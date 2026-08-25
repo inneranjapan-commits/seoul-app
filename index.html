@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>서울 실시간 도시데이터</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px;
+    font-family: -apple-system, "Malgun Gothic", "맑은 고딕", sans-serif;
+    background: #f4f5f7;
+    color: #222;
+  }
+  #app { max-width: 720px; margin: 0 auto; }
+
+  /* 0. 지역 선택 버튼 */
+  .area-bar {
+    max-width: 720px;
+    margin: 0 auto 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .area-btn {
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .area-btn:hover { background: #f0f0f0; }
+  .area-btn.active {
+    background: #222;
+    border-color: #222;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  /* 1. 상단 지역명 + 혼잡도 */
+  .header-card {
+    border-radius: 16px;
+    padding: 28px 24px;
+    color: #fff;
+    margin-bottom: 24px;
+    transition: background-color 0.3s;
+  }
+  .area-name { font-size: 20px; opacity: 0.9; margin: 0 0 8px; }
+  .congest-level { font-size: 40px; font-weight: 800; margin: 0 0 8px; }
+  .congest-msg { font-size: 14px; opacity: 0.95; margin: 0; line-height: 1.5; }
+
+  /* 2. 예측 막대 그래프 */
+  section { margin-bottom: 32px; }
+  h2 { font-size: 18px; margin: 0 0 12px; color: #333; }
+
+  .fcst-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+  }
+  .fcst-time {
+    width: 110px;
+    flex-shrink: 0;
+    font-size: 13px;
+    color: #555;
+  }
+  .fcst-bar-track {
+    flex: 1;
+    background: #e5e7eb;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 24px;
+    position: relative;
+  }
+  .fcst-bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    min-width: 6%;
+    transition: width 0.4s;
+  }
+  .fcst-pop {
+    width: 130px;
+    flex-shrink: 0;
+    font-size: 12px;
+    color: #666;
+    text-align: right;
+    white-space: nowrap;
+  }
+  .fcst-row.is-now {
+    background: #fff;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 8px 6px;
+    font-weight: 700;
+  }
+  .now-tag {
+    font-size: 11px;
+    background: #333;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 6px;
+  }
+
+  /* 3. 문화행사 카드 */
+  .event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .event-card {
+    display: block;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .event-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .event-thumb {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    background: #ddd;
+    display: block;
+  }
+  .event-body { padding: 12px 14px; }
+  .event-name {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    line-height: 1.4;
+  }
+  .event-period, .event-place {
+    font-size: 12px;
+    color: #666;
+    margin: 2px 0;
+  }
+  .ending-soon-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    background: #c62828;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+
+  .empty-msg { color: #888; font-size: 14px; }
+  .error-box {
+    background: #fdecea;
+    border: 1px solid #f5c2c0;
+    color: #611a15;
+    padding: 16px;
+    border-radius: 8px;
+    line-height: 1.6;
+  }
+  .retry-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: #611a15;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .retry-btn:hover { opacity: 0.9; }
+  .loading-msg {
+    color: #666;
+    font-size: 15px;
+    padding: 40px 0;
+    text-align: center;
+  }
+  .updated-at {
+    font-size: 12px;
+    color: #888;
+    margin: -12px 0 24px;
+    text-align: right;
+  }
+</style>
+</head>
+<body>
+  <div id="area-bar" class="area-bar"></div>
+  <div id="app">불러오는 중...</div>
+
+  <script>
+    // 혼잡도 4단계별 색상 (이 4가지 외의 값은 모두 회색으로 표시)
+    var LEVEL_COLORS = {
+      '여유': '#2e7d32',
+      '보통': '#1565c0',
+      '약간 붐빔': '#ef6c00',
+      '붐빔': '#c62828'
+    };
+    var UNKNOWN_COLOR = '#9e9e9e';
+
+    function colorOf(level) {
+      return LEVEL_COLORS[level] || UNKNOWN_COLOR;
+    }
+
+    // 값이 없거나(undefined/null) 빈 문자열이면 안내 문구로 대체하고,
+    // 예상치 못한 문자열이 오면 그 값을 그대로 보여준다.
+    function levelText(level) {
+      return (level && String(level).trim()) ? level : '정보 없음';
+    }
+
+    // "2026-08-26 07:00" -> Date 객체
+    function parseTime(str) {
+      return new Date(str.replace(' ', 'T') + ':00');
+    }
+
+    // "2026-08-26 07:00" -> "07:00"
+    function shortTime(str) {
+      var parts = str.split(' ');
+      return parts.length > 1 ? parts[1] : str;
+    }
+
+    function isSameHour(a, b) {
+      return a.getFullYear() === b.getFullYear() &&
+             a.getMonth() === b.getMonth() &&
+             a.getDate() === b.getDate() &&
+             a.getHours() === b.getHours();
+    }
+
+    function avgPop(minStr, maxStr) {
+      var min = parseInt(minStr, 10) || 0;
+      var max = parseInt(maxStr, 10) || 0;
+      return Math.round((min + max) / 2);
+    }
+
+    function formatNumber(n) {
+      return n.toLocaleString('ko-KR');
+    }
+
+    // "2026-08-01~2026-09-01" -> Date(2026-09-01), 형식이 다르면 null
+    function eventEndDate(period) {
+      if (!period) return null;
+      var parts = String(period).split('~');
+      var endStr = (parts[1] || parts[0] || '').trim();
+      var d = new Date(endStr);
+      return isNaN(d.getTime()) ? null : d;
+    }
+
+    function el(tag, className, html) {
+      var e = document.createElement(tag);
+      if (className) e.className = className;
+      if (html !== undefined) e.innerHTML = html;
+      return e;
+    }
+
+    function renderHeader(container, areaName, live) {
+      var card = el('div', 'header-card');
+      card.style.backgroundColor = colorOf(live.AREA_CONGEST_LVL);
+      card.appendChild(el('p', 'area-name', areaName));
+      card.appendChild(el('p', 'congest-level', levelText(live.AREA_CONGEST_LVL)));
+      card.appendChild(el('p', 'congest-msg', live.AREA_CONGEST_MSG || ''));
+      container.appendChild(card);
+    }
+
+    function renderForecast(container, live) {
+      var section = el('section');
+      section.appendChild(el('h2', null, '12시간 인구 예측'));
+
+      var rows = [];
+
+      // 지금(실시간) 데이터를 맨 위에 별도로 추가
+      rows.push({
+        timeLabel: '지금 (' + shortTime(live.PPLTN_TIME) + ')',
+        level: live.AREA_CONGEST_LVL,
+        pop: avgPop(live.AREA_PPLTN_MIN, live.AREA_PPLTN_MAX),
+        forceNow: true,
+        time: parseTime(live.PPLTN_TIME)
+      });
+
+      (live.FCST_PPLTN || []).forEach(function (f) {
+        rows.push({
+          timeLabel: shortTime(f.FCST_TIME),
+          level: f.FCST_CONGEST_LVL,
+          pop: avgPop(f.FCST_PPLTN_MIN, f.FCST_PPLTN_MAX),
+          time: parseTime(f.FCST_TIME)
+        });
+      });
+
+      var maxPop = Math.max.apply(null, rows.map(function (r) { return r.pop; }));
+      var now = new Date();
+
+      rows.forEach(function (r) {
+        var isNow = r.forceNow || isSameHour(r.time, now);
+        var row = el('div', 'fcst-row' + (isNow ? ' is-now' : ''));
+
+        var timeEl = el('div', 'fcst-time', r.timeLabel + (isNow && !r.forceNow ? '<span class="now-tag">지금</span>' : ''));
+
+        var track = el('div', 'fcst-bar-track');
+        var fill = el('div', 'fcst-bar-fill');
+        var widthPct = maxPop > 0 ? Math.max(6, Math.round((r.pop / maxPop) * 100)) : 6;
+        fill.style.width = widthPct + '%';
+        fill.style.backgroundColor = colorOf(r.level);
+        track.appendChild(fill);
+
+        var popEl = el('div', 'fcst-pop', levelText(r.level) + ' · ' + formatNumber(r.pop) + '명');
+
+        row.appendChild(timeEl);
+        row.appendChild(track);
+        row.appendChild(popEl);
+        section.appendChild(row);
+      });
+
+      container.appendChild(section);
+    }
+
+    function renderEvents(container, events) {
+      var section = el('section');
+      section.appendChild(el('h2', null, '문화행사'));
+
+      if (!events || events.length === 0) {
+        section.appendChild(el('p', 'empty-msg', '현재 등록된 문화행사가 없습니다.'));
+        container.appendChild(section);
+        return;
+      }
+
+      var grid = el('div', 'event-grid');
+
+      var now = new Date();
+      var oneWeekMs = 7 * 24 * 60 * 60 * 1000;
+
+      var sorted = events.slice().sort(function (a, b) {
+        var endA = eventEndDate(a.EVENT_PERIOD);
+        var endB = eventEndDate(b.EVENT_PERIOD);
+        if (!endA && !endB) return 0;
+        if (!endA) return 1;
+        if (!endB) return -1;
+        return endA - endB;
+      });
+
+      sorted.forEach(function (ev) {
+        var card = document.createElement('a');
+        card.className = 'event-card';
+        if (ev.URL) {
+          card.href = ev.URL;
+          card.target = '_blank';
+          card.rel = 'noopener noreferrer';
+        }
+
+        if (ev.THUMBNAIL) {
+          var img = document.createElement('img');
+          img.className = 'event-thumb';
+          img.src = ev.THUMBNAIL;
+          img.alt = ev.EVENT_NM || '';
+          img.onerror = function () { img.style.display = 'none'; };
+          card.appendChild(img);
+        }
+
+        var body = el('div', 'event-body');
+        var nameHtml = ev.EVENT_NM || '(제목 없음)';
+        var endDate = eventEndDate(ev.EVENT_PERIOD);
+        if (endDate) {
+          // 날짜 단위로만 비교 (종료일 당일도 "곧 종료"에 포함)
+          var todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+          var diff = endDate - todayStart;
+          if (diff >= 0 && diff <= oneWeekMs) {
+            nameHtml += ' <span class="ending-soon-tag">곧 종료</span>';
+          }
+        }
+        body.appendChild(el('p', 'event-name', nameHtml));
+        body.appendChild(el('p', 'event-period', ev.EVENT_PERIOD || ''));
+        body.appendChild(el('p', 'event-place', ev.EVENT_PLACE || ''));
+        card.appendChild(body);
+
+        grid.appendChild(card);
+      });
+
+      section.appendChild(grid);
+      container.appendChild(section);
+    }
+
+    function render(data) {
+      var app = document.getElementById('app');
+      app.innerHTML = '';
+
+      var city = data.CITYDATA;
+      var live = city.LIVE_PPLTN_STTS[0];
+
+      renderHeader(app, city.AREA_NM, live);
+      app.appendChild(el('p', 'updated-at', live.PPLTN_TIME + ' 기준'));
+      renderForecast(app, live);
+      renderEvents(app, city.EVENT_STTS);
+    }
+
+    function renderLoading() {
+      var app = document.getElementById('app');
+      app.innerHTML = '';
+      app.appendChild(el('p', 'loading-msg', '불러오는 중...'));
+    }
+
+    function renderError(message) {
+      var app = document.getElementById('app');
+      app.innerHTML = '';
+
+      var box = el('div', 'error-box');
+      box.appendChild(el('strong', null, '데이터를 불러오지 못했습니다.'));
+      box.appendChild(document.createElement('br'));
+      box.appendChild(document.createTextNode(message));
+
+      var retryBtn = el('button', 'retry-btn', '다시 시도');
+      retryBtn.type = 'button';
+      retryBtn.onclick = function () { loadCityData(currentAreaCode); };
+      box.appendChild(document.createElement('br'));
+      box.appendChild(retryBtn);
+
+      app.appendChild(box);
+    }
+
+    // 서울시 실시간 도시데이터 120개 장소 목록 기준 공식 명칭 (server.js와 동일한 코드 사용)
+    var AREAS = [
+      { code: 'gwanghwamun', name: '광화문·덕수궁' },
+      { code: 'hongdae', name: '홍대 관광특구' },
+      { code: 'gangnam', name: '강남역' },
+      { code: 'yeouido', name: '여의도한강공원' },
+      { code: 'seongsu', name: '성수카페거리' }
+    ];
+
+    var currentAreaCode = null;
+    var CACHE_TTL_MS = 5 * 60 * 1000;
+    var cityDataCache = {}; // areaCode -> { body, expiresAt }
+
+    function renderAreaBar() {
+      var bar = document.getElementById('area-bar');
+      bar.innerHTML = '';
+      AREAS.forEach(function (area) {
+        var btn = el('button', 'area-btn', area.name);
+        btn.type = 'button';
+        btn.dataset.areaCode = area.code;
+        btn.onclick = function () { selectArea(area.code); };
+        bar.appendChild(btn);
+      });
+    }
+
+    function updateActiveAreaBtn() {
+      var buttons = document.getElementById('area-bar').querySelectorAll('.area-btn');
+      buttons.forEach(function (btn) {
+        btn.classList.toggle('active', btn.dataset.areaCode === currentAreaCode);
+      });
+    }
+
+    function selectArea(areaCode) {
+      currentAreaCode = areaCode;
+      updateActiveAreaBtn();
+      loadCityData(areaCode);
+    }
+
+    // 서버(server.js)가 인증키를 숨긴 채 서울시 API를 대신 호출해 결과만 넘겨줌.
+    // 서울시 API는 한 번에 한 지역씩만 호출하므로, 선택한 지역만 그때그때 불러온다.
+    var REQUEST_TIMEOUT_MS = 15000;
+
+    function loadCityData(areaCode) {
+      var cached = cityDataCache[areaCode];
+      if (cached && cached.expiresAt > Date.now()) {
+        render(cached.body);
+        return;
+      }
+
+      renderLoading();
+
+      var controller = ('AbortController' in window) ? new AbortController() : null;
+      var timer = controller ? setTimeout(function () { controller.abort(); }, REQUEST_TIMEOUT_MS) : null;
+
+      fetch('/api/citydata?area=' + encodeURIComponent(areaCode), controller ? { signal: controller.signal } : {})
+        .then(function (res) {
+          return res.json().catch(function () {
+            throw new Error('서버 응답을 해석하지 못했습니다 (상태 코드 ' + res.status + ')');
+          }).then(function (body) {
+            if (!res.ok) throw new Error(body.error || ('알 수 없는 오류 (상태 코드 ' + res.status + ')'));
+            return body;
+          });
+        })
+        .then(function (body) {
+          if (timer) clearTimeout(timer);
+          if (areaCode !== currentAreaCode) return; // 그 사이 다른 지역을 선택했으면 무시
+          cityDataCache[areaCode] = { body: body, expiresAt: Date.now() + CACHE_TTL_MS };
+          render(body);
+        })
+        .catch(function (err) {
+          if (timer) clearTimeout(timer);
+          if (areaCode !== currentAreaCode) return;
+          var message = (err.name === 'AbortError')
+            ? '요청 시간이 너무 오래 걸려 중단했습니다.'
+            : err.message;
+          renderError(message);
+        });
+    }
+
+    renderAreaBar();
+    selectArea(AREAS[0].code);
+  </script>
+</body>
+</html>
