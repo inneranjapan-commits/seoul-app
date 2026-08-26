@@ -40,6 +40,9 @@ var LANG = {
     ytPromoTitle: '오늘 서울, 어땠나요?',
     ytPromoSubtitle: '하루 끝에 듣는 K-발라드 · FOXCREATIVE',
 
+    // 지역 선택 상자 옆에 붙는 배지: 지역이 여러 곳이라는 걸 바로 알려준다
+    areaCountBadge: '{n}개 지역',
+
     // 지역 이름 (지역 선택 버튼 + 상단 카드)
     areas: {
       gwanghwamun: '광화문·덕수궁',
@@ -117,6 +120,8 @@ var LANG = {
     ytPromoTitle: 'How was Seoul today?',
     ytPromoSubtitle: 'K-Ballads to end your day · FOXCREATIVE',
 
+    areaCountBadge: '{n} areas',
+
     areas: {
       gwanghwamun: 'Gwanghwamun · Deoksugung',
       hongdae: 'Hongdae Special Tourist Zone',
@@ -188,6 +193,8 @@ var LANG = {
     ytPromoTitle: '今日のソウル、どうでしたか？',
     ytPromoSubtitle: '一日の終わりにKバラード · FOXCREATIVE',
 
+    areaCountBadge: '{n}エリア',
+
     areas: {
       gwanghwamun: '光化門・徳寿宮',
       hongdae: '弘大観光特区',
@@ -258,6 +265,8 @@ var LANG = {
     pageTitle: '首尔实时城市数据',
     ytPromoTitle: '今天的首尔怎么样？',
     ytPromoSubtitle: '一天结束时听韩式抒情歌 · FOXCREATIVE',
+
+    areaCountBadge: '{n}个地区',
 
     areas: {
       gwanghwamun: '光化门·德寿宫',
