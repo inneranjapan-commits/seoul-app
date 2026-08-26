@@ -12,6 +12,7 @@ const { AREAS, fetchCityData } = require('./lib/citydata');
 
 const PORT = 3000;
 const ROOT = __dirname;
+const STATIC_ROOT = path.join(ROOT, 'public'); // 정적 파일(index.html, lang.js 등)은 public/ 안에서만 찾는다
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -75,10 +76,10 @@ const server = http.createServer((req, res) => {
   let staticPath = urlPath;
   if (staticPath === '/') staticPath = '/index.html';
 
-  const filePath = path.join(ROOT, staticPath);
+  const filePath = path.join(STATIC_ROOT, staticPath);
 
-  // 이 폴더 바깥의 파일에는 접근하지 못하게 막음
-  if (!filePath.startsWith(ROOT)) {
+  // public 폴더 바깥의 파일에는 접근하지 못하게 막음
+  if (!filePath.startsWith(STATIC_ROOT)) {
     res.writeHead(403, { 'Content-Type': 'text/plain; charset=utf-8' });
     res.end('접근이 거부되었습니다.');
     return;
