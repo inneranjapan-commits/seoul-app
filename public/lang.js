@@ -86,7 +86,6 @@ var LANG = {
     noEvents: '현재 등록된 문화행사가 없습니다.',
     noTitle: '(제목 없음)',
     errorTitle: '데이터를 불러오지 못했습니다.',
-    eventsForeignNotice: '', // 한국어에서는 표시하지 않음
 
     // 클라이언트에서 직접 만드는 에러 문구
     clientErrors: {
@@ -157,7 +156,6 @@ var LANG = {
     noEvents: 'There are no cultural events listed right now.',
     noTitle: '(Untitled)',
     errorTitle: 'Failed to load data.',
-    eventsForeignNotice: 'Event information is provided in Korean.',
 
     clientErrors: {
       abort: 'The request took too long and was cancelled.',
@@ -226,7 +224,6 @@ var LANG = {
     noEvents: '現在登録されている文化イベントはありません。',
     noTitle: '(タイトルなし)',
     errorTitle: 'データを読み込めませんでした。',
-    eventsForeignNotice: 'イベント情報は韓国語で提供されます。',
 
     clientErrors: {
       abort: 'リクエストの時間がかかりすぎたため中断しました。',
@@ -295,7 +292,6 @@ var LANG = {
     noEvents: '目前没有已登记的文化活动。',
     noTitle: '(无标题)',
     errorTitle: '未能加载数据。',
-    eventsForeignNotice: '活动信息仅提供韩语版本。',
 
     clientErrors: {
       abort: '请求耗时过长,已中止。',

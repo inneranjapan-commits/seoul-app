@@ -9,6 +9,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const { AREAS, fetchCityData } = require('./lib/citydata');
+const { fetchForeignEvents } = require('./lib/tourapi');
 
 const PORT = 3000;
 const ROOT = __dirname;
@@ -66,6 +67,16 @@ const server = http.createServer((req, res) => {
   if (urlPath === '/api/citydata') {
     const areaCode = requestUrl.searchParams.get('area') || '';
     fetchCityData(areaCode)
+      .then((result) => sendJson(res, result.status, result.body))
+      .catch((err) => {
+        sendJson(res, 500, { error: '알 수 없는 오류가 발생했습니다: ' + err.message, code: 'UNCAUGHT_ERROR', detail: err.message });
+      });
+    return;
+  }
+
+  if (urlPath === '/api/events') {
+    const lang = requestUrl.searchParams.get('lang') || '';
+    fetchForeignEvents(lang)
       .then((result) => sendJson(res, result.status, result.body))
       .catch((err) => {
         sendJson(res, 500, { error: '알 수 없는 오류가 발생했습니다: ' + err.message, code: 'UNCAUGHT_ERROR', detail: err.message });
