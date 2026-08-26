@@ -467,6 +467,16 @@
     }
 
     // 종료 임박(1주일 이내) 태그를 붙인 행사명 HTML을 만든다 (한국어/외국어 카드 공통으로 사용)
+    // 언어에 맞는 구글 도메인으로 행사명 검색 링크를 만든다 (중국어는 실제 검색이 되는
+    // google.com에 hl=zh-CN을 붙인다 — google.cn은 검색 기능이 없는 사이트라 제외)
+    function googleSearchUrl(title, lang) {
+      var domainByLang = { en: 'com', ja: 'co.jp', zh: 'com' };
+      var hlByLang = { en: 'en', ja: 'ja', zh: 'zh-CN' };
+      var domain = domainByLang[lang] || 'com';
+      var hl = hlByLang[lang] || 'en';
+      return 'https://www.google.' + domain + '/search?q=' + encodeURIComponent(title || '') + '&hl=' + hl;
+    }
+
     function eventNameHtml(ev, now, oneWeekMs, t) {
       var nameHtml = ev.EVENT_NM || t.noTitle;
       var endDate = eventEndDate(ev.EVENT_PERIOD);
@@ -508,15 +518,14 @@
       sorted.forEach(function (ev) {
         if (currentLang !== 'ko') {
           // 외국어 모드: 비짓서울 데이터 — 이미지/장소 없이 행사명 + 기간만.
-          // 홈페이지 URL이 있는 카드만 클릭 가능(새 탭)하게 하고, 눈으로 구분되게 표시한다.
-          var hasUrl = !!ev.EVENT_URL;
-          var plainCard = document.createElement(hasUrl ? 'a' : 'div');
-          plainCard.className = 'event-card-plain' + (hasUrl ? ' event-card-plain-linked' : '');
-          if (hasUrl) {
-            plainCard.href = ev.EVENT_URL;
-            plainCard.target = '_blank';
-            plainCard.rel = 'noopener noreferrer';
-          }
+          // 공식 홈페이지 URL이 있으면 그리로, 없으면 행사명으로 구글 검색을 연다
+          // (거의 대부분 홈페이지가 없어서, 검색 링크가 실질적인 기본값이다).
+          var linkUrl = ev.EVENT_URL || googleSearchUrl(ev.EVENT_NM, currentLang);
+          var plainCard = document.createElement('a');
+          plainCard.className = 'event-card-plain event-card-plain-linked';
+          plainCard.href = linkUrl;
+          plainCard.target = '_blank';
+          plainCard.rel = 'noopener noreferrer';
           plainCard.appendChild(el('p', 'event-name', eventNameHtml(ev, now, oneWeekMs, t)));
           plainCard.appendChild(el('p', 'event-period', ev.EVENT_PERIOD || ''));
           grid.appendChild(plainCard);
