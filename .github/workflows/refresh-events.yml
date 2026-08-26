@@ -9,6 +9,12 @@ on:
 permissions:
   contents: write
 
+# 예약 실행과 수동 실행이 겹칠 때 이 워크플로우끼리 서로 밀어내며 푸시하지 않도록,
+# 동시에 두 번 실행되지 않고 순서대로(뒤엣것은 대기) 돌게 한다.
+concurrency:
+  group: refresh-events
+  cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
@@ -28,6 +34,33 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add data/events
-          git diff --cached --quiet || git commit -m "Refresh VisitSeoul events data"
-          git push
+          if git diff --cached --quiet; then
+            echo "No data changes, nothing to commit."
+            exit 0
+          fi
+          git commit -m "Refresh VisitSeoul events data"
+
+          # 커밋 이후 main이 그 사이 바뀌었을 수 있으니, 푸시가 거부되면
+          # 최신 내용을 받아 그 위로 우리 커밋을 옮겨 싣고(rebase) 다시 시도한다.
+          # data/events는 이 워크플로우만 건드리는 파일이라 실제 충돌 날 일은 거의 없다.
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "Pushed successfully."
+              exit 0
+            fi
+
+            echo "Push rejected (attempt $attempt/5). Fetching latest main and rebasing..."
+            git fetch origin main
+            if ! git rebase origin/main; then
+              echo "::error::Rebase onto origin/main failed — a real conflict, needs manual attention."
+              git rebase --abort
+              exit 1
+            fi
+
+            sleep $((attempt * 5))
+          done
+
+          echo "::error::Failed to push after 5 attempts."
+          exit 1
