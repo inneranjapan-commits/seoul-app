@@ -255,13 +255,29 @@
   }
 
   .empty-msg { color: #888; font-size: 14px; }
-  /* 외국어 모드 행사 카드: 이미지/장소/링크 없이 이름+기간만, 클릭 불가 */
+  /* 외국어 모드 행사 카드: 이미지/장소 없이 이름+기간만.
+     홈페이지 URL이 있으면 <a>로 렌더링되어 .event-card-plain-linked가 추가로 붙는다. */
   .event-card-plain {
     display: block;
     background: #fff;
     border-radius: 10px;
     padding: 8px 10px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: inherit;
+  }
+  .event-card-plain-linked {
+    border-left: 3px solid #1565c0;
+    cursor: pointer;
+    transition: box-shadow 0.15s;
+  }
+  .event-card-plain-linked:hover {
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  }
+  .event-card-plain-linked .event-name::after {
+    content: ' ↗';
+    color: #1565c0;
+    font-weight: 700;
   }
   .error-box {
     background: #fdecea;
@@ -491,8 +507,16 @@
 
       sorted.forEach(function (ev) {
         if (currentLang !== 'ko') {
-          // 외국어 모드: TourAPI 데이터 — 이미지/장소/링크 없이 행사명 + 기간만, 클릭 불가
-          var plainCard = el('div', 'event-card-plain');
+          // 외국어 모드: 비짓서울 데이터 — 이미지/장소 없이 행사명 + 기간만.
+          // 홈페이지 URL이 있는 카드만 클릭 가능(새 탭)하게 하고, 눈으로 구분되게 표시한다.
+          var hasUrl = !!ev.EVENT_URL;
+          var plainCard = document.createElement(hasUrl ? 'a' : 'div');
+          plainCard.className = 'event-card-plain' + (hasUrl ? ' event-card-plain-linked' : '');
+          if (hasUrl) {
+            plainCard.href = ev.EVENT_URL;
+            plainCard.target = '_blank';
+            plainCard.rel = 'noopener noreferrer';
+          }
           plainCard.appendChild(el('p', 'event-name', eventNameHtml(ev, now, oneWeekMs, t)));
           plainCard.appendChild(el('p', 'event-period', ev.EVENT_PERIOD || ''));
           grid.appendChild(plainCard);

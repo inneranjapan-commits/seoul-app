@@ -115,6 +115,16 @@ async function callWithRetry(method, urlPath, body, maxAttempts) {
   return last;
 }
 
+// 비짓서울 homepage 필드는 순수 URL이 아니라 '<a href="...">...</a>' HTML 조각으로 온다.
+// href 속성값만 뽑아내고, 그런 형태가 아니면(이미 순수 URL이거나 값이 없으면) 그대로/빈 문자열 처리.
+function extractUrl(homepageHtml) {
+  if (!homepageHtml) return '';
+  const match = String(homepageHtml).match(/href="([^"]+)"/);
+  if (match) return match[1];
+  const trimmed = String(homepageHtml).trim();
+  return /^https?:\/\//.test(trimmed) ? trimmed : '';
+}
+
 function toIsoFromDot(dotStr) {
   // "2026.10.24" -> "2026-10-24"
   if (!dotStr) return '';
@@ -190,7 +200,7 @@ async function fetchLang(lang, langIndex) {
           if (isNaN(endDate.getTime()) || endDate < todayStart) {
             alreadyEndedCount++;
           } else {
-            events.push({ EVENT_NM: d.post_sj || '', EVENT_PERIOD: `${startIso}~${endIso}` });
+            events.push({ EVENT_NM: d.post_sj || '', EVENT_PERIOD: `${startIso}~${endIso}`, EVENT_URL: extractUrl(d.homepage) });
           }
         }
       }
