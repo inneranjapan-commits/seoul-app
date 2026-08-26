@@ -1,0 +1,5 @@
+# 실제 서비스 화면에는 필요 없는 개발용/참고용 파일들 (배포 용량만 차지하므로 제외)
+citydata.json
+analyze-structure.js
+fetch-citydata.js
+서울시 주요 121장소 목록.xlsx

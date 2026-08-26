@@ -1,0 +1,12 @@
+{
+  "name": "seoul-app",
+  "private": true,
+  "version": "1.0.0",
+  "description": "서울 실시간 도시데이터 웹앱",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
