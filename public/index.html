@@ -452,7 +452,9 @@
     function renderEvents(container, events) {
       var t = LANG[currentLang];
       var section = el('section');
-      section.appendChild(el('h2', null, t.eventsTitle));
+      // 외국어 모드는 지역과 무관한 "서울 전체" 목록이므로 제목으로 그 점을 드러낸다
+      var title = currentLang === 'ko' ? t.eventsTitle : t.eventsTitleSeoul;
+      section.appendChild(el('h2', null, title));
 
       if (!events || events.length === 0) {
         section.appendChild(el('p', 'empty-msg', t.noEvents));
@@ -538,51 +540,50 @@
       renderEvents(app, events);
     }
 
-    // 문화행사 언어별 소스: 한국어는 서울시 데이터(EVENT_STTS)를 그대로 쓰고,
-    // 외국어(en/ja/zh)는 비짓서울 데이터(/api/events, 지역별로 미리 좌표 매칭됨)에서 따로 불러온다.
+    // 문화행사 언어별 소스: 한국어는 서울시 데이터(지역별 EVENT_STTS)를 그대로 쓰고,
+    // 외국어(en/ja/zh)는 비짓서울 데이터(/api/events) — 지역과 무관한 "서울 전체" 목록을
+    // 한 번만 불러와 캐시해두고, 지역을 바꿔도 다시 불러오지 않는다.
     // (TourAPI 관련 코드는 lib/tourapi.js에 그대로 남아있지만 지금은 사용하지 않는다)
     var EVENTS_CACHE_TTL_MS = 30 * 60 * 1000;
-    var eventsCache = {}; // "lang|areaCode" -> { events, expiresAt }
-    var eventsFetchInFlight = {}; // "lang|areaCode" -> Promise
+    var eventsCache = {}; // lang -> { events, expiresAt }
+    var eventsFetchInFlight = {}; // lang -> Promise
 
-    function loadForeignEvents(lang, areaCode) {
-      var cacheKey = lang + '|' + areaCode;
-      var cached = eventsCache[cacheKey];
+    function loadForeignEvents(lang) {
+      var cached = eventsCache[lang];
       if (cached && cached.expiresAt > Date.now()) {
         return Promise.resolve(cached.events);
       }
-      if (eventsFetchInFlight[cacheKey]) return eventsFetchInFlight[cacheKey];
+      if (eventsFetchInFlight[lang]) return eventsFetchInFlight[lang];
 
-      var promise = fetch('/api/events?lang=' + encodeURIComponent(lang) + '&area=' + encodeURIComponent(areaCode))
+      var promise = fetch('/api/events?lang=' + encodeURIComponent(lang))
         .then(function (res) {
           return res.json().catch(function () { return null; });
         })
         .then(function (body) {
           var events = (body && body.events) || [];
-          eventsCache[cacheKey] = { events: events, expiresAt: Date.now() + EVENTS_CACHE_TTL_MS };
+          eventsCache[lang] = { events: events, expiresAt: Date.now() + EVENTS_CACHE_TTL_MS };
           return events;
         })
         .catch(function () {
           return []; // 실패해도 전체 화면을 에러로 덮지 않고, 행사 없음으로 조용히 처리
         });
 
-      eventsFetchInFlight[cacheKey] = promise.then(function (events) {
-        delete eventsFetchInFlight[cacheKey];
+      eventsFetchInFlight[lang] = promise.then(function (events) {
+        delete eventsFetchInFlight[lang];
         return events;
       });
-      return eventsFetchInFlight[cacheKey];
+      return eventsFetchInFlight[lang];
     }
 
-    // citydata를 새로 받아왔을 때/언어나 지역을 바꿨을 때 공통으로 호출: 맞는 행사를 구해서 그린다
+    // citydata를 새로 받아왔을 때/언어를 바꿨을 때 공통으로 호출: 맞는 행사를 구해서 그린다
     function renderWithEvents(data) {
       if (currentLang === 'ko') {
         render(data, data.CITYDATA.EVENT_STTS);
         return;
       }
       var langAtRequest = currentLang;
-      var areaAtRequest = currentAreaCode;
-      loadForeignEvents(langAtRequest, areaAtRequest).then(function (events) {
-        if (currentLang !== langAtRequest || currentAreaCode !== areaAtRequest) return; // 그 사이 바뀌었으면 무시
+      loadForeignEvents(langAtRequest).then(function (events) {
+        if (currentLang !== langAtRequest) return; // 그 사이 언어가 바뀌었으면 무시
         render(data, events);
       });
     }

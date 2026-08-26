@@ -7,6 +7,5 @@ const { getEvents } = require('../lib/visitseoul-events');
 
 module.exports = function handler(req, res) {
   const lang = (req.query && req.query.lang) || '';
-  const area = (req.query && req.query.area) || '';
-  res.status(200).json({ events: getEvents(area, lang) });
+  res.status(200).json({ events: getEvents(lang) });
 };

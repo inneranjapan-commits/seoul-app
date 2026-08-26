@@ -76,6 +76,7 @@ var LANG = {
 
     forecastTitle: '12시간 인구 예측',
     eventsTitle: '문화행사',
+    eventsTitleSeoul: '서울의 문화행사',
     endingSoon: '곧 종료',
     nowTag: '지금',
     nowWithTime: '지금 ({time})',
@@ -146,6 +147,7 @@ var LANG = {
 
     forecastTitle: '12-Hour Population Forecast',
     eventsTitle: 'Cultural Events',
+    eventsTitleSeoul: 'Cultural Events in Seoul',
     endingSoon: 'Ending Soon',
     nowTag: 'Now',
     nowWithTime: 'Now ({time})',
@@ -214,6 +216,7 @@ var LANG = {
 
     forecastTitle: '12時間人口予測',
     eventsTitle: '文化イベント',
+    eventsTitleSeoul: 'ソウルの文化イベント',
     endingSoon: 'まもなく終了',
     nowTag: '現在',
     nowWithTime: '現在 ({time})',
@@ -282,6 +285,7 @@ var LANG = {
 
     forecastTitle: '12小时人口预测',
     eventsTitle: '文化活动',
+    eventsTitleSeoul: '首尔的文化活动',
     endingSoon: '即将结束',
     nowTag: '现在',
     nowWithTime: '现在 ({time})',

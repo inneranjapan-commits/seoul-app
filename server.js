@@ -76,8 +76,7 @@ const server = http.createServer((req, res) => {
 
   if (urlPath === '/api/events') {
     const lang = requestUrl.searchParams.get('lang') || '';
-    const area = requestUrl.searchParams.get('area') || '';
-    sendJson(res, 200, { events: getEvents(area, lang) });
+    sendJson(res, 200, { events: getEvents(lang) });
     return;
   }
 
