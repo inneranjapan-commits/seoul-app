@@ -280,6 +280,17 @@
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 10px;
   }
+  /* 한국어 모드 전용: 행사가 6건뿐이라 여러 장을 한 줄에 작게 늘어놓기보다
+     한 줄에 한 장씩 카드 폭을 꽉 채워 크게 보여준다 (외국어 모드는 기존 그대로 작게 유지) */
+  .event-grid-large {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .event-grid-large .event-thumb { height: 220px; }
+  .event-grid-large .event-body { padding: 12px 14px; }
+  .event-grid-large .event-name { font-size: 16px; margin-bottom: 6px; }
+  .event-grid-large .event-period,
+  .event-grid-large .event-place { font-size: 13px; }
   .event-card {
     display: block;
     background: #fff;
@@ -584,7 +595,8 @@
       var title = currentLang === 'ko' ? t.eventsTitle : t.eventsTitleSeoul;
       section.appendChild(el('h2', null, title));
 
-      var grid = el('div', 'event-grid');
+      // 한국어 모드는 이미지 있는 카드를 한 줄에 한 장씩 크게, 외국어 모드는 기존처럼 작게
+      var grid = el('div', 'event-grid' + (currentLang === 'ko' ? ' event-grid-large' : ''));
 
       var now = new Date();
       var oneWeekMs = 7 * 24 * 60 * 60 * 1000;

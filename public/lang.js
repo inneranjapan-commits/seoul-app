@@ -38,7 +38,7 @@ var LANG = {
   ko: {
     pageTitle: '서울 실시간 도시데이터',
     ytPromoTitle: '오늘 서울, 어땠나요?',
-    ytPromoSubtitle: '하루 끝에 듣는 K-발라드',
+    ytPromoSubtitle: '하루 끝에 듣는 K-발라드 · FOXCREATIVE',
 
     // 지역 이름 (지역 선택 버튼 + 상단 카드)
     areas: {
@@ -115,7 +115,7 @@ var LANG = {
   en: {
     pageTitle: 'Seoul Real-Time City Data',
     ytPromoTitle: 'How was Seoul today?',
-    ytPromoSubtitle: 'K-Ballads to end your day',
+    ytPromoSubtitle: 'K-Ballads to end your day · FOXCREATIVE',
 
     areas: {
       gwanghwamun: 'Gwanghwamun · Deoksugung',
@@ -186,7 +186,7 @@ var LANG = {
   ja: {
     pageTitle: 'ソウル リアルタイム都市データ',
     ytPromoTitle: '今日のソウル、どうでしたか？',
-    ytPromoSubtitle: '一日の終わりにKバラード',
+    ytPromoSubtitle: '一日の終わりにKバラード · FOXCREATIVE',
 
     areas: {
       gwanghwamun: '光化門・徳寿宮',
@@ -257,7 +257,7 @@ var LANG = {
   zh: {
     pageTitle: '首尔实时城市数据',
     ytPromoTitle: '今天的首尔怎么样？',
-    ytPromoSubtitle: '一天结束时听韩式抒情歌',
+    ytPromoSubtitle: '一天结束时听韩式抒情歌 · FOXCREATIVE',
 
     areas: {
       gwanghwamun: '光化门·德寿宫',
