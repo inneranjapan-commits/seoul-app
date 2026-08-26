@@ -11,13 +11,22 @@ const ROOT = __dirname;
 const API_TIMEOUT_MS = 10000;
 const CACHE_TTL_MS = 5 * 60 * 1000;
 
-// 서울시 실시간 도시데이터 120개 장소 목록 기준 공식 명칭
+// 서울시 실시간 도시데이터 120개 장소 목록 기준 공식 명칭 (엑셀 "서울시 주요 121장소 목록" 대조 완료)
 const AREAS = [
   { code: 'gwanghwamun', name: '광화문·덕수궁' },
   { code: 'hongdae', name: '홍대 관광특구' },
   { code: 'gangnam', name: '강남역' },
   { code: 'yeouido', name: '여의도한강공원' },
   { code: 'seongsu', name: '성수카페거리' },
+  { code: 'myeongdong', name: '명동 관광특구' },
+  { code: 'dongdaemun', name: '동대문 관광특구' },
+  { code: 'itaewon', name: '이태원 관광특구' },
+  { code: 'gyeongbokgung', name: '경복궁' },
+  { code: 'bukchon', name: '북촌한옥마을' },
+  { code: 'insadong', name: '인사동' },
+  { code: 'jamsil', name: '잠실 관광특구' },
+  { code: 'namsan', name: '남산공원' },
+  { code: 'ddp', name: 'DDP(동대문디자인플라자)' },
 ];
 const AREA_NAME_BY_CODE = {};
 AREAS.forEach(function (a) { AREA_NAME_BY_CODE[a.code] = a.name; });
@@ -64,7 +73,7 @@ function sendJson(res, statusCode, obj) {
 async function handleCityData(res, areaCode) {
   const areaName = AREA_NAME_BY_CODE[areaCode];
   if (!areaName) {
-    sendJson(res, 400, { error: '알 수 없는 지역입니다: ' + areaCode });
+    sendJson(res, 400, { error: '알 수 없는 지역입니다: ' + areaCode, code: 'UNKNOWN_AREA', area: areaCode });
     return;
   }
 
@@ -75,7 +84,7 @@ async function handleCityData(res, areaCode) {
   }
 
   if (!SEOUL_API_KEY || SEOUL_API_KEY === '여기에_인증키_입력') {
-    sendJson(res, 500, { error: '서버에 SEOUL_API_KEY가 설정되어 있지 않습니다. .env 파일을 확인해주세요.' });
+    sendJson(res, 500, { error: '서버에 SEOUL_API_KEY가 설정되어 있지 않습니다. .env 파일을 확인해주세요.', code: 'MISSING_API_KEY' });
     return;
   }
 
@@ -90,9 +99,9 @@ async function handleCityData(res, areaCode) {
     apiRes = await fetch(url, { signal: controller.signal });
   } catch (err) {
     if (err.name === 'AbortError') {
-      sendJson(res, 504, { error: '서울시 API 응답이 너무 느립니다. 잠시 후 다시 시도해주세요.' });
+      sendJson(res, 504, { error: '서울시 API 응답이 너무 느립니다. 잠시 후 다시 시도해주세요.', code: 'API_TIMEOUT' });
     } else {
-      sendJson(res, 502, { error: '서울시 API 호출에 실패했습니다: ' + err.message });
+      sendJson(res, 502, { error: '서울시 API 호출에 실패했습니다: ' + err.message, code: 'API_FETCH_FAILED', detail: err.message });
     }
     return;
   } finally {
@@ -100,7 +109,7 @@ async function handleCityData(res, areaCode) {
   }
 
   if (!apiRes.ok) {
-    sendJson(res, 502, { error: `서울시 API 오류 (상태 코드 ${apiRes.status})` });
+    sendJson(res, 502, { error: `서울시 API 오류 (상태 코드 ${apiRes.status})`, code: 'API_HTTP_ERROR', status: apiRes.status });
     return;
   }
 
@@ -108,18 +117,18 @@ async function handleCityData(res, areaCode) {
   try {
     data = await apiRes.json();
   } catch (err) {
-    sendJson(res, 502, { error: '서울시 API 응답을 해석하지 못했습니다.' });
+    sendJson(res, 502, { error: '서울시 API 응답을 해석하지 못했습니다.', code: 'API_PARSE_ERROR' });
     return;
   }
 
   const resultCode = data.RESULT && data.RESULT['RESULT.CODE'];
   if (resultCode && resultCode !== 'INFO-000') {
-    sendJson(res, 502, { error: (data.RESULT && data.RESULT['RESULT.MESSAGE']) || '서울시 API가 오류를 반환했습니다.' });
+    sendJson(res, 502, { error: (data.RESULT && data.RESULT['RESULT.MESSAGE']) || '서울시 API가 오류를 반환했습니다.', code: 'API_RESULT_ERROR' });
     return;
   }
 
   if (!data.CITYDATA) {
-    sendJson(res, 502, { error: '서울시 API 응답에 CITYDATA가 없습니다.' });
+    sendJson(res, 502, { error: '서울시 API 응답에 CITYDATA가 없습니다.', code: 'MISSING_CITYDATA' });
     return;
   }
 
@@ -140,7 +149,7 @@ const server = http.createServer((req, res) => {
   if (urlPath === '/api/citydata') {
     const areaCode = requestUrl.searchParams.get('area') || '';
     handleCityData(res, areaCode).catch((err) => {
-      sendJson(res, 500, { error: '알 수 없는 오류가 발생했습니다: ' + err.message });
+      sendJson(res, 500, { error: '알 수 없는 오류가 발생했습니다: ' + err.message, code: 'UNCAUGHT_ERROR', detail: err.message });
     });
     return;
   }

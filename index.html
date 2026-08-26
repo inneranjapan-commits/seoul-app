@@ -15,22 +15,56 @@
   }
   #app { max-width: 720px; margin: 0 auto; }
 
-  /* 0. 지역 선택 버튼 */
+  /* 0. 상단 바 (언어 선택 버튼) */
+  .top-bar {
+    max-width: 720px;
+    margin: 0 auto 12px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .lang-bar {
+    display: flex;
+    gap: 6px;
+  }
+  .lang-btn {
+    padding: 5px 10px;
+    border-radius: 999px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #333;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .lang-btn:hover { background: #f0f0f0; }
+  .lang-btn.active {
+    background: #222;
+    border-color: #222;
+    color: #fff;
+  }
+
+  /* 0. 지역 선택 버튼 (지역이 많아져서 한 줄로 안 들어갈 때는 옆으로 스크롤) */
   .area-bar {
     max-width: 720px;
     margin: 0 auto 20px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    padding-bottom: 6px;
   }
   .area-btn {
-    padding: 8px 14px;
+    padding: 10px 16px;
     border-radius: 999px;
     border: 1px solid #ccc;
     background: #fff;
     color: #333;
     font-size: 14px;
     cursor: pointer;
+    flex-shrink: 0;
+    white-space: nowrap;
   }
   .area-btn:hover { background: #f0f0f0; }
   .area-btn.active {
@@ -158,6 +192,11 @@
   }
 
   .empty-msg { color: #888; font-size: 14px; }
+  .foreign-notice {
+    color: #888;
+    font-size: 12px;
+    margin: -6px 0 14px;
+  }
   .error-box {
     background: #fdecea;
     border: 1px solid #f5c2c0;
@@ -193,11 +232,14 @@
 </style>
 </head>
 <body>
+  <div class="top-bar"><div id="lang-bar" class="lang-bar"></div></div>
   <div id="area-bar" class="area-bar"></div>
-  <div id="app">불러오는 중...</div>
+  <div id="app">Loading...</div>
 
+  <script src="lang.js"></script>
   <script>
     // 혼잡도 4단계별 색상 (이 4가지 외의 값은 모두 회색으로 표시)
+    // 키는 서울시 API가 내려주는 원래(한국어) 값 그대로 사용 — 화면 언어와 무관한 내부 식별자
     var LEVEL_COLORS = {
       '여유': '#2e7d32',
       '보통': '#1565c0',
@@ -211,9 +253,21 @@
     }
 
     // 값이 없거나(undefined/null) 빈 문자열이면 안내 문구로 대체하고,
-    // 예상치 못한 문자열이 오면 그 값을 그대로 보여준다.
+    // 알려진 4단계면 현재 언어로 번역, 예상치 못한 문자열이 오면 그 값을 그대로 보여준다.
     function levelText(level) {
-      return (level && String(level).trim()) ? level : '정보 없음';
+      var t = LANG[currentLang];
+      if (level && String(level).trim()) {
+        return t.congestLevels[level] || level;
+      }
+      return t.noInfo;
+    }
+
+    // 혼잡도 설명 문구: 알려진 4단계는 현재 언어의 고정 문구를 사용하고,
+    // 예상치 못한 값이면 서울시 API가 내려준 원문(rawMsg)을 그대로 보여준다.
+    function congestMessage(level, rawMsg) {
+      var t = LANG[currentLang];
+      if (level && t.congestMsg[level]) return t.congestMsg[level];
+      return rawMsg || '';
     }
 
     // "2026-08-26 07:00" -> Date 객체
@@ -240,8 +294,11 @@
       return Math.round((min + max) / 2);
     }
 
-    function formatNumber(n) {
-      return n.toLocaleString('ko-KR');
+    // 언어별로 숫자 자릿수 구분과 단위가 다르게 나오도록 처리
+    // 예: 4,250명 / 4,250 people / 4,250人
+    function formatCount(n) {
+      var locale = LOCALE_BY_LANG[currentLang] || 'en-US';
+      return formatTemplate(LANG[currentLang].countUnit, { n: n.toLocaleString(locale) });
     }
 
     // "2026-08-01~2026-09-01" -> Date(2026-09-01), 형식이 다르면 null
@@ -265,19 +322,20 @@
       card.style.backgroundColor = colorOf(live.AREA_CONGEST_LVL);
       card.appendChild(el('p', 'area-name', areaName));
       card.appendChild(el('p', 'congest-level', levelText(live.AREA_CONGEST_LVL)));
-      card.appendChild(el('p', 'congest-msg', live.AREA_CONGEST_MSG || ''));
+      card.appendChild(el('p', 'congest-msg', congestMessage(live.AREA_CONGEST_LVL, live.AREA_CONGEST_MSG)));
       container.appendChild(card);
     }
 
     function renderForecast(container, live) {
+      var t = LANG[currentLang];
       var section = el('section');
-      section.appendChild(el('h2', null, '12시간 인구 예측'));
+      section.appendChild(el('h2', null, t.forecastTitle));
 
       var rows = [];
 
       // 지금(실시간) 데이터를 맨 위에 별도로 추가
       rows.push({
-        timeLabel: '지금 (' + shortTime(live.PPLTN_TIME) + ')',
+        timeLabel: formatTemplate(t.nowWithTime, { time: shortTime(live.PPLTN_TIME) }),
         level: live.AREA_CONGEST_LVL,
         pop: avgPop(live.AREA_PPLTN_MIN, live.AREA_PPLTN_MAX),
         forceNow: true,
@@ -300,7 +358,7 @@
         var isNow = r.forceNow || isSameHour(r.time, now);
         var row = el('div', 'fcst-row' + (isNow ? ' is-now' : ''));
 
-        var timeEl = el('div', 'fcst-time', r.timeLabel + (isNow && !r.forceNow ? '<span class="now-tag">지금</span>' : ''));
+        var timeEl = el('div', 'fcst-time', r.timeLabel + (isNow && !r.forceNow ? '<span class="now-tag">' + t.nowTag + '</span>' : ''));
 
         var track = el('div', 'fcst-bar-track');
         var fill = el('div', 'fcst-bar-fill');
@@ -309,7 +367,7 @@
         fill.style.backgroundColor = colorOf(r.level);
         track.appendChild(fill);
 
-        var popEl = el('div', 'fcst-pop', levelText(r.level) + ' · ' + formatNumber(r.pop) + '명');
+        var popEl = el('div', 'fcst-pop', levelText(r.level) + ' · ' + formatCount(r.pop));
 
         row.appendChild(timeEl);
         row.appendChild(track);
@@ -321,11 +379,18 @@
     }
 
     function renderEvents(container, events) {
+      var t = LANG[currentLang];
       var section = el('section');
-      section.appendChild(el('h2', null, '문화행사'));
+      section.appendChild(el('h2', null, t.eventsTitle));
+
+      // 문화행사 제목/기간/장소는 서울시가 한국어로만 제공하므로, 외국어 모드에서는
+      // 번역이 아니라 "한국어로 제공된다"는 안내만 작게 붙인다.
+      if (currentLang !== 'ko' && t.eventsForeignNotice) {
+        section.appendChild(el('p', 'foreign-notice', t.eventsForeignNotice));
+      }
 
       if (!events || events.length === 0) {
-        section.appendChild(el('p', 'empty-msg', '현재 등록된 문화행사가 없습니다.'));
+        section.appendChild(el('p', 'empty-msg', t.noEvents));
         container.appendChild(section);
         return;
       }
@@ -363,14 +428,14 @@
         }
 
         var body = el('div', 'event-body');
-        var nameHtml = ev.EVENT_NM || '(제목 없음)';
+        var nameHtml = ev.EVENT_NM || t.noTitle;
         var endDate = eventEndDate(ev.EVENT_PERIOD);
         if (endDate) {
           // 날짜 단위로만 비교 (종료일 당일도 "곧 종료"에 포함)
           var todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
           var diff = endDate - todayStart;
           if (diff >= 0 && diff <= oneWeekMs) {
-            nameHtml += ' <span class="ending-soon-tag">곧 종료</span>';
+            nameHtml += ' <span class="ending-soon-tag">' + t.endingSoon + '</span>';
           }
         }
         body.appendChild(el('p', 'event-name', nameHtml));
@@ -385,35 +450,68 @@
       container.appendChild(section);
     }
 
+    // 지금 화면에 무엇이 떠 있는지 기억해뒀다가, 언어를 바꿀 때 다시 불러오지 않고
+    // 같은 데이터를 새 언어로 즉시 다시 그리기 위한 상태값
+    var lastMode = 'loading'; // 'loading' | 'data' | 'error'
+    var lastData = null;
+    var lastErrorInfo = null;
+
     function render(data) {
+      lastMode = 'data';
+      lastData = data;
+
       var app = document.getElementById('app');
       app.innerHTML = '';
 
       var city = data.CITYDATA;
       var live = city.LIVE_PPLTN_STTS[0];
+      var areaName = LANG[currentLang].areas[currentAreaCode] || city.AREA_NM;
 
-      renderHeader(app, city.AREA_NM, live);
-      app.appendChild(el('p', 'updated-at', live.PPLTN_TIME + ' 기준'));
+      renderHeader(app, areaName, live);
+      app.appendChild(el('p', 'updated-at', formatTemplate(LANG[currentLang].asOf, { time: live.PPLTN_TIME })));
       renderForecast(app, live);
       renderEvents(app, city.EVENT_STTS);
     }
 
     function renderLoading() {
+      lastMode = 'loading';
+
       var app = document.getElementById('app');
       app.innerHTML = '';
-      app.appendChild(el('p', 'loading-msg', '불러오는 중...'));
+      app.appendChild(el('p', 'loading-msg', LANG[currentLang].loading));
     }
 
-    function renderError(message) {
+    // info: { kind: 'abort' | 'clientParse' | 'clientUnknown' | 'network' | 'server', status, area, detail, code, raw }
+    function translateError(info) {
+      var t = LANG[currentLang];
+      if (!info) return '';
+      if (info.kind === 'abort') return t.clientErrors.abort;
+      if (info.kind === 'clientParse') return formatTemplate(t.clientErrors.parseFailed, { status: info.status });
+      if (info.kind === 'clientUnknown') return formatTemplate(t.clientErrors.unknown, { status: info.status });
+      if (info.kind === 'network') return t.clientErrors.network;
+      if (info.kind === 'server') {
+        var tmpl = t.serverErrors[info.code];
+        if (tmpl) return formatTemplate(tmpl, info.params || {});
+        // 서버가 알 수 없는 코드를 보냈을 때만 원문(대개 한국어)을 그대로 보여준다 (예외적인 경우)
+        return info.raw || t.clientErrors.unknown;
+      }
+      return info.raw || '';
+    }
+
+    function renderError(info) {
+      lastMode = 'error';
+      lastErrorInfo = info;
+
+      var t = LANG[currentLang];
       var app = document.getElementById('app');
       app.innerHTML = '';
 
       var box = el('div', 'error-box');
-      box.appendChild(el('strong', null, '데이터를 불러오지 못했습니다.'));
+      box.appendChild(el('strong', null, t.errorTitle));
       box.appendChild(document.createElement('br'));
-      box.appendChild(document.createTextNode(message));
+      box.appendChild(document.createTextNode(translateError(info)));
 
-      var retryBtn = el('button', 'retry-btn', '다시 시도');
+      var retryBtn = el('button', 'retry-btn', t.retry);
       retryBtn.type = 'button';
       retryBtn.onclick = function () { loadCityData(currentAreaCode); };
       box.appendChild(document.createElement('br'));
@@ -422,13 +520,12 @@
       app.appendChild(box);
     }
 
-    // 서울시 실시간 도시데이터 120개 장소 목록 기준 공식 명칭 (server.js와 동일한 코드 사용)
+    // 서울시 실시간 도시데이터 120개 장소 목록 기준 공식 코드 (server.js와 동일한 코드 사용)
+    // 화면에 보여줄 이름은 lang.js의 areas 테이블에서 언어별로 가져온다.
     var AREAS = [
-      { code: 'gwanghwamun', name: '광화문·덕수궁' },
-      { code: 'hongdae', name: '홍대 관광특구' },
-      { code: 'gangnam', name: '강남역' },
-      { code: 'yeouido', name: '여의도한강공원' },
-      { code: 'seongsu', name: '성수카페거리' }
+      'gwanghwamun', 'hongdae', 'gangnam', 'yeouido', 'seongsu',
+      'myeongdong', 'dongdaemun', 'itaewon', 'gyeongbokgung', 'bukchon',
+      'insadong', 'jamsil', 'namsan', 'ddp'
     ];
 
     var currentAreaCode = null;
@@ -438,13 +535,15 @@
     function renderAreaBar() {
       var bar = document.getElementById('area-bar');
       bar.innerHTML = '';
-      AREAS.forEach(function (area) {
-        var btn = el('button', 'area-btn', area.name);
+      AREAS.forEach(function (code) {
+        var name = LANG[currentLang].areas[code] || code;
+        var btn = el('button', 'area-btn', name);
         btn.type = 'button';
-        btn.dataset.areaCode = area.code;
-        btn.onclick = function () { selectArea(area.code); };
+        btn.dataset.areaCode = code;
+        btn.onclick = function () { selectArea(code); };
         bar.appendChild(btn);
       });
+      updateActiveAreaBtn();
     }
 
     function updateActiveAreaBtn() {
@@ -458,6 +557,55 @@
       currentAreaCode = areaCode;
       updateActiveAreaBtn();
       loadCityData(areaCode);
+    }
+
+    // ---- 언어 선택 ----
+    var LANG_STORAGE_KEY = 'seoulAppLang';
+
+    function getInitialLang() {
+      try {
+        var saved = localStorage.getItem(LANG_STORAGE_KEY);
+        if (saved && LANG[saved]) return saved;
+      } catch (e) {
+        // localStorage를 쓸 수 없는 환경(예: 프라이빗 모드)이면 그냥 넘어간다
+      }
+      return detectBrowserLang();
+    }
+
+    var currentLang = getInitialLang();
+
+    function renderLangBar() {
+      var bar = document.getElementById('lang-bar');
+      bar.innerHTML = '';
+      SUPPORTED_LANGS.forEach(function (lang) {
+        var btn = el('button', 'lang-btn', LANGUAGE_LABELS[lang]);
+        btn.type = 'button';
+        btn.dataset.lang = lang;
+        if (lang === currentLang) btn.classList.add('active');
+        btn.onclick = function () { switchLang(lang); };
+        bar.appendChild(btn);
+      });
+    }
+
+    function switchLang(lang) {
+      if (!LANG[lang]) return;
+      currentLang = lang;
+      try { localStorage.setItem(LANG_STORAGE_KEY, lang); } catch (e) {}
+
+      document.documentElement.lang = lang;
+      document.title = LANG[lang].pageTitle || document.title;
+
+      renderLangBar();
+      renderAreaBar();
+
+      // 이미 불러온 데이터/에러/로딩 상태를 다시 요청하지 않고 새 언어로 즉시 다시 그린다
+      if (lastMode === 'data' && lastData) {
+        render(lastData);
+      } else if (lastMode === 'error' && lastErrorInfo) {
+        renderError(lastErrorInfo);
+      } else {
+        renderLoading();
+      }
     }
 
     // 서버(server.js)가 인증키를 숨긴 채 서울시 API를 대신 호출해 결과만 넘겨줌.
@@ -479,9 +627,14 @@
       fetch('/api/citydata?area=' + encodeURIComponent(areaCode), controller ? { signal: controller.signal } : {})
         .then(function (res) {
           return res.json().catch(function () {
-            throw new Error('서버 응답을 해석하지 못했습니다 (상태 코드 ' + res.status + ')');
+            throw { kind: 'clientParse', status: res.status };
           }).then(function (body) {
-            if (!res.ok) throw new Error(body.error || ('알 수 없는 오류 (상태 코드 ' + res.status + ')'));
+            if (!res.ok) {
+              if (body && body.code) {
+                throw { kind: 'server', code: body.code, raw: body.error, params: { status: res.status, area: body.area, detail: body.detail } };
+              }
+              throw { kind: 'clientUnknown', status: res.status };
+            }
             return body;
           });
         })
@@ -494,15 +647,24 @@
         .catch(function (err) {
           if (timer) clearTimeout(timer);
           if (areaCode !== currentAreaCode) return;
-          var message = (err.name === 'AbortError')
-            ? '요청 시간이 너무 오래 걸려 중단했습니다.'
-            : err.message;
-          renderError(message);
+
+          var info;
+          if (err && err.name === 'AbortError') {
+            info = { kind: 'abort' };
+          } else if (err && err.kind) {
+            info = err;
+          } else {
+            info = { kind: 'network' };
+          }
+          renderError(info);
         });
     }
 
+    document.documentElement.lang = currentLang;
+    document.title = LANG[currentLang].pageTitle || document.title;
+    renderLangBar();
     renderAreaBar();
-    selectArea(AREAS[0].code);
+    selectArea(AREAS[0]);
   </script>
 </body>
 </html>
