@@ -469,6 +469,133 @@
     margin: -12px 0 24px;
     text-align: right;
   }
+
+  /* 4. 긴급전화 SOS 버튼 — 화면 어디서나(스크롤 위치와 무관하게) 항상 보이도록
+     position: fixed로 우측 하단에 고정한다. 급할 때 찾아 헤매지 않도록 색은
+     혼잡도 "붐빔"과 같은 강한 빨강을 써서 눈에 바로 띄게 한다. */
+  .sos-fab {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 13px 18px;
+    border: none;
+    border-radius: 999px;
+    background: #c62828;
+    color: #fff;
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 14px rgba(198, 38, 38, 0.5);
+    cursor: pointer;
+  }
+  .sos-fab:hover { background: #b71c1c; }
+  .sos-fab:active { transform: scale(0.97); }
+  .sos-fab-icon { width: 18px; height: 18px; flex-shrink: 0; }
+
+  /* 뒤 배경 어둡게 깔고, 목록은 하단에서 올라오는 시트 형태로 (폰 화면에서 누르기 편하도록) */
+  .sos-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .sos-overlay[hidden] { display: none; }
+  .sos-sheet {
+    width: 100%;
+    max-width: 480px;
+    max-height: 85vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 18px 18px 0 0;
+    padding: 18px 16px 28px;
+  }
+  .sos-sheet-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .sos-sheet-title { font-size: 18px; font-weight: 800; margin: 0; color: #222; }
+  .sos-close-btn {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: #f0f0f0;
+    color: #333;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .sos-close-btn:hover { background: #e2e2e2; }
+
+  .sos-section { margin-bottom: 18px; }
+  .sos-section:last-child { margin-bottom: 0; }
+  .sos-section-title {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0 0 8px;
+  }
+  /* 긴급(112/119)은 빨강, 다국어 상담은 파랑, 평일 상담은 회색 — 실수로
+     엉뚱한 곳에 걸지 않도록 색과 배치로 확실히 구분한다 */
+  .sos-section-emergency .sos-section-title { color: #c62828; }
+  .sos-section-multilingual .sos-section-title { color: #1565c0; }
+  .sos-section-weekday .sos-section-title { color: #666; }
+
+  .sos-card { border-radius: 12px; padding: 14px; margin-bottom: 10px; }
+  .sos-section-emergency .sos-card { background: #fdecea; border: 1.5px solid #f1a9a4; }
+  .sos-section-multilingual .sos-card { background: #eaf2fc; border: 1px solid #bcd6f5; }
+  .sos-section-weekday .sos-card { background: #f4f5f7; border: 1px solid #ddd; }
+  .sos-card:last-child { margin-bottom: 0; }
+
+  .sos-card-top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+  .sos-card-name { font-size: 15px; font-weight: 800; margin: 0; color: #222; }
+  .sos-card-hours {
+    flex-shrink: 0;
+    font-size: 11px;
+    font-weight: 700;
+    color: #555;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 2px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .sos-card-desc { font-size: 12.5px; color: #555; line-height: 1.45; margin: 6px 0 10px; }
+
+  .sos-card-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+  .sos-call-btn {
+    flex: 1 1 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 10px 6px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+  }
+  .sos-call-btn-label { font-size: 10px; font-weight: 700; opacity: 0.85; }
+  .sos-call-btn-number { font-size: 14px; font-weight: 800; }
+
+  .sos-section-emergency .sos-call-btn { background: #c62828; color: #fff; flex-basis: 100%; }
+  .sos-section-multilingual .sos-call-btn.domestic,
+  .sos-section-weekday .sos-call-btn.domestic { background: #1565c0; color: #fff; }
+  .sos-section-multilingual .sos-call-btn.intl,
+  .sos-section-weekday .sos-call-btn.intl { background: #fff; color: #1565c0; border: 1.5px solid #1565c0; }
+
+  .sos-card-note { font-size: 11px; color: #888; margin: 8px 0 0; line-height: 1.4; }
 </style>
 </head>
 <body>
@@ -491,6 +618,24 @@
     <div class="area-select-panel" id="area-select-panel" role="listbox" hidden></div>
   </div>
   <div id="app">Loading...</div>
+
+  <!-- 긴급전화 SOS 버튼: 화면 어디서나 스크롤과 무관하게 항상 보이도록 body 최상위에 둔다 -->
+  <button type="button" class="sos-fab" id="sos-fab" aria-haspopup="dialog" aria-expanded="false">
+    <svg class="sos-fab-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20.6c0 .6-.4 1-1 1C10.4 21.6 2.4 13.6 2.4 4.9c0-.6.4-1 1-1H7c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1.1L6.6 10.8z" fill="currentColor"/>
+    </svg>
+    <span id="sos-fab-text">SOS</span>
+  </button>
+
+  <div class="sos-overlay" id="sos-overlay" hidden>
+    <div class="sos-sheet" role="dialog" aria-modal="true" aria-labelledby="sos-sheet-title">
+      <div class="sos-sheet-header">
+        <h2 class="sos-sheet-title" id="sos-sheet-title"></h2>
+        <button type="button" class="sos-close-btn" id="sos-close-btn">&#10005;</button>
+      </div>
+      <div id="sos-sections"></div>
+    </div>
+  </div>
 
   <script src="lang.js"></script>
   <script>
@@ -1034,6 +1179,87 @@
       if (areaSelectOpen && (e.key === 'Escape' || e.key === 'Esc')) closeAreaSelect();
     });
 
+    // ---- 긴급전화(SOS) ----
+    var sosOpen = false;
+
+    // 국제전화 번호가 있으면 "국내용/해외 로밍" 두 버튼, 없으면(112/119) 번호 하나만 꽉 채워 보여준다
+    function sosCallButtonsHtml(t, contact) {
+      if (contact.intlNumber) {
+        return (
+          '<a class="sos-call-btn domestic" href="tel:' + contact.domesticNumber + '">' +
+            '<span class="sos-call-btn-label">' + t.domesticLabel + '</span>' +
+            '<span class="sos-call-btn-number">' + contact.domesticDisplay + '</span>' +
+          '</a>' +
+          '<a class="sos-call-btn intl" href="tel:' + contact.intlNumber + '">' +
+            '<span class="sos-call-btn-label">' + t.intlLabel + '</span>' +
+            '<span class="sos-call-btn-number">' + contact.intlDisplay + '</span>' +
+          '</a>'
+        );
+      }
+      return (
+        '<a class="sos-call-btn" href="tel:' + contact.domesticNumber + '">' +
+          '<span class="sos-call-btn-number">' + contact.domesticDisplay + '</span>' +
+        '</a>'
+      );
+    }
+
+    function renderSosFab() {
+      var t = LANG[currentLang].emergency;
+      document.getElementById('sos-fab').setAttribute('aria-label', t.fabAriaLabel);
+    }
+
+    function renderSosSheet() {
+      var t = LANG[currentLang].emergency;
+      document.getElementById('sos-sheet-title').textContent = t.modalTitle;
+      document.getElementById('sos-close-btn').setAttribute('aria-label', t.closeLabel);
+
+      var container = document.getElementById('sos-sections');
+      container.innerHTML = '';
+
+      t.sections.forEach(function (sec) {
+        var secEl = el('div', 'sos-section sos-section-' + sec.key);
+        secEl.appendChild(el('p', 'sos-section-title', sec.title));
+
+        sec.contacts.forEach(function (c) {
+          var card = el('div', 'sos-card');
+          var top = el('div', 'sos-card-top');
+          top.appendChild(el('p', 'sos-card-name', c.name));
+          top.appendChild(el('span', 'sos-card-hours', c.hours));
+          card.appendChild(top);
+          card.appendChild(el('p', 'sos-card-desc', c.desc));
+          card.appendChild(el('div', 'sos-card-buttons', sosCallButtonsHtml(t, c)));
+          if (c.note) card.appendChild(el('p', 'sos-card-note', c.note));
+          secEl.appendChild(card);
+        });
+
+        container.appendChild(secEl);
+      });
+    }
+
+    function openSos() {
+      sosOpen = true;
+      document.getElementById('sos-overlay').hidden = false;
+      document.getElementById('sos-fab').setAttribute('aria-expanded', 'true');
+    }
+
+    function closeSos() {
+      sosOpen = false;
+      document.getElementById('sos-overlay').hidden = true;
+      document.getElementById('sos-fab').setAttribute('aria-expanded', 'false');
+    }
+
+    document.getElementById('sos-fab').onclick = openSos;
+    document.getElementById('sos-close-btn').onclick = closeSos;
+
+    // 시트 바깥(어두운 배경)을 누르면 닫기 — 시트 안쪽을 누른 건 무시
+    document.getElementById('sos-overlay').onclick = function (e) {
+      if (e.target.id === 'sos-overlay') closeSos();
+    };
+
+    document.addEventListener('keydown', function (e) {
+      if (sosOpen && (e.key === 'Escape' || e.key === 'Esc')) closeSos();
+    });
+
     // ---- 언어 선택 ----
     var LANG_STORAGE_KEY = 'seoulAppLang';
 
@@ -1078,6 +1304,8 @@
       renderYtBanner();
       renderLangBar();
       renderAreaBar();
+      renderSosFab();
+      renderSosSheet();
 
       // 이미 불러온 데이터/에러/로딩 상태를 다시 요청하지 않고 새 언어로 즉시 다시 그린다
       // (문화행사는 언어별로 소스가 다르므로 renderWithEvents가 필요하면 다시 불러온다)
@@ -1147,6 +1375,8 @@
     renderYtBanner();
     renderLangBar();
     renderAreaBar();
+    renderSosFab();
+    renderSosSheet();
     selectArea(AREAS[0]);
     // 목록을 열기 전에 인기 지역 점이 이미 채워져 있도록 백그라운드로 미리 불러온다
     prefetchPopularCongestion();

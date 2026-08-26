@@ -61,6 +61,96 @@ var LANG = {
       ddp: 'DDP(동대문디자인플라자)'
     },
 
+    // 긴급전화 기능: 하단 고정 SOS 버튼을 누르면 뜨는 목록에 쓰이는 문구.
+    // 번호(domesticNumber/intlNumber)는 언어와 무관하게 항상 같은 값이라 각 언어 블록에
+    // 그대로 반복해 둔다 (이 파일의 다른 항목들과 같은 방식).
+    emergency: {
+      fabAriaLabel: '긴급전화',
+      modalTitle: '긴급 연락처',
+      closeLabel: '닫기',
+      domesticLabel: '국내용',
+      intlLabel: '해외 로밍',
+      sections: [
+        {
+          key: 'emergency',
+          title: '긴급 (생명이 위급할 때)',
+          contacts: [
+            {
+              id: 'police',
+              name: '112 경찰',
+              hours: '24시간',
+              desc: '생명이 위급하거나 범죄가 발생했을 때',
+              domesticNumber: '112',
+              domesticDisplay: '112',
+              note: '로밍 중에도 국가번호 없이 그대로 눌러도 연결돼요'
+            },
+            {
+              id: 'fire',
+              name: '119 화재·구급',
+              hours: '24시간',
+              desc: '화재, 사고, 응급환자가 발생했을 때',
+              domesticNumber: '119',
+              domesticDisplay: '119',
+              note: '로밍 중에도 국가번호 없이 그대로 눌러도 연결돼요'
+            }
+          ]
+        },
+        {
+          key: 'multilingual',
+          title: '다국어 상담 (24시간)',
+          contacts: [
+            {
+              id: 't1330',
+              name: '1330 관광통역안내',
+              hours: '24시간 · 8개 언어',
+              desc: '어디에 전화해야 할지 모르겠다면 이 번호로 먼저 연락하세요',
+              domesticNumber: '1330',
+              domesticDisplay: '1330',
+              intlNumber: '+82-2-1330',
+              intlDisplay: '+82-2-1330'
+            },
+            {
+              id: 'bbb',
+              name: '1588-5644 BBB 통역봉사',
+              hours: '24시간 · 20개 언어',
+              desc: '1330 통역이 안 되는 언어라면 이 번호로',
+              domesticNumber: '1588-5644',
+              domesticDisplay: '1588-5644',
+              intlNumber: '+82-1588-5644',
+              intlDisplay: '+82-1588-5644',
+              note: '통신사에 따라 국제전화 연결이 안 될 수 있어요'
+            }
+          ]
+        },
+        {
+          key: 'weekday',
+          title: '평일 상담',
+          contacts: [
+            {
+              id: 'dasan120',
+              name: '02-120 서울시 다산콜',
+              hours: '평일 09:00~18:00',
+              desc: '대중교통·생활 민원 등 서울시 문의 (9번 → 1 영어 · 2 중국어 · 3 일본어)',
+              domesticNumber: '02-120',
+              domesticDisplay: '02-120',
+              intlNumber: '+82-2-731-2120',
+              intlDisplay: '+82-2-731-2120'
+            },
+            {
+              id: 'help1345',
+              name: '1345 외국인종합안내센터',
+              hours: '평일 09:00~22:00 · 20개 언어',
+              desc: '체류·비자 등 출입국 관련 문의가 있을 때',
+              domesticNumber: '1345',
+              domesticDisplay: '1345',
+              intlNumber: '+82-1345',
+              intlDisplay: '+82-1345'
+            }
+          ]
+        }
+      ]
+    },
+
     // 혼잡도 4단계 표시 텍스트 (키는 서울시 API가 내려주는 원래 값)
     congestLevels: {
       '여유': '여유',
@@ -139,6 +229,93 @@ var LANG = {
       ddp: 'DDP (Dongdaemun Design Plaza)'
     },
 
+    emergency: {
+      fabAriaLabel: 'Emergency call',
+      modalTitle: 'Emergency Contacts',
+      closeLabel: 'Close',
+      domesticLabel: 'In Korea',
+      intlLabel: 'From abroad',
+      sections: [
+        {
+          key: 'emergency',
+          title: 'Emergency (life-threatening)',
+          contacts: [
+            {
+              id: 'police',
+              name: 'Police (112)',
+              hours: '24/7',
+              desc: 'Life-threatening danger or a crime in progress',
+              domesticNumber: '112',
+              domesticDisplay: '112',
+              note: 'Works even while roaming — no country code needed'
+            },
+            {
+              id: 'fire',
+              name: 'Fire & Ambulance (119)',
+              hours: '24/7',
+              desc: 'Fire, accidents, or a medical emergency',
+              domesticNumber: '119',
+              domesticDisplay: '119',
+              note: 'Works even while roaming — no country code needed'
+            }
+          ]
+        },
+        {
+          key: 'multilingual',
+          title: 'Multilingual Help (24/7)',
+          contacts: [
+            {
+              id: 't1330',
+              name: 'Tourist Info & Interpretation (1330)',
+              hours: '24/7 · 8 languages',
+              desc: 'Not sure who to call? Start here',
+              domesticNumber: '1330',
+              domesticDisplay: '1330',
+              intlNumber: '+82-2-1330',
+              intlDisplay: '+82-2-1330'
+            },
+            {
+              id: 'bbb',
+              name: 'BBB Interpretation Volunteers (1588-5644)',
+              hours: '24/7 · 20 languages',
+              desc: "For languages 1330 doesn't cover",
+              domesticNumber: '1588-5644',
+              domesticDisplay: '1588-5644',
+              intlNumber: '+82-1588-5644',
+              intlDisplay: '+82-1588-5644',
+              note: 'May not connect on some carriers'
+            }
+          ]
+        },
+        {
+          key: 'weekday',
+          title: 'Weekday Help',
+          contacts: [
+            {
+              id: 'dasan120',
+              name: 'Seoul Dasan Call Center (120)',
+              hours: 'Weekdays 09:00–18:00',
+              desc: 'Seoul city services & daily-life questions (press 9, then 1 English / 2 Chinese / 3 Japanese)',
+              domesticNumber: '02-120',
+              domesticDisplay: '02-120',
+              intlNumber: '+82-2-731-2120',
+              intlDisplay: '+82-2-731-2120'
+            },
+            {
+              id: 'help1345',
+              name: 'Immigration Contact Center (1345)',
+              hours: 'Weekdays 09:00–22:00 · 20 languages',
+              desc: 'Visa & immigration questions',
+              domesticNumber: '1345',
+              domesticDisplay: '1345',
+              intlNumber: '+82-1345',
+              intlDisplay: '+82-1345'
+            }
+          ]
+        }
+      ]
+    },
+
     congestLevels: {
       '여유': 'Relaxed',
       '보통': 'Normal',
@@ -212,6 +389,93 @@ var LANG = {
       ddp: 'DDP(東大門デザインプラザ)'
     },
 
+    emergency: {
+      fabAriaLabel: '緊急電話',
+      modalTitle: '緊急連絡先',
+      closeLabel: '閉じる',
+      domesticLabel: '韓国国内から',
+      intlLabel: '海外ローミング',
+      sections: [
+        {
+          key: 'emergency',
+          title: '緊急(命の危険があるとき)',
+          contacts: [
+            {
+              id: 'police',
+              name: '警察 (112)',
+              hours: '24時間',
+              desc: '生命の危険や犯罪が発生したとき',
+              domesticNumber: '112',
+              domesticDisplay: '112',
+              note: 'ローミング中でも国番号なしでそのままかけられます'
+            },
+            {
+              id: 'fire',
+              name: '消防・救急 (119)',
+              hours: '24時間',
+              desc: '火災、事故、急病人が発生したとき',
+              domesticNumber: '119',
+              domesticDisplay: '119',
+              note: 'ローミング中でも国番号なしでそのままかけられます'
+            }
+          ]
+        },
+        {
+          key: 'multilingual',
+          title: '多言語相談(24時間)',
+          contacts: [
+            {
+              id: 't1330',
+              name: '観光通訳案内 (1330)',
+              hours: '24時間・8言語対応',
+              desc: 'どこに電話すればいいか分からない時はまずこちら',
+              domesticNumber: '1330',
+              domesticDisplay: '1330',
+              intlNumber: '+82-2-1330',
+              intlDisplay: '+82-2-1330'
+            },
+            {
+              id: 'bbb',
+              name: 'BBB通訳ボランティア (1588-5644)',
+              hours: '24時間・20言語対応',
+              desc: '1330で対応していない言語はこちら',
+              domesticNumber: '1588-5644',
+              domesticDisplay: '1588-5644',
+              intlNumber: '+82-1588-5644',
+              intlDisplay: '+82-1588-5644',
+              note: 'キャリアによっては繋がらないことがあります'
+            }
+          ]
+        },
+        {
+          key: 'weekday',
+          title: '平日相談',
+          contacts: [
+            {
+              id: 'dasan120',
+              name: 'ソウルダサンコールセンター (120)',
+              hours: '平日9:00〜18:00',
+              desc: '交通・生活に関するソウル市への問い合わせ(9→1英語・2中国語・3日本語)',
+              domesticNumber: '02-120',
+              domesticDisplay: '02-120',
+              intlNumber: '+82-2-731-2120',
+              intlDisplay: '+82-2-731-2120'
+            },
+            {
+              id: 'help1345',
+              name: '外国人総合案内センター (1345)',
+              hours: '平日9:00〜22:00・20言語対応',
+              desc: '在留・ビザなど出入国関連の問い合わせ',
+              domesticNumber: '1345',
+              domesticDisplay: '1345',
+              intlNumber: '+82-1345',
+              intlDisplay: '+82-1345'
+            }
+          ]
+        }
+      ]
+    },
+
     congestLevels: {
       '여유': '空いている',
       '보통': '普通',
@@ -283,6 +547,93 @@ var LANG = {
       jamsil: '蚕室',
       namsan: '南山公园(首尔塔)',
       ddp: 'DDP(东大门设计广场)'
+    },
+
+    emergency: {
+      fabAriaLabel: '紧急电话',
+      modalTitle: '紧急联系电话',
+      closeLabel: '关闭',
+      domesticLabel: '韩国境内拨打',
+      intlLabel: '境外/漫游拨打',
+      sections: [
+        {
+          key: 'emergency',
+          title: '紧急(生命危险时)',
+          contacts: [
+            {
+              id: 'police',
+              name: '警察 (112)',
+              hours: '24小时',
+              desc: '生命危险或发生犯罪时',
+              domesticNumber: '112',
+              domesticDisplay: '112',
+              note: '漫游状态下无需加国家代码,直接拨打即可'
+            },
+            {
+              id: 'fire',
+              name: '消防·急救 (119)',
+              hours: '24小时',
+              desc: '发生火灾、事故或急症时',
+              domesticNumber: '119',
+              domesticDisplay: '119',
+              note: '漫游状态下无需加国家代码,直接拨打即可'
+            }
+          ]
+        },
+        {
+          key: 'multilingual',
+          title: '多语言咨询(24小时)',
+          contacts: [
+            {
+              id: 't1330',
+              name: '旅游咨询及翻译 (1330)',
+              hours: '24小时·提供8种语言',
+              desc: '不知道该打给谁?先拨打这个号码',
+              domesticNumber: '1330',
+              domesticDisplay: '1330',
+              intlNumber: '+82-2-1330',
+              intlDisplay: '+82-2-1330'
+            },
+            {
+              id: 'bbb',
+              name: 'BBB义务翻译服务 (1588-5644)',
+              hours: '24小时·提供20种语言',
+              desc: '1330未提供的语言可拨打此号码',
+              domesticNumber: '1588-5644',
+              domesticDisplay: '1588-5644',
+              intlNumber: '+82-1588-5644',
+              intlDisplay: '+82-1588-5644',
+              note: '视运营商而定,可能无法接通'
+            }
+          ]
+        },
+        {
+          key: 'weekday',
+          title: '工作日咨询',
+          contacts: [
+            {
+              id: 'dasan120',
+              name: '首尔市茶山呼叫中心 (120)',
+              hours: '工作日 09:00–18:00',
+              desc: '首尔市交通、生活相关咨询(按9,再按1英语/2中文/3日语)',
+              domesticNumber: '02-120',
+              domesticDisplay: '02-120',
+              intlNumber: '+82-2-731-2120',
+              intlDisplay: '+82-2-731-2120'
+            },
+            {
+              id: 'help1345',
+              name: '外国人综合咨询中心 (1345)',
+              hours: '工作日 09:00–22:00·提供20种语言',
+              desc: '签证及出入境相关咨询',
+              domesticNumber: '1345',
+              domesticDisplay: '1345',
+              intlNumber: '+82-1345',
+              intlDisplay: '+82-1345'
+            }
+          ]
+        }
+      ]
     },
 
     congestLevels: {
