@@ -239,17 +239,100 @@
   }
   .area-dot.loaded { border: none; }
 
-  /* 1. 상단 지역명 + 혼잡도 */
-  .header-card {
-    border-radius: 16px;
-    padding: 28px 24px;
+  /* 1. 상단 지역명 + 혼잡도 — 예전엔 화면 대부분을 차지하는 큰 카드였는데,
+     "이 근처" 정보를 주인공으로 올리기 위해 한 줄짜리 얇은 띠로 줄였다. */
+  .congest-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 10px 16px;
     color: #fff;
-    margin-bottom: 24px;
+    margin-bottom: 6px;
     transition: background-color 0.3s;
   }
-  .area-name { font-size: 20px; opacity: 0.9; margin: 0 0 8px; }
-  .congest-level { font-size: 40px; font-weight: 800; margin: 0 0 8px; }
-  .congest-msg { font-size: 14px; opacity: 0.95; margin: 0; line-height: 1.5; }
+  .congest-bar-area {
+    font-size: 13px;
+    opacity: 0.9;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .congest-bar-level { font-size: 15px; font-weight: 800; flex-shrink: 0; }
+
+  /* 12시간 예측: 기본은 접혀 있고 눌러야 펼쳐진다 */
+  .forecast-toggle-wrap { margin-bottom: 28px; }
+  .forecast-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    color: #555;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .forecast-toggle-btn:hover { background: #f5f5f5; }
+  .forecast-toggle-arrow { transition: transform 0.15s; }
+  .forecast-toggle-btn.open .forecast-toggle-arrow { transform: rotate(180deg); }
+  .forecast-toggle-body { margin-top: 16px; }
+
+  /* 0. "이 근처" — 올리브영, 짐 보관함처럼 도보 거리 안에 있는 실제 장소 정보.
+     이제 화면의 주인공이라 혼잡도 띠 바로 아래, 예측 그래프보다 먼저 온다. */
+  .nearby-section { margin-bottom: 32px; }
+  .nearby-category { margin-bottom: 20px; }
+  .nearby-category:last-child { margin-bottom: 0; }
+  .nearby-category-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .nearby-category-name { font-size: 15px; font-weight: 800; color: #222; }
+  .nearby-category-badge {
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1565c0;
+    background: #eaf2fc;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .nearby-list { display: flex; flex-direction: column; gap: 8px; }
+  .nearby-item {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .nearby-item-name { font-size: 13.5px; font-weight: 700; color: #222; margin: 0 0 3px; line-height: 1.4; }
+  .nearby-item-address { font-size: 12px; color: #888; margin: 0 0 4px; }
+  .nearby-item-walk { font-size: 12px; color: #1565c0; font-weight: 600; margin: 0; }
+  .nearby-more-btn {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 9px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    color: #1565c0;
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .nearby-more-btn:hover { background: #f5f5f5; }
 
   /* 2. 예측 막대 그래프 */
   section { margin-bottom: 32px; }
@@ -905,13 +988,186 @@
       return e;
     }
 
-    function renderHeader(container, areaName, live) {
-      var card = el('div', 'header-card');
-      card.style.backgroundColor = colorOf(live.AREA_CONGEST_LVL);
-      card.appendChild(el('p', 'area-name', areaName));
-      card.appendChild(el('p', 'congest-level', levelText(live.AREA_CONGEST_LVL)));
-      card.appendChild(el('p', 'congest-msg', congestMessage(live.AREA_CONGEST_LVL, live.AREA_CONGEST_MSG)));
-      container.appendChild(card);
+    // el()과 달리 외부 데이터(상호명·주소·역 상세위치 등)를 안전하게 넣을 때 쓴다
+    // (innerHTML이 아니라 textContent라 그 안에 우연히 HTML 특수문자가 있어도 안전함)
+    function elText(tag, className, text) {
+      var e = document.createElement(tag);
+      if (className) e.className = className;
+      e.textContent = text;
+      return e;
+    }
+
+    // 예전엔 지역명 + 큰 혼잡도 글씨 + 설명 문장까지 있는 큰 카드였는데,
+    // "이 근처" 정보를 주인공으로 올리기 위해 한 줄짜리 띠로 압축했다.
+    function renderCongestBar(container, areaName, live) {
+      var bar = el('div', 'congest-bar');
+      bar.style.backgroundColor = colorOf(live.AREA_CONGEST_LVL);
+      bar.appendChild(elText('span', 'congest-bar-area', areaName));
+      bar.appendChild(elText('span', 'congest-bar-level', levelText(live.AREA_CONGEST_LVL)));
+      container.appendChild(bar);
+    }
+
+    // 12시간 예측은 이제 기본으로 접혀 있고, 버튼을 눌러야 펼쳐진다.
+    function renderForecastToggle(container, live) {
+      var t = LANG[currentLang];
+      var wrap = el('div', 'forecast-toggle-wrap');
+
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'forecast-toggle-btn';
+      var label = el('span', null, t.forecastToggleShow);
+      btn.appendChild(label);
+      btn.appendChild(el('span', 'forecast-toggle-arrow', '⌄'));
+      btn.setAttribute('aria-expanded', 'false');
+
+      var body = el('div', 'forecast-toggle-body');
+      body.hidden = true;
+      renderForecast(body, live);
+
+      btn.onclick = function () {
+        var willOpen = body.hidden;
+        body.hidden = !willOpen;
+        btn.classList.toggle('open', willOpen);
+        btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        label.textContent = willOpen ? t.forecastToggleHide : t.forecastToggleShow;
+      };
+
+      wrap.appendChild(btn);
+      wrap.appendChild(body);
+      container.appendChild(wrap);
+    }
+
+    // 역명 표시: 한국어는 원본 그대로("명동역"), 다른 언어는 lang.js의 stationNames로
+    // 번역한 뒤 그 언어에 맞는 "역/Station/駅/站"을 붙인다.
+    function stationDisplayName(t, koreanStationName) {
+      var translated = (t.stationNames && t.stationNames[koreanStationName]) || koreanStationName;
+      if (currentLang === 'ko') return translated + '역';
+      if (currentLang === 'ja') return translated + '駅';
+      if (currentLang === 'zh') return translated + '站';
+      return translated + ' Station';
+    }
+
+    // "도보 5분 · 350m" 형태의 문구. 시속 4km(분당 67m, 지도 앱들이 흔히 쓰는
+    // 보행속도 기준)로 계산한다.
+    function walkLabel(t, meters) {
+      var minutes = Math.max(1, Math.round(meters / 67));
+      var locale = LOCALE_BY_LANG[currentLang] || 'en-US';
+      return formatTemplate(t.walkLabel, { min: minutes, distance: meters.toLocaleString(locale) });
+    }
+
+    // 짐 보관함 상세위치는 실제로 찾아가야 하는 정보라 애매하면 안 되므로, 자주 나오는
+    // 단어("출구/출입구", "게이트", "층", "주변", "내부")만 언어별로 바꾼다. 나머지
+    // 단어(방면, 통로, 상가 등)는 그대로 한국어로 둔다 — 출구 번호 같은 핵심 정보는
+    // 숫자라 언어와 무관하게 이미 통한다.
+    // 출구 번호는 "1,8번출구"처럼 표기가 제각각이라 정규식으로 번호만 뽑아 언어별
+    // 표기로 다시 조립한다 (영어는 "Exit 1, 8", 일본어는 "1・8番出口" 식).
+    var LOCKER_WORD_MAP = {
+      en: { gate: 'Gate', floor: 'F', near: 'near', inside: 'inside' },
+      ja: { gate: 'ゲート', floor: '階', near: '付近', inside: '内' },
+      zh: { gate: '闸机', floor: '楼', near: '附近', inside: '内部' }
+    };
+
+    function translateLockerDetail(detail, lang) {
+      if (lang === 'ko' || !detail) return detail;
+      var map = LOCKER_WORD_MAP[lang];
+      if (!map) return detail;
+
+      var s = detail;
+
+      // "지하2층" -> "B2", "B1층" -> "B1" (지하/B 표기를 하나로 통일한 뒤 층수만 언어별로 붙임)
+      s = s.replace(/지하\s*([0-9]+)\s*층/g, 'B$1' + map.floor);
+      s = s.replace(/B([0-9]+)\s*층/g, 'B$1' + map.floor);
+
+      // "3,4번 출입구" / "7번출구" 등 -> 언어별 출구 표기
+      s = s.replace(/([0-9]+(?:\s*,\s*[0-9]+)*)\s*번\s*(출입구|출구)/g, function (match, nums) {
+        var list = nums.split(/\s*,\s*/);
+        if (lang === 'en') return 'Exit ' + list.join(', ');
+        if (lang === 'ja') return list.join('・') + '番出口';
+        if (lang === 'zh') return list.join('、') + '号出口';
+        return match;
+      });
+
+      // 남은 낱말 치환
+      s = s.split('게이트').join(map.gate);
+      s = s.split('주변').join(map.near);
+      s = s.split('내부').join(map.inside);
+
+      return s;
+    }
+
+    // 목록이 길면(예: 17곳) 가까운 5개만 먼저 보여주고, "더보기"를 눌러야 나머지가
+    // 펼쳐진다. 총 개수는 카테고리 제목 옆 배지에 항상 표시되므로 목록 접힘과 무관하다.
+    var NEARBY_VISIBLE_COUNT = 5;
+
+    function renderNearbyList(container, items, t, buildItemFn) {
+      var list = el('div', 'nearby-list');
+      items.forEach(function (item, idx) {
+        var itemEl = buildItemFn(item);
+        if (idx >= NEARBY_VISIBLE_COUNT) itemEl.hidden = true;
+        list.appendChild(itemEl);
+      });
+      container.appendChild(list);
+
+      if (items.length <= NEARBY_VISIBLE_COUNT) return;
+
+      var remaining = items.length - NEARBY_VISIBLE_COUNT;
+      var moreBtn = document.createElement('button');
+      moreBtn.type = 'button';
+      moreBtn.className = 'nearby-more-btn';
+      var moreLabel = formatTemplate(t.nearbyMoreLabel, { n: remaining });
+      moreBtn.textContent = moreLabel;
+      moreBtn.onclick = function () {
+        var isExpanding = list.children[NEARBY_VISIBLE_COUNT].hidden;
+        Array.prototype.forEach.call(list.children, function (child, idx) {
+          if (idx >= NEARBY_VISIBLE_COUNT) child.hidden = !isExpanding;
+        });
+        moreBtn.textContent = isExpanding ? t.nearbyLessLabel : moreLabel;
+      };
+      container.appendChild(moreBtn);
+    }
+
+    function renderNearby(container, nearby) {
+      var t = LANG[currentLang];
+      var section = el('section', 'nearby-section');
+      section.appendChild(el('h2', null, t.nearbyTitle));
+
+      var oliveyoung = (nearby && nearby.oliveyoung) || { count: 0, stores: [] };
+      if (oliveyoung.stores && oliveyoung.stores.length) {
+        var oyCategory = el('div', 'nearby-category');
+        var oyHeader = el('div', 'nearby-category-header');
+        oyHeader.appendChild(el('span', 'nearby-category-name', '올리브영 · OLIVE YOUNG'));
+        oyHeader.appendChild(el('span', 'nearby-category-badge', formatTemplate(t.nearbyCountUnit, { n: oliveyoung.count })));
+        oyCategory.appendChild(oyHeader);
+
+        renderNearbyList(oyCategory, oliveyoung.stores, t, function (store) {
+          var item = el('div', 'nearby-item');
+          item.appendChild(elText('p', 'nearby-item-name', store.name));
+          item.appendChild(elText('p', 'nearby-item-address', store.address));
+          item.appendChild(elText('p', 'nearby-item-walk', walkLabel(t, store.distanceMeters)));
+          return item;
+        });
+        section.appendChild(oyCategory);
+      }
+
+      var lockers = (nearby && nearby.lockers) || { count: 0, lockers: [] };
+      if (lockers.lockers && lockers.lockers.length) {
+        var lkCategory = el('div', 'nearby-category');
+        var lkHeader = el('div', 'nearby-category-header');
+        lkHeader.appendChild(el('span', 'nearby-category-name', t.nearbyLockerTitle));
+        lkHeader.appendChild(el('span', 'nearby-category-badge', formatTemplate(t.nearbyCountUnit, { n: lockers.count })));
+        lkCategory.appendChild(lkHeader);
+
+        renderNearbyList(lkCategory, lockers.lockers, t, function (loc) {
+          var item = el('div', 'nearby-item');
+          var detail = translateLockerDetail(loc.detail, currentLang);
+          item.appendChild(elText('p', 'nearby-item-name', stationDisplayName(t, loc.stationName) + ' ' + detail));
+          item.appendChild(elText('p', 'nearby-item-walk', walkLabel(t, loc.distanceMeters)));
+          return item;
+        });
+        section.appendChild(lkCategory);
+      }
+
+      container.appendChild(section);
     }
 
     function renderForecast(container, live) {
@@ -1082,7 +1338,7 @@
     var lastData = null;
     var lastErrorInfo = null;
 
-    function render(data, events) {
+    function render(data, events, nearby) {
       lastMode = 'data';
       lastData = data;
 
@@ -1093,9 +1349,10 @@
       var live = city.LIVE_PPLTN_STTS[0];
       var areaName = LANG[currentLang].areas[currentAreaCode] || city.AREA_NM;
 
-      renderHeader(app, areaName, live);
+      renderCongestBar(app, areaName, live);
       app.appendChild(el('p', 'updated-at', formatTemplate(LANG[currentLang].asOf, { time: live.PPLTN_TIME })));
-      renderForecast(app, live);
+      renderNearby(app, nearby);
+      renderForecastToggle(app, live);
       renderEvents(app, events);
     }
 
@@ -1134,16 +1391,52 @@
       return eventsFetchInFlight[lang];
     }
 
-    // citydata를 새로 받아왔을 때/언어를 바꿨을 때 공통으로 호출: 맞는 행사를 구해서 그린다
+    // "이 근처"(올리브영·짐 보관함) 데이터: 분기에 한 번 미리 받아둔 정적 파일이라
+    // 한 번 불러온 지역은 계속 재사용하고 다시 부르지 않는다 (만료 없음).
+    var nearbyCache = {}; // areaCode -> nearby
+    var nearbyFetchInFlight = {}; // areaCode -> Promise
+    var EMPTY_NEARBY = { oliveyoung: { count: 0, stores: [] }, lockers: { count: 0, lockers: [] } };
+
+    function loadNearby(areaCode) {
+      if (nearbyCache[areaCode]) return Promise.resolve(nearbyCache[areaCode]);
+      if (nearbyFetchInFlight[areaCode]) return nearbyFetchInFlight[areaCode];
+
+      var promise = fetch('/api/nearby?area=' + encodeURIComponent(areaCode))
+        .then(function (res) { return res.json().catch(function () { return null; }); })
+        .then(function (body) {
+          var nearby = body || EMPTY_NEARBY;
+          nearbyCache[areaCode] = nearby;
+          return nearby;
+        })
+        .catch(function () {
+          return EMPTY_NEARBY; // 실패해도 전체 화면을 에러로 덮지 않고 조용히 비워서 보여준다
+        });
+
+      nearbyFetchInFlight[areaCode] = promise.then(function (nearby) {
+        delete nearbyFetchInFlight[areaCode];
+        return nearby;
+      });
+      return nearbyFetchInFlight[areaCode];
+    }
+
+    // citydata를 새로 받아왔을 때/언어를 바꿨을 때 공통으로 호출: 맞는 행사·근처 정보를 구해서 그린다
     function renderWithEvents(data) {
+      var areaAtRequest = currentAreaCode;
+      var nearbyPromise = loadNearby(areaAtRequest);
+
       if (currentLang === 'ko') {
-        render(data, data.CITYDATA.EVENT_STTS);
+        nearbyPromise.then(function (nearby) {
+          if (currentAreaCode !== areaAtRequest) return; // 그 사이 지역이 바뀌었으면 무시
+          render(data, data.CITYDATA.EVENT_STTS, nearby);
+        });
         return;
       }
       var langAtRequest = currentLang;
-      loadForeignEvents(langAtRequest).then(function (events) {
-        if (currentLang !== langAtRequest) return; // 그 사이 언어가 바뀌었으면 무시
-        render(data, events);
+      Promise.all([loadForeignEvents(langAtRequest), nearbyPromise]).then(function (results) {
+        if (currentLang !== langAtRequest || currentAreaCode !== areaAtRequest) return; // 그 사이 언어/지역이 바뀌었으면 무시
+        var events = results[0];
+        var nearby = results[1];
+        render(data, events, nearby);
       });
     }
 

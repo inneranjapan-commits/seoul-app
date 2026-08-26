@@ -11,6 +11,7 @@ const path = require('path');
 const { AREAS, fetchCityData } = require('./lib/citydata');
 const { getEvents } = require('./lib/visitseoul-events');
 const { reverseGeocode } = require('./lib/geocode');
+const { getNearby } = require('./lib/nearby-places');
 
 const PORT = 3000;
 const ROOT = __dirname;
@@ -89,6 +90,12 @@ const server = http.createServer((req, res) => {
       .catch((err) => {
         sendJson(res, 500, { error: '알 수 없는 오류가 발생했습니다: ' + err.message, code: 'UNCAUGHT_ERROR', detail: err.message });
       });
+    return;
+  }
+
+  if (urlPath === '/api/nearby') {
+    const area = requestUrl.searchParams.get('area') || '';
+    sendJson(res, 200, getNearby(area));
     return;
   }
 
