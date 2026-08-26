@@ -575,9 +575,11 @@
 
     // 서울시 실시간 도시데이터 120개 장소 목록 기준 공식 코드 (server.js와 동일한 코드 사용)
     // 화면에 보여줄 이름은 lang.js의 areas 테이블에서 언어별로 가져온다.
+    // 관광객이 많이 찾는 5곳(POPULAR_AREA_CODES와 동일)을 목록 맨 위로 올려서,
+    // 혼잡도 점이 있는 곳과 없는 곳이 섞이지 않게 한다.
     var AREAS = [
-      'gwanghwamun', 'hongdae', 'gangnam', 'yeouido', 'seongsu',
-      'myeongdong', 'dongdaemun', 'itaewon', 'gyeongbokgung', 'bukchon',
+      'myeongdong', 'gwanghwamun', 'gyeongbokgung', 'dongdaemun', 'hongdae',
+      'gangnam', 'yeouido', 'seongsu', 'itaewon', 'bukchon',
       'insadong', 'jamsil', 'namsan', 'ddp'
     ];
 
@@ -590,8 +592,9 @@
 
     // 인기 지역 5곳만 미리 데이터를 불러와 목록에 혼잡도 점을 표시한다.
     // 14곳 전부를 매번 불러오면 서울시 API 하루 호출 한도를 금방 써버릴 수 있어,
-    // 원래 기본 지역이었던 5곳으로만 범위를 좁혔다.
-    var POPULAR_AREA_CODES = ['gwanghwamun', 'hongdae', 'gangnam', 'yeouido', 'seongsu'];
+    // 외국인 관광객이 실제로 많이 찾는 5곳으로 범위를 좁혔다.
+    // (여의도한강공원·강남역은 외국인 관광객이 혼잡도를 확인할 이유가 상대적으로 적어서 제외)
+    var POPULAR_AREA_CODES = ['myeongdong', 'gwanghwamun', 'gyeongbokgung', 'dongdaemun', 'hongdae'];
     var popularFetchInFlight = {}; // areaCode -> true (같은 지역 중복 요청 방지)
 
     function renderAreaBar() {
