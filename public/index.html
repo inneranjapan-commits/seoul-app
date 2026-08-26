@@ -1036,9 +1036,9 @@
       return s;
     }
 
-    // 목록이 길면(예: 17곳) 가까운 5개만 먼저 보여주고, "더보기"를 눌러야 나머지가
+    // 목록이 길면(예: 71곳) 가까운 3개만 먼저 보여주고, "더보기"를 눌러야 나머지가
     // 펼쳐진다. 총 개수는 카테고리 제목 옆 배지에 항상 표시되므로 목록 접힘과 무관하다.
-    var NEARBY_VISIBLE_COUNT = 5;
+    var NEARBY_VISIBLE_COUNT = 3;
 
     function renderNearbyList(container, items, t, buildItemFn) {
       var list = el('div', 'nearby-list');
