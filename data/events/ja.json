@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-08-26T06:19:08.028Z",
+  "events": [
+    {
+      "EVENT_NM": "2026 ソウルオータムフェスタ",
+      "EVENT_PERIOD": "2026-09-18~2026-11-29",
+      "areaCode": "dongdaemun"
+    },
+    {
+      "EVENT_NM": "2026ソウル市テコンドー公演",
+      "EVENT_PERIOD": "2026-05-09~2026-10-18",
+      "areaCode": "myeongdong"
+    },
+    {
+      "EVENT_NM": "2026ソウル国際庭園博覧会",
+      "EVENT_PERIOD": "2026-05-01~2026-10-27",
+      "areaCode": "seongsu"
+    },
+    {
+      "EVENT_NM": "2026ソウル野外図書館",
+      "EVENT_PERIOD": "2026-04-23~2026-11-01",
+      "areaCode": "myeongdong"
+    },
+    {
+      "EVENT_NM": "2026ナムサン(南山)コル伝統体験：芸術家の時間",
+      "EVENT_PERIOD": "2026-04-03~2026-10-25",
+      "areaCode": "myeongdong"
+    }
+  ]
+}

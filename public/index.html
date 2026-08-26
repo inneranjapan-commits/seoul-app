@@ -539,47 +539,50 @@
     }
 
     // 문화행사 언어별 소스: 한국어는 서울시 데이터(EVENT_STTS)를 그대로 쓰고,
-    // 외국어(en/ja/zh)는 TourAPI(/api/events)에서 따로 불러온다.
-    var EVENTS_CACHE_TTL_MS = 30 * 60 * 1000; // 서버 캐시(30분)와 맞춤
-    var eventsCache = {}; // lang -> { events, expiresAt }
-    var eventsFetchInFlight = {}; // lang -> Promise
+    // 외국어(en/ja/zh)는 비짓서울 데이터(/api/events, 지역별로 미리 좌표 매칭됨)에서 따로 불러온다.
+    // (TourAPI 관련 코드는 lib/tourapi.js에 그대로 남아있지만 지금은 사용하지 않는다)
+    var EVENTS_CACHE_TTL_MS = 30 * 60 * 1000;
+    var eventsCache = {}; // "lang|areaCode" -> { events, expiresAt }
+    var eventsFetchInFlight = {}; // "lang|areaCode" -> Promise
 
-    function loadForeignEvents(lang) {
-      var cached = eventsCache[lang];
+    function loadForeignEvents(lang, areaCode) {
+      var cacheKey = lang + '|' + areaCode;
+      var cached = eventsCache[cacheKey];
       if (cached && cached.expiresAt > Date.now()) {
         return Promise.resolve(cached.events);
       }
-      if (eventsFetchInFlight[lang]) return eventsFetchInFlight[lang];
+      if (eventsFetchInFlight[cacheKey]) return eventsFetchInFlight[cacheKey];
 
-      var promise = fetch('/api/events?lang=' + encodeURIComponent(lang))
+      var promise = fetch('/api/events?lang=' + encodeURIComponent(lang) + '&area=' + encodeURIComponent(areaCode))
         .then(function (res) {
           return res.json().catch(function () { return null; });
         })
         .then(function (body) {
           var events = (body && body.events) || [];
-          eventsCache[lang] = { events: events, expiresAt: Date.now() + EVENTS_CACHE_TTL_MS };
+          eventsCache[cacheKey] = { events: events, expiresAt: Date.now() + EVENTS_CACHE_TTL_MS };
           return events;
         })
         .catch(function () {
           return []; // 실패해도 전체 화면을 에러로 덮지 않고, 행사 없음으로 조용히 처리
         });
 
-      eventsFetchInFlight[lang] = promise.then(function (events) {
-        delete eventsFetchInFlight[lang];
+      eventsFetchInFlight[cacheKey] = promise.then(function (events) {
+        delete eventsFetchInFlight[cacheKey];
         return events;
       });
-      return eventsFetchInFlight[lang];
+      return eventsFetchInFlight[cacheKey];
     }
 
-    // citydata를 새로 받아왔을 때/언어를 바꿨을 때 공통으로 호출: 언어에 맞는 행사를 구해서 그린다
+    // citydata를 새로 받아왔을 때/언어나 지역을 바꿨을 때 공통으로 호출: 맞는 행사를 구해서 그린다
     function renderWithEvents(data) {
       if (currentLang === 'ko') {
         render(data, data.CITYDATA.EVENT_STTS);
         return;
       }
       var langAtRequest = currentLang;
-      loadForeignEvents(langAtRequest).then(function (events) {
-        if (currentLang !== langAtRequest) return; // 그 사이 언어가 또 바뀌었으면 무시
+      var areaAtRequest = currentAreaCode;
+      loadForeignEvents(langAtRequest, areaAtRequest).then(function (events) {
+        if (currentLang !== langAtRequest || currentAreaCode !== areaAtRequest) return; // 그 사이 바뀌었으면 무시
         render(data, events);
       });
     }

@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-08-26T06:16:30.977Z",
+  "events": [
+    {
+      "EVENT_NM": "2026 SEOUL AUTUMN FESTA",
+      "EVENT_PERIOD": "2026-09-18~2026-11-29",
+      "areaCode": "dongdaemun"
+    },
+    {
+      "EVENT_NM": "2026 Seoul Taekwondo Performance",
+      "EVENT_PERIOD": "2026-05-09~2026-10-18",
+      "areaCode": "myeongdong"
+    },
+    {
+      "EVENT_NM": "2026 Seoul International Garden Show",
+      "EVENT_PERIOD": "2026-05-01~2026-10-27",
+      "areaCode": "seongsu"
+    },
+    {
+      "EVENT_NM": "2026 Seoul Outdoor Library",
+      "EVENT_PERIOD": "2026-04-23~2026-11-01",
+      "areaCode": "myeongdong"
+    },
+    {
+      "EVENT_NM": "2026 Namsangol Traditional Experience : Artist's Time",
+      "EVENT_PERIOD": "2026-04-03~2026-10-25",
+      "areaCode": "myeongdong"
+    }
+  ]
+}
