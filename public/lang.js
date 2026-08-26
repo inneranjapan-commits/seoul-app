@@ -90,7 +90,8 @@ var LANG = {
           unsupported: '이 기기(브라우저)는 위치 확인 기능을 지원하지 않아요.'
         },
         errorFallbackIntro: '대신 아래 1330 관광통역안내로 전화해서 도움을 요청하세요',
-        refresh: '다시 확인'
+        refresh: '다시 확인',
+        showToNearbyHint: '이 화면을 주변 사람에게 보여주세요'
       },
       sections: [
         {
@@ -275,7 +276,8 @@ var LANG = {
           unsupported: "This device/browser doesn't support location services."
         },
         errorFallbackIntro: 'Call Tourist Info & Interpretation (1330) below for help instead',
-        refresh: 'Check Again'
+        refresh: 'Check Again',
+        showToNearbyHint: 'Show this screen to someone nearby'
       },
       sections: [
         {
@@ -455,7 +457,8 @@ var LANG = {
           unsupported: 'この端末・ブラウザは位置情報機能に対応していません。'
         },
         errorFallbackIntro: '代わりに下の観光通訳案内(1330)に電話して助けを求めてください',
-        refresh: 'もう一度確認'
+        refresh: 'もう一度確認',
+        showToNearbyHint: 'この画面を近くの人に見せてください'
       },
       sections: [
         {
@@ -635,7 +638,8 @@ var LANG = {
           unsupported: '此设备/浏览器不支持定位功能。'
         },
         errorFallbackIntro: '请改为拨打下方的旅游咨询及翻译(1330)寻求帮助',
-        refresh: '重新获取'
+        refresh: '重新获取',
+        showToNearbyHint: '请把这个画面给附近的人看'
       },
       sections: [
         {

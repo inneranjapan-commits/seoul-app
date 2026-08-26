@@ -632,20 +632,21 @@
   }
   @keyframes loc-spin { to { transform: rotate(360deg); } }
 
-  /* 한국어 고정 문구 배지 — "이 화면을 보여주세요". 언어와 무관하게 항상 한국어로만 보인다 */
-  .loc-show-hint {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  /* 한국어 고정 문구 — "도움이 필요합니다. 제 위치는 여기입니다." 화면을 건네받은
+     한국인이 읽는 문구라, 언어와 무관하게 항상 한국어로만 크게 보인다 */
+  .loc-help-ko {
     background: #fff8e1;
     border: 1px solid #ffe082;
     color: #7a5900;
-    font-size: 13px;
+    font-size: 17px;
     font-weight: 800;
-    padding: 8px 10px;
+    line-height: 1.4;
+    padding: 10px 12px;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin: 0 0 6px;
   }
+  /* 관광객 본인이 읽는, 사용자 언어로 된 작은 설명 — "이 화면을 주변 사람에게 보여주세요" */
+  .loc-show-hint-native { font-size: 12px; color: #777; margin: 0 0 12px; line-height: 1.4; }
 
   .loc-address { font-size: 19px; font-weight: 800; color: #1a1a1a; line-height: 1.4; margin: 0 0 8px; }
   .loc-coords-row { display: flex; align-items: baseline; gap: 6px; margin-bottom: 12px; }
@@ -1301,9 +1302,9 @@
     }
 
     // ---- 내 위치 확인 ----
-    // "이 화면을 보여주세요"는 외국인이 한국인에게 내미는 용도라, 화면 언어와 무관하게
-    // 항상 한국어 그대로 보여야 해서 lang.js 번역 목록이 아니라 여기 고정값으로 둔다.
-    var LOCATION_SHOW_HINT_KO = '📍 이 화면을 보여주세요';
+    // 화면을 건네받는 한국인이 읽는 문구라, 화면 언어와 무관하게 항상 한국어 그대로 보여야
+    // 해서 lang.js 번역 목록이 아니라 여기 고정값으로 둔다.
+    var LOCATION_HELP_KO = '도움이 필요합니다. 제 위치는 여기입니다.';
 
     var locState = 'idle'; // 'idle' | 'locating' | 'success' | 'partial' | 'error'
     var locData = { address: null, lat: null, lon: null, errorReason: null };
@@ -1433,7 +1434,9 @@
       }
 
       // 'success' | 'partial' — 위치를 구했을 때 (주소를 못 찾았으면 좌표만 크게 보여준다)
-      card.appendChild(el('p', 'loc-show-hint', LOCATION_SHOW_HINT_KO));
+      // 순서: 한국어 문구(크게, 한국인이 읽음) -> 사용자 언어 설명(작게, 관광객이 읽음) -> 주소(크게)
+      card.appendChild(el('p', 'loc-help-ko', LOCATION_HELP_KO));
+      card.appendChild(el('p', 'loc-show-hint-native', tl.showToNearbyHint));
 
       if (locState === 'success') {
         // 주소는 외부(OSM Nominatim) 응답이라 innerHTML이 아닌 textContent로 안전하게 넣는다
