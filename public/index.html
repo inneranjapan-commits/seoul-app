@@ -187,65 +187,76 @@
     margin-left: 6px;
   }
 
-  /* 3. 문화행사 카드 */
+  /* 3. 문화행사 카드 — 혼잡도·예측이 화면의 중심이 되도록 작고 차분하게 배치 */
+  .events-section {
+    margin-top: 8px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+  }
+  .events-section h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #888;
+    margin: 0 0 10px;
+  }
   .event-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px;
   }
   .event-card {
     display: block;
     background: #fff;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
     transition: transform 0.15s, box-shadow 0.15s;
   }
   .event-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
   }
   .event-thumb {
     width: 100%;
-    height: 130px;
+    height: 80px;
     object-fit: cover;
     background: #ddd;
     display: block;
   }
-  .event-body { padding: 12px 14px; }
+  .event-body { padding: 8px 10px; }
   .event-name {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
-    margin: 0 0 6px;
-    line-height: 1.4;
+    margin: 0 0 4px;
+    line-height: 1.35;
   }
   .event-period, .event-place {
-    font-size: 12px;
-    color: #666;
+    font-size: 11px;
+    color: #888;
     margin: 2px 0;
   }
   .ending-soon-tag {
     display: inline-block;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 700;
     background: #c62828;
     color: #fff;
-    padding: 2px 6px;
+    padding: 1px 5px;
     border-radius: 4px;
     margin-left: 4px;
     vertical-align: middle;
   }
 
   .empty-msg { color: #888; font-size: 14px; }
-  /* 외국어 모드 행사 카드: TourAPI 데이터라 이미지/장소/링크 없이 이름+기간만, 클릭 불가 */
+  /* 외국어 모드 행사 카드: 이미지/장소/링크 없이 이름+기간만, 클릭 불가 */
   .event-card-plain {
     display: block;
     background: #fff;
-    border-radius: 12px;
-    padding: 12px 14px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 8px 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
   }
   .error-box {
     background: #fdecea;
@@ -450,17 +461,14 @@
     }
 
     function renderEvents(container, events) {
+      // 행사가 0건이면 섹션 자체를 아예 그리지 않는다 (혼잡도·예측에 집중되게)
+      if (!events || events.length === 0) return;
+
       var t = LANG[currentLang];
-      var section = el('section');
+      var section = el('section', 'events-section');
       // 외국어 모드는 지역과 무관한 "서울 전체" 목록이므로 제목으로 그 점을 드러낸다
       var title = currentLang === 'ko' ? t.eventsTitle : t.eventsTitleSeoul;
       section.appendChild(el('h2', null, title));
-
-      if (!events || events.length === 0) {
-        section.appendChild(el('p', 'empty-msg', t.noEvents));
-        container.appendChild(section);
-        return;
-      }
 
       var grid = el('div', 'event-grid');
 
