@@ -1,0 +1,5234 @@
+{
+  "generatedAt": "2026-08-26T23:16:34.410Z",
+  "radiusMeters": 800,
+  "areas": {
+    "gwanghwamun": {
+      "centerStationName": "광화문",
+      "count": 45,
+      "stores": [
+        {
+          "name": "CU 광장점",
+          "nameRomanized": "CU Gwangjang",
+          "address": "서울특별시 종로구 새문안로 103-1",
+          "lat": 37.5704817726179,
+          "lon": 126.976183539917,
+          "distanceMeters": 35
+        },
+        {
+          "name": "7-ELEVEN 종로",
+          "nameRomanized": "7-ELEVEN Jongro",
+          "address": "서울특별시 종로구 새문안로9길 21",
+          "lat": 37.5712114655368,
+          "lon": 126.975628641253,
+          "distanceMeters": 111
+        },
+        {
+          "name": "7-ELEVEN 아벤트리",
+          "nameRomanized": "7-ELEVEN Abenteuri",
+          "address": "서울특별시 종로구 종로 1",
+          "lat": 37.5709596388997,
+          "lon": 126.977926618852,
+          "distanceMeters": 128
+        },
+        {
+          "name": "7-ELEVEN 우체국점",
+          "nameRomanized": "7-ELEVEN Uchegug",
+          "address": "서울특별시 종로구 종로 6",
+          "lat": 37.5698424363635,
+          "lon": 126.978096741258,
+          "distanceMeters": 156
+        },
+        {
+          "name": "emart24 종로당주점",
+          "nameRomanized": "emart24 Jongrodangju",
+          "address": "서울특별시 종로구 새문안로5길 11",
+          "lat": 37.5712022675879,
+          "lon": 126.974734386436,
+          "distanceMeters": 177
+        },
+        {
+          "name": "CU",
+          "nameRomanized": "CU",
+          "address": "서울특별시 종로구 새문안로 89",
+          "lat": 37.5704724152497,
+          "lon": 126.974519560417,
+          "distanceMeters": 181
+        },
+        {
+          "name": "CU 중구세종대로점",
+          "nameRomanized": "CU Junggusejongdaero",
+          "address": "서울특별시 중구 세종대로 135-9",
+          "lat": 37.5688239661455,
+          "lon": 126.976308580732,
+          "distanceMeters": 193
+        },
+        {
+          "name": "7-ELEVEN 청계퍼시픽점",
+          "nameRomanized": "7-ELEVEN Cheonggyepeosipig",
+          "address": "서울특별시 중구 청계천로 8",
+          "lat": 37.5688243345344,
+          "lon": 126.978221552342,
+          "distanceMeters": 241
+        },
+        {
+          "name": "CU 청계",
+          "nameRomanized": "CU Cheonggye",
+          "address": "서울특별시 종로구 무교로 37",
+          "lat": 37.5694101411764,
+          "lon": 126.979104298722,
+          "distanceMeters": 257
+        },
+        {
+          "name": "CU 종로1가점",
+          "nameRomanized": "CU Jongro1ga",
+          "address": "서울특별시 종로구 종로 19",
+          "lat": 37.5708518751644,
+          "lon": 126.979918911908,
+          "distanceMeters": 297
+        },
+        {
+          "name": "CU 나호텔점",
+          "nameRomanized": "CU Nahotel",
+          "address": "서울특별시 중구 세종대로 135",
+          "lat": 37.5678148397041,
+          "lon": 126.976252304316,
+          "distanceMeters": 305
+        },
+        {
+          "name": "GS25 청진본",
+          "nameRomanized": "GS25 Cheongjinbon",
+          "address": "서울특별시 종로구 종로3길 38",
+          "lat": 37.5720771565659,
+          "lon": 126.979499748415,
+          "distanceMeters": 309
+        },
+        {
+          "name": "CU 콘코디언점",
+          "nameRomanized": "CU Konkodieon",
+          "address": "서울특별시 종로구 새문안로 76",
+          "lat": 37.5697963703561,
+          "lon": 126.973172769466,
+          "distanceMeters": 311
+        },
+        {
+          "name": "CU 한국프레스",
+          "nameRomanized": "CU Hangugpeureseu",
+          "address": "서울특별시 중구 세종대로 124",
+          "lat": 37.5674277260423,
+          "lon": 126.977871065375,
+          "distanceMeters": 365
+        },
+        {
+          "name": "7-ELEVEN 무교다동점",
+          "nameRomanized": "7-ELEVEN Mugyodadong",
+          "address": "서울특별시 중구 을지로1길 47",
+          "lat": 37.5682659776078,
+          "lon": 126.979681901368,
+          "distanceMeters": 374
+        },
+        {
+          "name": "CU 종로경희궁점",
+          "nameRomanized": "CU Jongrogyeonghuigung",
+          "address": "서울특별시 종로구 경희궁길 4",
+          "lat": 37.5705800003554,
+          "lon": 126.972153722154,
+          "distanceMeters": 389
+        },
+        {
+          "name": "7-ELEVEN 종로당주점",
+          "nameRomanized": "7-ELEVEN Jongrodangju",
+          "address": "서울특별시 종로구 새문안로3길 21",
+          "lat": 37.5721027827678,
+          "lon": 126.972583309699,
+          "distanceMeters": 392
+        },
+        {
+          "name": "CU",
+          "nameRomanized": "CU",
+          "address": "서울특별시 종로구 삼봉로 57",
+          "lat": 37.5725638589083,
+          "lon": 126.980473128586,
+          "distanceMeters": 411
+        },
+        {
+          "name": "CU 예금보험공사점",
+          "nameRomanized": "CU Yegeumboheomgongsa",
+          "address": "서울특별시 중구 청계천로 30",
+          "lat": 37.568500424008,
+          "lon": 126.980802449412,
+          "distanceMeters": 437
+        },
+        {
+          "name": "emart24 청계천점",
+          "nameRomanized": "emart24 Cheonggyecheon",
+          "address": "서울특별시 종로구 청계천로 35",
+          "lat": 37.5693384423181,
+          "lon": 126.981379525626,
+          "distanceMeters": 445
+        },
+        {
+          "name": "7-ELEVEN 세",
+          "nameRomanized": "7-ELEVEN Se",
+          "address": "서울특별시 종로구 종로1길 42-1",
+          "lat": 37.5742213759332,
+          "lon": 126.978661467608,
+          "distanceMeters": 449
+        },
+        {
+          "name": "emart24 시대점",
+          "nameRomanized": "emart24 Sidae",
+          "address": "서울특별시 종로구 사직로8길 42",
+          "lat": 37.5737697482142,
+          "lon": 126.973126063767,
+          "distanceMeters": 470
+        },
+        {
+          "name": "7-ELEVEN 종로",
+          "nameRomanized": "7-ELEVEN Jongro",
+          "address": "서울특별시 종로구 삼봉로 81",
+          "lat": 37.5725280290029,
+          "lon": 126.981786248653,
+          "distanceMeters": 510
+        },
+        {
+          "name": "CU 종로K트윈",
+          "nameRomanized": "CU JongroKteuwin",
+          "address": "서울특별시 종로구 종로1길 50",
+          "lat": 37.5747259978724,
+          "lon": 126.979023571704,
+          "distanceMeters": 513
+        },
+        {
+          "name": "7-ELEVEN 무교",
+          "nameRomanized": "7-ELEVEN Mugyo",
+          "address": "서울특별시 중구 다동길 46",
+          "lat": 37.5678608643793,
+          "lon": 126.981730789069,
+          "distanceMeters": 544
+        },
+        {
+          "name": "CU 연합미디어",
+          "nameRomanized": "CU Yeonhabmidieo",
+          "address": "서울특별시 종로구 율곡로2길 25",
+          "lat": 37.5743658560621,
+          "lon": 126.98051793887,
+          "distanceMeters": 549
+        },
+        {
+          "name": "CU 생산성빌딩점",
+          "nameRomanized": "CU Saengsanseongbilding",
+          "address": "서울특별시 종로구 새문안로5가길 32",
+          "lat": 37.5749141060342,
+          "lon": 126.973544502931,
+          "distanceMeters": 554
+        },
+        {
+          "name": "7-ELEVEN 정동빌딩점",
+          "nameRomanized": "7-ELEVEN Jeongdongbilding",
+          "address": "서울특별시 중구 정동길 21-15",
+          "lat": 37.567849672794,
+          "lon": 126.970864348462,
+          "distanceMeters": 585
+        },
+        {
+          "name": "7-ELEVEN M종각역점",
+          "nameRomanized": "7-ELEVEN Mjonggag Station",
+          "address": "서울특별시 종로구 종로 55",
+          "lat": 37.5702126876782,
+          "lon": 126.983247036955,
+          "distanceMeters": 590
+        },
+        {
+          "name": "CU 을지",
+          "nameRomanized": "CU Eulji",
+          "address": "서울특별시 중구 을지로 29",
+          "lat": 37.5664912382563,
+          "lon": 126.981018026167,
+          "distanceMeters": 598
+        },
+        {
+          "name": "CU 트윈트리",
+          "nameRomanized": "CU Teuwinteuri",
+          "address": "서울특별시 종로구 율곡로 6",
+          "lat": 37.5754469258725,
+          "lon": 126.979781833719,
+          "distanceMeters": 614
+        },
+        {
+          "name": "CU 시청",
+          "nameRomanized": "CU City Hall",
+          "address": "서울특별시 중구 을지로 6",
+          "lat": 37.5653827101198,
+          "lon": 126.979218612111,
+          "distanceMeters": 620
+        },
+        {
+          "name": "CU 경희당점",
+          "nameRomanized": "CU Gyeonghuidang",
+          "address": "서울특별시 종로구 경희궁길 36",
+          "lat": 37.5729130678268,
+          "lon": 126.970069977542,
+          "distanceMeters": 630
+        },
+        {
+          "name": "CU 종각쇼핑",
+          "nameRomanized": "CU Jonggagsyoping",
+          "address": "서울특별시 종로구 종로 54",
+          "lat": 37.5697622502426,
+          "lon": 126.983677278897,
+          "distanceMeters": 633
+        },
+        {
+          "name": "CU 종각센트로폴리스점",
+          "nameRomanized": "CU Jonggagsenteuropolriseu",
+          "address": "서울특별시 종로구 우정국로 26",
+          "lat": 37.5714921580596,
+          "lon": 126.983654261841,
+          "distanceMeters": 633
+        },
+        {
+          "name": "CU 인사동메인점",
+          "nameRomanized": "CU Insadongmein",
+          "address": "서울특별시 종로구 인사동9길 39",
+          "lat": 37.5728706169194,
+          "lon": 126.983201161696,
+          "distanceMeters": 639
+        },
+        {
+          "name": "7-ELEVEN 아벤트리",
+          "nameRomanized": "7-ELEVEN Abenteuri",
+          "address": "서울특별시 종로구 우정국로 46",
+          "lat": 37.5731048948511,
+          "lon": 126.98333694916,
+          "distanceMeters": 661
+        },
+        {
+          "name": "CU 중구정동길점",
+          "nameRomanized": "CU Junggujeongdonggil",
+          "address": "서울특별시 중구 정동길 10",
+          "lat": 37.5674799681894,
+          "lon": 126.969687300266,
+          "distanceMeters": 696
+        },
+        {
+          "name": "GS25 배재공원점",
+          "nameRomanized": "GS25 Baejaegongwon",
+          "address": "서울특별시 중구 서소문로11길 50",
+          "lat": 37.5648498935059,
+          "lon": 126.973129268365,
+          "distanceMeters": 702
+        },
+        {
+          "name": "7-ELEVEN",
+          "nameRomanized": "7-ELEVEN",
+          "address": "서울특별시 종로구 삼일대로17길 51",
+          "lat": 37.5690866312718,
+          "lon": 126.984628255861,
+          "distanceMeters": 729
+        },
+        {
+          "name": "CU 내자주",
+          "nameRomanized": "CU Naejaju",
+          "address": "서울특별시 종로구 사직로 121",
+          "lat": 37.5762382556466,
+          "lon": 126.972185576712,
+          "distanceMeters": 742
+        },
+        {
+          "name": "emart24 서울조선호텔점",
+          "nameRomanized": "emart24 Seouljoseonhotel",
+          "address": "서울특별시 중구 소공로 106",
+          "lat": 37.5644818813093,
+          "lon": 126.980192270748,
+          "distanceMeters": 746
+        },
+        {
+          "name": "7-ELEVEN 종로내자점",
+          "nameRomanized": "7-ELEVEN Jongronaeja",
+          "address": "서울특별시 종로구 사직로 112",
+          "lat": 37.5757875305726,
+          "lon": 126.971234829657,
+          "distanceMeters": 749
+        },
+        {
+          "name": "CU 내외빌딩점",
+          "nameRomanized": "CU Naeoebilding",
+          "address": "서울특별시 중구 을지로 51",
+          "lat": 37.5664916359649,
+          "lon": 126.983677992578,
+          "distanceMeters": 772
+        },
+        {
+          "name": "CU 페럼",
+          "nameRomanized": "CU Pereom",
+          "address": "서울특별시 중구 을지로5길 19",
+          "lat": 37.566933187197,
+          "lon": 126.984141978238,
+          "distanceMeters": 779
+        }
+      ]
+    },
+    "hongdae": {
+      "centerStationName": "홍대입구",
+      "count": 68,
+      "stores": [
+        {
+          "name": "emart24 홍대LG",
+          "nameRomanized": "emart24 HongdaeLG",
+          "address": "서울특별시 마포구 양화로 156",
+          "lat": 37.5561064858956,
+          "lon": 126.923448871669,
+          "distanceMeters": 73
+        },
+        {
+          "name": "7-ELEVEN 마포홍익점",
+          "nameRomanized": "7-ELEVEN Mapohongig",
+          "address": "서울특별시 마포구 홍익로6길 52",
+          "lat": 37.5563053177092,
+          "lon": 126.92439933517,
+          "distanceMeters": 83
+        },
+        {
+          "name": "CU 홍대동교로점",
+          "nameRomanized": "CU Hongdaedonggyoro",
+          "address": "서울특별시 마포구 동교로 190",
+          "lat": 37.5570789643684,
+          "lon": 126.922531152868,
+          "distanceMeters": 105
+        },
+        {
+          "name": "CU 홍대입구역점",
+          "nameRomanized": "CU Hongik Univ. Station",
+          "address": "서울특별시 마포구 동교로 182-5",
+          "lat": 37.5566733299188,
+          "lon": 126.922248634832,
+          "distanceMeters": 123
+        },
+        {
+          "name": "7-ELEVEN 홍대",
+          "nameRomanized": "7-ELEVEN Hongdae",
+          "address": "서울특별시 마포구 어울마당로 130",
+          "lat": 37.5558098491327,
+          "lon": 126.924524326984,
+          "distanceMeters": 130
+        },
+        {
+          "name": "CU 홍대와이즈점",
+          "nameRomanized": "CU Hongdaewaijeu",
+          "address": "서울특별시 마포구 홍익로6길 78",
+          "lat": 37.5570898612089,
+          "lon": 126.925462395252,
+          "distanceMeters": 165
+        },
+        {
+          "name": "7-ELEVEN 연트럴파크점",
+          "nameRomanized": "7-ELEVEN Yeonteureolpakeu",
+          "address": "서울특별시 마포구 양화로19길 14",
+          "lat": 37.5581793108219,
+          "lon": 126.924272946657,
+          "distanceMeters": 169
+        },
+        {
+          "name": "CU 앰배서더홍대",
+          "nameRomanized": "CU Aembaeseodeohongdae",
+          "address": "서울특별시 마포구 홍익로6길 14",
+          "lat": 37.5551510388734,
+          "lon": 126.922850032733,
+          "distanceMeters": 191
+        },
+        {
+          "name": "emart24 홍대역점",
+          "nameRomanized": "emart24 Hongdae Station",
+          "address": "서울특별시 마포구 월드컵북로2길 7",
+          "lat": 37.5559970430154,
+          "lon": 126.921434483516,
+          "distanceMeters": 212
+        },
+        {
+          "name": "CU 홍익인간점",
+          "nameRomanized": "CU Hongigingan",
+          "address": "서울특별시 마포구 양화로 183",
+          "lat": 37.5583690829715,
+          "lon": 126.925155541073,
+          "distanceMeters": 224
+        },
+        {
+          "name": "7-ELEVEN 동교다온점",
+          "nameRomanized": "7-ELEVEN Donggyodaon",
+          "address": "서울특별시 마포구 월드컵북로4길 12",
+          "lat": 37.5569696579798,
+          "lon": 126.920743091014,
+          "distanceMeters": 257
+        },
+        {
+          "name": "CU 홍대",
+          "nameRomanized": "CU Hongdae",
+          "address": "서울특별시 마포구 와우산로29길 70",
+          "lat": 37.5563607629254,
+          "lon": 126.926594868636,
+          "distanceMeters": 264
+        },
+        {
+          "name": "CU 에이케이&",
+          "nameRomanized": "CU Eikei&",
+          "address": "서울특별시 마포구 양화로 188",
+          "lat": 37.5577392244415,
+          "lon": 126.92649165731,
+          "distanceMeters": 274
+        },
+        {
+          "name": "7-ELEVEN 마포동교로점",
+          "nameRomanized": "7-ELEVEN Mapodonggyoro",
+          "address": "서울특별시 마포구 동교로25길 28",
+          "lat": 37.5583304505305,
+          "lon": 126.921171724923,
+          "distanceMeters": 280
+        },
+        {
+          "name": "GS25 홍대동교점",
+          "nameRomanized": "GS25 Hongdaedonggyo",
+          "address": "서울특별시 마포구 양화로21길 21",
+          "lat": 37.5590896931645,
+          "lon": 126.924860555296,
+          "distanceMeters": 282
+        },
+        {
+          "name": "emart24 서교초점",
+          "nameRomanized": "emart24 Seogyocho",
+          "address": "서울특별시 마포구 와우산로27길 48",
+          "lat": 37.5549998903295,
+          "lon": 126.926007705676,
+          "distanceMeters": 285
+        },
+        {
+          "name": "CU 서교",
+          "nameRomanized": "CU Seogyo",
+          "address": "서울특별시 마포구 양화로 133",
+          "lat": 37.5552308936749,
+          "lon": 126.920982595838,
+          "distanceMeters": 289
+        },
+        {
+          "name": "GS25 홍대아트점",
+          "nameRomanized": "GS25 Hongdaeateu",
+          "address": "서울특별시 마포구 홍익로 25",
+          "lat": 37.5544026313416,
+          "lon": 126.921968064598,
+          "distanceMeters": 300
+        },
+        {
+          "name": "7-ELEVEN 홍대역점",
+          "nameRomanized": "7-ELEVEN Hongdae Station",
+          "address": "서울특별시 마포구 홍익로 19",
+          "lat": 37.5540156420138,
+          "lon": 126.922636177982,
+          "distanceMeters": 317
+        },
+        {
+          "name": "7-ELEVEN 마포스토리점",
+          "nameRomanized": "7-ELEVEN Maposeutori",
+          "address": "서울특별시 마포구 월드컵북로 13",
+          "lat": 37.5560682035995,
+          "lon": 126.920065000143,
+          "distanceMeters": 324
+        },
+        {
+          "name": "7-ELEVEN 홍대",
+          "nameRomanized": "7-ELEVEN Hongdae",
+          "address": "서울특별시 마포구 월드컵북로1길 18",
+          "lat": 37.5550862090078,
+          "lon": 126.920201856393,
+          "distanceMeters": 355
+        },
+        {
+          "name": "CU 라이즈",
+          "nameRomanized": "CU Raijeu",
+          "address": "서울특별시 마포구 양화로 124",
+          "lat": 37.5542937735332,
+          "lon": 126.92085909655,
+          "distanceMeters": 367
+        },
+        {
+          "name": "emart24 홍대",
+          "nameRomanized": "emart24 Hongdae",
+          "address": "서울특별시 마포구 와우산로29길 48",
+          "lat": 37.5557937845872,
+          "lon": 126.927647941678,
+          "distanceMeters": 369
+        },
+        {
+          "name": "CU 홍대",
+          "nameRomanized": "CU Hongdae",
+          "address": "서울특별시 마포구 홍익로 6",
+          "lat": 37.5532957627309,
+          "lon": 126.924051548118,
+          "distanceMeters": 386
+        },
+        {
+          "name": "CU 연남",
+          "nameRomanized": "CU Yeonnam",
+          "address": "서울특별시 마포구 연희로1길 23",
+          "lat": 37.5600810547923,
+          "lon": 126.925278327018,
+          "distanceMeters": 398
+        },
+        {
+          "name": "GS25 경의선책",
+          "nameRomanized": "GS25 Gyeonguiseonchaeg",
+          "address": "서울특별시 마포구 신촌로4길 18",
+          "lat": 37.557172648172,
+          "lon": 126.92820117064,
+          "distanceMeters": 405
+        },
+        {
+          "name": "CU 서교로점",
+          "nameRomanized": "CU Seogyoro",
+          "address": "서울특별시 마포구 동교로 157",
+          "lat": 37.5558423535017,
+          "lon": 126.919182484753,
+          "distanceMeters": 406
+        },
+        {
+          "name": "CU 하우스",
+          "nameRomanized": "CU House",
+          "address": "서울특별시 마포구 월드컵북로6길 81-12",
+          "lat": 37.5603675637839,
+          "lon": 126.922471157681,
+          "distanceMeters": 416
+        },
+        {
+          "name": "7-ELEVEN 서교일등점",
+          "nameRomanized": "7-ELEVEN Seogyoildeung",
+          "address": "서울특별시 마포구 와우산로27길 24",
+          "lat": 37.554333919122,
+          "lon": 126.927241935119,
+          "distanceMeters": 416
+        },
+        {
+          "name": "CU 홍대피카소점",
+          "nameRomanized": "CU Hongdaepikaso",
+          "address": "서울특별시 마포구 와우산로 106",
+          "lat": 37.5531073331593,
+          "lon": 126.92527397312,
+          "distanceMeters": 430
+        },
+        {
+          "name": "7-ELEVEN 동교숲길점",
+          "nameRomanized": "7-ELEVEN Donggyosupgil",
+          "address": "서울특별시 마포구 동교로 232",
+          "lat": 37.5605760913565,
+          "lon": 126.9244742469,
+          "distanceMeters": 432
+        },
+        {
+          "name": "CU 연남PMK점",
+          "nameRomanized": "CU YeonnamPMK",
+          "address": "서울특별시 마포구 연남로 10",
+          "lat": 37.5607195506807,
+          "lon": 126.923387561541,
+          "distanceMeters": 442
+        },
+        {
+          "name": "emart24 마포",
+          "nameRomanized": "emart24 Mapo",
+          "address": "서울특별시 마포구 홍익로5길 36",
+          "lat": 37.5536357795646,
+          "lon": 126.92046369529,
+          "distanceMeters": 445
+        },
+        {
+          "name": "CU 얼아이즈",
+          "nameRomanized": "CU Eolaijeu",
+          "address": "서울특별시 마포구 와우산로29가길 32",
+          "lat": 37.5541270440354,
+          "lon": 126.92781931007,
+          "distanceMeters": 470
+        },
+        {
+          "name": "emart24 R홍대기숙사점",
+          "nameRomanized": "emart24 Rhongdaegisugsa",
+          "address": "서울특별시 마포구 와우산로 94",
+          "lat": 37.5525214983485,
+          "lon": 126.924980318875,
+          "distanceMeters": 485
+        },
+        {
+          "name": "CU 연남Y빌딩점",
+          "nameRomanized": "CU YeonnamYbilding",
+          "address": "서울특별시 마포구 동교로23길 67",
+          "lat": 37.5585449464201,
+          "lon": 126.918602358015,
+          "distanceMeters": 487
+        },
+        {
+          "name": "CU 연남꿈나무점",
+          "nameRomanized": "CU Yeonnamkkumnamu",
+          "address": "서울특별시 마포구 연남로3길 39",
+          "lat": 37.5604745031081,
+          "lon": 126.920694106194,
+          "distanceMeters": 489
+        },
+        {
+          "name": "GS25 창천휘가로점",
+          "nameRomanized": "GS25 Changcheonhwigaro",
+          "address": "서울특별시 서대문구 연희로2안길 7-29",
+          "lat": 37.559803337059,
+          "lon": 126.927836470619,
+          "distanceMeters": 502
+        },
+        {
+          "name": "CU 홍대３호",
+          "nameRomanized": "CU Hongdae３ho",
+          "address": "서울특별시 마포구 와우산로29길 16",
+          "lat": 37.5550197652059,
+          "lon": 126.929029396817,
+          "distanceMeters": 512
+        },
+        {
+          "name": "CU 마포뉴",
+          "nameRomanized": "CU Maponyu",
+          "address": "서울특별시 마포구 월드컵북로1길 50",
+          "lat": 37.5540852079389,
+          "lon": 126.918890137001,
+          "distanceMeters": 513
+        },
+        {
+          "name": "GS25 연남호호점",
+          "nameRomanized": "GS25 Yeonnamhoho",
+          "address": "서울특별시 마포구 연희로1길 45",
+          "lat": 37.5610455271486,
+          "lon": 126.925922500096,
+          "distanceMeters": 518
+        },
+        {
+          "name": "CU 홍대으뜸점",
+          "nameRomanized": "CU Hongdaeeutteum",
+          "address": "서울특별시 마포구 와우산로26길 9-19",
+          "lat": 37.5530725370093,
+          "lon": 126.927265795346,
+          "distanceMeters": 519
+        },
+        {
+          "name": "CU 홍대놀이터점",
+          "nameRomanized": "CU Hongdaenoliteo",
+          "address": "서울특별시 마포구 와우산로21길 31",
+          "lat": 37.5522223303346,
+          "lon": 126.9221400905,
+          "distanceMeters": 520
+        },
+        {
+          "name": "emart24 창천원룸점",
+          "nameRomanized": "emart24 Changcheonwonrum",
+          "address": "서울특별시 서대문구 신촌로3길 10",
+          "lat": 37.5585517608084,
+          "lon": 126.929173178431,
+          "distanceMeters": 527
+        },
+        {
+          "name": "7-ELEVEN 서교",
+          "nameRomanized": "7-ELEVEN Seogyo",
+          "address": "서울특별시 마포구 동교로 142",
+          "lat": 37.5551476407704,
+          "lon": 126.917813843197,
+          "distanceMeters": 544
+        },
+        {
+          "name": "CU 연남아지트점",
+          "nameRomanized": "CU Yeonnamajiteu",
+          "address": "서울특별시 마포구 동교로 243",
+          "lat": 37.5617201385635,
+          "lon": 126.92413354359,
+          "distanceMeters": 555
+        },
+        {
+          "name": "7-ELEVEN 연남동교로점",
+          "nameRomanized": "7-ELEVEN Yeonnamdonggyoro",
+          "address": "서울특별시 마포구 동교로38길 8",
+          "lat": 37.5617836354881,
+          "lon": 126.924801258415,
+          "distanceMeters": 569
+        },
+        {
+          "name": "GS25 연남공원점",
+          "nameRomanized": "GS25 Yeonnamgongwon",
+          "address": "서울특별시 마포구 동교로29길 32",
+          "lat": 37.5619268117389,
+          "lon": 126.923273142207,
+          "distanceMeters": 577
+        },
+        {
+          "name": "7-ELEVEN 홍대교연점",
+          "nameRomanized": "7-ELEVEN Hongdaegyoyeon",
+          "address": "서울특별시 마포구 와우산로 140",
+          "lat": 37.5538305373596,
+          "lon": 126.929177646735,
+          "distanceMeters": 586
+        },
+        {
+          "name": "CU 서교",
+          "nameRomanized": "CU Seogyo",
+          "address": "서울특별시 마포구 양화로 100-13",
+          "lat": 37.5525177753915,
+          "lon": 126.91933319441,
+          "distanceMeters": 605
+        },
+        {
+          "name": "GS25 동교",
+          "nameRomanized": "GS25 Donggyo",
+          "address": "서울특별시 마포구 와우산로 167",
+          "lat": 37.5558677238239,
+          "lon": 126.930748837031,
+          "distanceMeters": 634
+        },
+        {
+          "name": "GS25 홍대잔다리점",
+          "nameRomanized": "GS25 Hongdaejandari",
+          "address": "서울특별시 마포구 잔다리로 40",
+          "lat": 37.5519591571022,
+          "lon": 126.919333796485,
+          "distanceMeters": 654
+        },
+        {
+          "name": "emart24 서대문연희점",
+          "nameRomanized": "emart24 Seodaemunyeonhui",
+          "address": "서울특별시 서대문구 연희로4길 5",
+          "lat": 37.5617584155286,
+          "lon": 126.927698765499,
+          "distanceMeters": 662
+        },
+        {
+          "name": "7-ELEVEN 홍대",
+          "nameRomanized": "7-ELEVEN Hongdae",
+          "address": "서울특별시 마포구 잔다리로 12",
+          "lat": 37.5509337096685,
+          "lon": 126.921847198083,
+          "distanceMeters": 666
+        },
+        {
+          "name": "emart24 서교미래점",
+          "nameRomanized": "emart24 Seogyomirae",
+          "address": "서울특별시 마포구 월드컵북로5나길 21",
+          "lat": 37.5575430494658,
+          "lon": 126.916045659011,
+          "distanceMeters": 676
+        },
+        {
+          "name": "CU 연희",
+          "nameRomanized": "CU Yeonhui",
+          "address": "서울특별시 서대문구 연희로 38",
+          "lat": 37.5620647194777,
+          "lon": 126.927641877826,
+          "distanceMeters": 688
+        },
+        {
+          "name": "7-ELEVEN 홍익대",
+          "nameRomanized": "7-ELEVEN Hongigdae",
+          "address": "서울특별시 마포구 와우산로 63",
+          "lat": 37.5502766585649,
+          "lon": 126.922877690309,
+          "distanceMeters": 723
+        },
+        {
+          "name": "CU 마포연남점",
+          "nameRomanized": "CU Mapoyeonnam",
+          "address": "서울특별시 마포구 동교로 261-1",
+          "lat": 37.5631893759946,
+          "lon": 126.925094126592,
+          "distanceMeters": 728
+        },
+        {
+          "name": "emart24 마포성산",
+          "nameRomanized": "emart24 Maposeongsan",
+          "address": "서울특별시 마포구 성미산로 91",
+          "lat": 37.5612652872938,
+          "lon": 126.917637350508,
+          "distanceMeters": 730
+        },
+        {
+          "name": "7-ELEVEN 마포성",
+          "nameRomanized": "7-ELEVEN Maposeong",
+          "address": "서울특별시 마포구 월드컵북로 69",
+          "lat": 37.5599309062268,
+          "lon": 126.91634856612,
+          "distanceMeters": 734
+        },
+        {
+          "name": "CU 창전숲길점",
+          "nameRomanized": "CU Changjeonsupgil",
+          "address": "서울특별시 마포구 와우산로32길 25",
+          "lat": 37.5547689956878,
+          "lon": 126.931587328867,
+          "distanceMeters": 734
+        },
+        {
+          "name": "GS25 연남동진점",
+          "nameRomanized": "GS25 Yeonnamdongjin",
+          "address": "서울특별시 마포구 성미산로 191",
+          "lat": 37.5629650443853,
+          "lon": 126.926554433897,
+          "distanceMeters": 737
+        },
+        {
+          "name": "CU 마포성제점",
+          "nameRomanized": "CU Maposeongje",
+          "address": "서울특별시 마포구 잔다리로 89",
+          "lat": 37.5551189164528,
+          "lon": 126.915414610722,
+          "distanceMeters": 748
+        },
+        {
+          "name": "emart24 서교",
+          "nameRomanized": "emart24 Seogyo",
+          "address": "서울특별시 마포구 월드컵북로5길 68",
+          "lat": 37.556163845101,
+          "lon": 126.91509654129,
+          "distanceMeters": 756
+        },
+        {
+          "name": "7-ELEVEN 홍대클럽점",
+          "nameRomanized": "7-ELEVEN Hongdaekeulreob",
+          "address": "서울특별시 마포구 어울마당로 58",
+          "lat": 37.5501044236016,
+          "lon": 126.921293554234,
+          "distanceMeters": 767
+        },
+        {
+          "name": "CU 홍대학사점",
+          "nameRomanized": "CU Hongdaehagsa",
+          "address": "서울특별시 마포구 독막로19길 42-18",
+          "lat": 37.5497998635091,
+          "lon": 126.924009829508,
+          "distanceMeters": 773
+        },
+        {
+          "name": "7-ELEVEN 마포연남점",
+          "nameRomanized": "7-ELEVEN Mapoyeonnam",
+          "address": "서울특별시 마포구 성미산로 142",
+          "lat": 37.5636560943381,
+          "lon": 126.922309289861,
+          "distanceMeters": 777
+        },
+        {
+          "name": "CU 창천블루점",
+          "nameRomanized": "CU Changcheonbeulru",
+          "address": "서울특별시 서대문구 신촌로9길 37-11",
+          "lat": 37.5586707034011,
+          "lon": 126.932262831048,
+          "distanceMeters": 789
+        }
+      ]
+    },
+    "gangnam": {
+      "centerStationName": "강남",
+      "count": 60,
+      "stores": [
+        {
+          "name": "GS25 강남메트로",
+          "nameRomanized": "GS25 Gangnammeteuro",
+          "address": "서울특별시 강남구 강남대로 396",
+          "lat": 37.4981574435241,
+          "lon": 127.028305636423,
+          "distanceMeters": 71
+        },
+        {
+          "name": "CU 통",
+          "nameRomanized": "CU Tong",
+          "address": "서울특별시 강남구 테헤란로 101",
+          "lat": 37.4986170160683,
+          "lon": 127.028057017322,
+          "distanceMeters": 86
+        },
+        {
+          "name": "GS25 S1호점",
+          "nameRomanized": "GS25 S1ho",
+          "address": "서울특별시 강남구 강남대로 390",
+          "lat": 37.4978420259699,
+          "lon": 127.028576924641,
+          "distanceMeters": 92
+        },
+        {
+          "name": "7-ELEVEN 강남",
+          "nameRomanized": "7-ELEVEN Gangnam",
+          "address": "서울특별시 서초구 서초대로77길 9",
+          "lat": 37.4985904092916,
+          "lon": 127.026213681242,
+          "distanceMeters": 136
+        },
+        {
+          "name": "CU 뉴삼성전자",
+          "nameRomanized": "CU Nyusamseongjeonja",
+          "address": "서울특별시 서초구 서초대로74길 11",
+          "lat": 37.4966350677604,
+          "lon": 127.026914121933,
+          "distanceMeters": 157
+        },
+        {
+          "name": "7-ELEVEN 강남푸르지오시티점",
+          "nameRomanized": "7-ELEVEN Gangnampureujiositi",
+          "address": "서울특별시 강남구 테헤란로4길 6",
+          "lat": 37.4976616502109,
+          "lon": 127.029289298281,
+          "distanceMeters": 158
+        },
+        {
+          "name": "7-ELEVEN TGI점",
+          "nameRomanized": "7-ELEVEN TGI",
+          "address": "서울특별시 서초구 서초대로 405",
+          "lat": 37.4976175027586,
+          "lon": 127.025387813173,
+          "distanceMeters": 194
+        },
+        {
+          "name": "CU 강남해커스점",
+          "nameRomanized": "CU Gangnamhaekeoseu",
+          "address": "서울특별시 서초구 강남대로61길 13",
+          "lat": 37.4988878850703,
+          "lon": 127.025557875171,
+          "distanceMeters": 203
+        },
+        {
+          "name": "7-ELEVEN 뉴강남",
+          "nameRomanized": "7-ELEVEN Nyugangnam",
+          "address": "서울특별시 강남구 강남대로96길 9",
+          "lat": 37.4998604793157,
+          "lon": 127.02774083223,
+          "distanceMeters": 212
+        },
+        {
+          "name": "CU 역삼우인점",
+          "nameRomanized": "CU Yeogsamuin",
+          "address": "서울특별시 강남구 강남대로84길 8",
+          "lat": 37.4964723132728,
+          "lon": 127.029322759072,
+          "distanceMeters": 228
+        },
+        {
+          "name": "GS25 서초",
+          "nameRomanized": "GS25 Seocho",
+          "address": "서울특별시 서초구 강남대로61길 10",
+          "lat": 37.4992663223251,
+          "lon": 127.025490151044,
+          "distanceMeters": 232
+        },
+        {
+          "name": "CU 역삼",
+          "nameRomanized": "CU Yeogsam",
+          "address": "서울특별시 강남구 강남대로94길 23",
+          "lat": 37.4997429969443,
+          "lon": 127.029199639837,
+          "distanceMeters": 247
+        },
+        {
+          "name": "7-ELEVEN 역삼",
+          "nameRomanized": "7-ELEVEN Yeogsam",
+          "address": "서울특별시 강남구 강남대로84길 16",
+          "lat": 37.4966883787322,
+          "lon": 127.030023968218,
+          "distanceMeters": 261
+        },
+        {
+          "name": "CU 오벨리스크점",
+          "nameRomanized": "CU Obelriseukeu",
+          "address": "서울특별시 서초구 서초대로74길 27",
+          "lat": 37.4952834800215,
+          "lon": 127.027252884411,
+          "distanceMeters": 298
+        },
+        {
+          "name": "7-ELEVEN 강남",
+          "nameRomanized": "7-ELEVEN Gangnam",
+          "address": "서울특별시 서초구 서초대로77길 27",
+          "lat": 37.5001222756633,
+          "lon": 127.025501750989,
+          "distanceMeters": 300
+        },
+        {
+          "name": "CU 서초삼성타운점",
+          "nameRomanized": "CU Seochosamseong Town",
+          "address": "서울특별시 서초구 강남대로55길 24",
+          "lat": 37.4957073298577,
+          "lon": 127.02556809957,
+          "distanceMeters": 305
+        },
+        {
+          "name": "7-ELEVEN 역삼타운점",
+          "nameRomanized": "7-ELEVEN Yeogsam Town",
+          "address": "서울특별시 강남구 강남대로84길 28",
+          "lat": 37.4969854834045,
+          "lon": 127.030906150719,
+          "distanceMeters": 316
+        },
+        {
+          "name": "CU 역삼디오빌점",
+          "nameRomanized": "CU Yeogsamdiobil",
+          "address": "서울특별시 강남구 강남대로84길 33",
+          "lat": 37.4975891072472,
+          "lon": 127.031098645653,
+          "distanceMeters": 317
+        },
+        {
+          "name": "7-ELEVEN 서초",
+          "nameRomanized": "7-ELEVEN Seocho",
+          "address": "서울특별시 서초구 강남대로61길 25",
+          "lat": 37.4984377115663,
+          "lon": 127.023985808794,
+          "distanceMeters": 318
+        },
+        {
+          "name": "CU 역삼시티점",
+          "nameRomanized": "CU Yeogsamsiti",
+          "address": "서울특별시 강남구 테헤란로7길 7",
+          "lat": 37.499634556356,
+          "lon": 127.030466195152,
+          "distanceMeters": 318
+        },
+        {
+          "name": "CU 강남승리점",
+          "nameRomanized": "CU Gangnamseungri",
+          "address": "서울특별시 서초구 서초대로78길 30",
+          "lat": 37.4951121249208,
+          "lon": 127.027953932078,
+          "distanceMeters": 319
+        },
+        {
+          "name": "CU 클린업피부과",
+          "nameRomanized": "CU Keulrineobpibugwa",
+          "address": "서울특별시 서초구 강남대로 429",
+          "lat": 37.500788961174,
+          "lon": 127.025773395664,
+          "distanceMeters": 351
+        },
+        {
+          "name": "7-ELEVEN 서초",
+          "nameRomanized": "7-ELEVEN Seocho",
+          "address": "서울특별시 서초구 서초대로 389",
+          "lat": 37.4970772580466,
+          "lon": 127.023657426552,
+          "distanceMeters": 356
+        },
+        {
+          "name": "CU 서초도씨에빛점",
+          "nameRomanized": "CU Seochodossiebich",
+          "address": "서울특별시 서초구 강남대로 359",
+          "lat": 37.4947966155314,
+          "lon": 127.028609688755,
+          "distanceMeters": 364
+        },
+        {
+          "name": "7-ELEVEN 삼원",
+          "nameRomanized": "7-ELEVEN Samwon",
+          "address": "서울특별시 강남구 테헤란로 124",
+          "lat": 37.4987872862809,
+          "lon": 127.031698507816,
+          "distanceMeters": 378
+        },
+        {
+          "name": "7-ELEVEN 강남",
+          "nameRomanized": "7-ELEVEN Gangnam",
+          "address": "서울특별시 서초구 서초대로77길 35",
+          "lat": 37.5008521391035,
+          "lon": 127.025275817404,
+          "distanceMeters": 379
+        },
+        {
+          "name": "CU 학",
+          "nameRomanized": "CU Hag",
+          "address": "서울특별시 서초구 강남대로53길 8",
+          "lat": 37.4945624946943,
+          "lon": 127.028021576072,
+          "distanceMeters": 380
+        },
+        {
+          "name": "7-ELEVEN 과학기술회관점",
+          "nameRomanized": "7-ELEVEN Gwahaggisulhoegwan",
+          "address": "서울특별시 강남구 테헤란로7길 22",
+          "lat": 37.5007247032692,
+          "lon": 127.03073805578,
+          "distanceMeters": 417
+        },
+        {
+          "name": "GS25 강남태강점",
+          "nameRomanized": "GS25 Gangnamtaegang",
+          "address": "서울특별시 강남구 테헤란로10길 14",
+          "lat": 37.4982014606166,
+          "lon": 127.032331546852,
+          "distanceMeters": 424
+        },
+        {
+          "name": "7-ELEVEN 강남",
+          "nameRomanized": "7-ELEVEN Gangnam",
+          "address": "서울특별시 서초구 서초대로77길 43",
+          "lat": 37.5013838118279,
+          "lon": 127.024902793996,
+          "distanceMeters": 446
+        },
+        {
+          "name": "emart24 역삼승리점",
+          "nameRomanized": "emart24 Yeogsamseungri",
+          "address": "서울특별시 강남구 강남대로94길 55",
+          "lat": 37.5005352501272,
+          "lon": 127.031654010555,
+          "distanceMeters": 463
+        },
+        {
+          "name": "7-ELEVEN 역삼만남점",
+          "nameRomanized": "7-ELEVEN Yeogsammannam",
+          "address": "서울특별시 강남구 테헤란로6길 47",
+          "lat": 37.4955796638972,
+          "lon": 127.031844159877,
+          "distanceMeters": 463
+        },
+        {
+          "name": "CU 서초어벤져스점",
+          "nameRomanized": "CU Seochoeobenjyeoseu",
+          "address": "서울특별시 서초구 서초대로78길 48",
+          "lat": 37.4934901555137,
+          "lon": 127.028609190407,
+          "distanceMeters": 506
+        },
+        {
+          "name": "7-ELEVEN 역삼은탑점",
+          "nameRomanized": "7-ELEVEN Yeogsameuntab",
+          "address": "서울특별시 강남구 테헤란로14길 5",
+          "lat": 37.4990842019713,
+          "lon": 127.033214015682,
+          "distanceMeters": 516
+        },
+        {
+          "name": "CU 서초",
+          "nameRomanized": "CU Seocho",
+          "address": "서울특별시 서초구 서초대로73길 50",
+          "lat": 37.5016813264077,
+          "lon": 127.024020774001,
+          "distanceMeters": 517
+        },
+        {
+          "name": "GS25 역삼덕원점",
+          "nameRomanized": "GS25 Yeogsamdeogwon",
+          "address": "서울특별시 강남구 테헤란로13길 16",
+          "lat": 37.5007422946178,
+          "lon": 127.032343951449,
+          "distanceMeters": 525
+        },
+        {
+          "name": "7-ELEVEN 서초바로세움점",
+          "nameRomanized": "7-ELEVEN Seochobaroseum",
+          "address": "서울특별시 서초구 서초대로77길 55",
+          "lat": 37.5021047086036,
+          "lon": 127.024461971529,
+          "distanceMeters": 535
+        },
+        {
+          "name": "CU 역삼유토빌점",
+          "nameRomanized": "CU Yeogsamyutobil",
+          "address": "서울특별시 강남구 논현로87길 41",
+          "lat": 37.4988318340124,
+          "lon": 127.033519241111,
+          "distanceMeters": 536
+        },
+        {
+          "name": "CU 서초골드로즈점",
+          "nameRomanized": "CU Seochogoldeurojeu",
+          "address": "서울특별시 서초구 서초대로74길 51",
+          "lat": 37.4930667313192,
+          "lon": 127.028405486405,
+          "distanceMeters": 549
+        },
+        {
+          "name": "CU 강남스타일점",
+          "nameRomanized": "CU Gangnamseutail",
+          "address": "서울특별시 강남구 역삼로 109",
+          "lat": 37.493660739011,
+          "lon": 127.031017860718,
+          "distanceMeters": 568
+        },
+        {
+          "name": "CU 역삼HK",
+          "nameRomanized": "CU YeogsamHK",
+          "address": "서울특별시 강남구 테헤란로 133",
+          "lat": 37.5001473188754,
+          "lon": 127.033463284216,
+          "distanceMeters": 577
+        },
+        {
+          "name": "CU 서초다우점",
+          "nameRomanized": "CU Seochodau",
+          "address": "서울특별시 서초구 서초대로77길 58",
+          "lat": 37.5025732479272,
+          "lon": 127.024382958939,
+          "distanceMeters": 584
+        },
+        {
+          "name": "CU 역삼포스틸점",
+          "nameRomanized": "CU Yeogsamposeutil",
+          "address": "서울특별시 강남구 테헤란로20길 10",
+          "lat": 37.4990839376091,
+          "lon": 127.03414133909,
+          "distanceMeters": 596
+        },
+        {
+          "name": "CU 서초",
+          "nameRomanized": "CU Seocho",
+          "address": "서울특별시 서초구 서초대로77길 62",
+          "lat": 37.5027265159736,
+          "lon": 127.023908015112,
+          "distanceMeters": 619
+        },
+        {
+          "name": "CU 역삼비엘점",
+          "nameRomanized": "CU Yeogsambiel",
+          "address": "서울특별시 강남구 역삼로 106",
+          "lat": 37.4929489671837,
+          "lon": 127.030927103179,
+          "distanceMeters": 632
+        },
+        {
+          "name": "7-ELEVEN 역삼피에스따점",
+          "nameRomanized": "7-ELEVEN Yeogsampieseutta",
+          "address": "서울특별시 강남구 테헤란로19길 29",
+          "lat": 37.5018954510087,
+          "lon": 127.032819437267,
+          "distanceMeters": 639
+        },
+        {
+          "name": "CU 서초써밋점",
+          "nameRomanized": "CU Seochosseomis",
+          "address": "서울특별시 서초구 서운로 207",
+          "lat": 37.5015195836308,
+          "lon": 127.021758883969,
+          "distanceMeters": 646
+        },
+        {
+          "name": "CU 아크로텔",
+          "nameRomanized": "CU Akeurotel",
+          "address": "서울특별시 서초구 효령로77길 34",
+          "lat": 37.491994425948,
+          "lon": 127.028846082749,
+          "distanceMeters": 673
+        },
+        {
+          "name": "emart24 강남더인피닛",
+          "nameRomanized": "emart24 Gangnamdeoinpinis",
+          "address": "서울특별시 서초구 사평대로58길 6",
+          "lat": 37.5034474043832,
+          "lon": 127.023489794153,
+          "distanceMeters": 707
+        },
+        {
+          "name": "GS25",
+          "nameRomanized": "GS25",
+          "address": "서울특별시 서초구 사임당로 139",
+          "lat": 37.4917250238082,
+          "lon": 127.024888279215,
+          "distanceMeters": 731
+        },
+        {
+          "name": "GS25 역삼쏘도베점",
+          "nameRomanized": "GS25 Yeogsamssodobe",
+          "address": "서울특별시 강남구 강남대로94길 95",
+          "lat": 37.5011199729137,
+          "lon": 127.034956523515,
+          "distanceMeters": 743
+        },
+        {
+          "name": "CU 어비스",
+          "nameRomanized": "CU Eobiseu",
+          "address": "서울특별시 강남구 강남대로 320",
+          "lat": 37.4918497087979,
+          "lon": 127.031039727259,
+          "distanceMeters": 746
+        },
+        {
+          "name": "7-ELEVEN",
+          "nameRomanized": "7-ELEVEN",
+          "address": "서울특별시 강남구 강남대로66길 7",
+          "lat": 37.4919126746591,
+          "lon": 127.031435524295,
+          "distanceMeters": 755
+        },
+        {
+          "name": "7-ELEVEN 역삼보브점",
+          "nameRomanized": "7-ELEVEN Yeogsambobeu",
+          "address": "서울특별시 강남구 봉은사로 114",
+          "lat": 37.5047082610773,
+          "lon": 127.026114033093,
+          "distanceMeters": 761
+        },
+        {
+          "name": "7-ELEVEN 사평대로점",
+          "nameRomanized": "7-ELEVEN Sapyeongdaero",
+          "address": "서울특별시 서초구 사평대로 362",
+          "lat": 37.5036277667689,
+          "lon": 127.022664256498,
+          "distanceMeters": 763
+        },
+        {
+          "name": "CU RIO",
+          "nameRomanized": "CU RIO",
+          "address": "서울특별시 서초구 서운로 226",
+          "lat": 37.5031053495067,
+          "lon": 127.021781963018,
+          "distanceMeters": 765
+        },
+        {
+          "name": "7-ELEVEN 역삼창조점",
+          "nameRomanized": "7-ELEVEN Yeogsamchangjo",
+          "address": "서울특별시 강남구 논현로85길 13",
+          "lat": 37.4991013276277,
+          "lon": 127.036256097479,
+          "distanceMeters": 779
+        },
+        {
+          "name": "CU 역삼카이로스점",
+          "nameRomanized": "CU Yeogsamkairoseu",
+          "address": "서울특별시 강남구 강남대로66길 8",
+          "lat": 37.491723417885,
+          "lon": 127.031605060684,
+          "distanceMeters": 781
+        },
+        {
+          "name": "7-ELEVEN 역삼",
+          "nameRomanized": "7-ELEVEN Yeogsam",
+          "address": "서울특별시 강남구 역삼로 151",
+          "lat": 37.4949208369112,
+          "lon": 127.035666050294,
+          "distanceMeters": 793
+        },
+        {
+          "name": "CU 역삼퓨처스점",
+          "nameRomanized": "CU Yeogsampyucheoseu",
+          "address": "서울특별시 강남구 역삼로17길 60",
+          "lat": 37.498587681015,
+          "lon": 127.036493332859,
+          "distanceMeters": 793
+        }
+      ]
+    },
+    "yeouido": {
+      "centerStationName": "여의나루",
+      "count": 15,
+      "stores": [
+        {
+          "name": "7-ELEVEN S여의나루역점",
+          "nameRomanized": "7-ELEVEN Syeouinaru Station",
+          "address": "서울특별시 영등포구 여의동로 343",
+          "lat": 37.5270820100231,
+          "lon": 126.932868369841,
+          "distanceMeters": 9
+        },
+        {
+          "name": "7-ELEVEN 여의서울점",
+          "nameRomanized": "7-ELEVEN Yeouiseoul",
+          "address": "서울특별시 영등포구 여의나루로 117",
+          "lat": 37.5262250159461,
+          "lon": 126.931059070968,
+          "distanceMeters": 185
+        },
+        {
+          "name": "7-ELEVEN 아라호점",
+          "nameRomanized": "7-ELEVEN Araho",
+          "address": "서울특별시 영등포구 여의동로 338",
+          "lat": 37.5284527715613,
+          "lon": 126.935084539254,
+          "distanceMeters": 248
+        },
+        {
+          "name": "CU 한강버스여의도선착장점",
+          "nameRomanized": "CU Hangangbeoseuyeouidoseonchagjang",
+          "address": "서울특별시 영등포구 여의동로 338",
+          "lat": 37.52848880539,
+          "lon": 126.935073194767,
+          "distanceMeters": 250
+        },
+        {
+          "name": "7-ELEVEN 여의1호",
+          "nameRomanized": "7-ELEVEN Yeoui1ho",
+          "address": "서울특별시 영등포구 국제금융로7길 22",
+          "lat": 37.5232438585187,
+          "lon": 126.933075433431,
+          "distanceMeters": 434
+        },
+        {
+          "name": "7-ELEVEN 여의",
+          "nameRomanized": "7-ELEVEN Yeoui",
+          "address": "서울특별시 영등포구 국제금융로2길 7",
+          "lat": 37.5246457177567,
+          "lon": 126.926829582302,
+          "distanceMeters": 596
+        },
+        {
+          "name": "7-ELEVEN 여의",
+          "nameRomanized": "7-ELEVEN Yeoui",
+          "address": "서울특별시 영등포구 여의공원로 111",
+          "lat": 37.5297897781576,
+          "lon": 126.925772406281,
+          "distanceMeters": 687
+        },
+        {
+          "name": "CU 여의동산점",
+          "nameRomanized": "CU Yeouidongsan",
+          "address": "서울특별시 영등포구 여의대방로 417",
+          "lat": 37.521055121863,
+          "lon": 126.934321723502,
+          "distanceMeters": 690
+        },
+        {
+          "name": "7-ELEVEN 여의홍우점",
+          "nameRomanized": "7-ELEVEN Yeouihongu",
+          "address": "서울특별시 영등포구 국제금융로 78",
+          "lat": 37.5208732032459,
+          "lon": 126.931301549666,
+          "distanceMeters": 710
+        },
+        {
+          "name": "CU 여의도파인루체점",
+          "nameRomanized": "CU Yeouidopainruche",
+          "address": "서울특별시 영등포구 여의대방로69길 19",
+          "lat": 37.5206023860499,
+          "lon": 126.930419456602,
+          "distanceMeters": 757
+        },
+        {
+          "name": "CU BNK금융",
+          "nameRomanized": "CU BNKgeumyung",
+          "address": "서울특별시 영등포구 국제금융로2길 24",
+          "lat": 37.5243110968727,
+          "lon": 126.924838886523,
+          "distanceMeters": 770
+        },
+        {
+          "name": "CU 약국",
+          "nameRomanized": "CU Yaggug",
+          "address": "서울특별시 영등포구 국제금융로6길 26",
+          "lat": 37.5219608233275,
+          "lon": 126.926979263912,
+          "distanceMeters": 772
+        },
+        {
+          "name": "CU 여의",
+          "nameRomanized": "CU Yeoui",
+          "address": "서울특별시 영등포구 국제금융로8길 19",
+          "lat": 37.5207638064978,
+          "lon": 126.929141040195,
+          "distanceMeters": 780
+        },
+        {
+          "name": "CU 순복음",
+          "nameRomanized": "CU Sunbogeum",
+          "address": "서울특별시 영등포구 은행로 54",
+          "lat": 37.5298070166741,
+          "lon": 126.924539222247,
+          "distanceMeters": 787
+        },
+        {
+          "name": "emart24 여의도포스트",
+          "nameRomanized": "emart24 Yeouidoposeuteu",
+          "address": "서울특별시 영등포구 여의나루로 60",
+          "lat": 37.5223027330678,
+          "lon": 126.92622100491,
+          "distanceMeters": 792
+        }
+      ]
+    },
+    "seongsu": {
+      "centerStationName": "성수",
+      "count": 47,
+      "stores": [
+        {
+          "name": "GS25 성수테크노",
+          "nameRomanized": "GS25 Seongsutekeuno",
+          "address": "서울특별시 성동구 아차산로 103",
+          "lat": 37.5450538476394,
+          "lon": 127.055820663962,
+          "distanceMeters": 49
+        },
+        {
+          "name": "emart24 트렌드랩",
+          "nameRomanized": "emart24 Teurendeuraeb",
+          "address": "서울특별시 성동구 아차산로 104",
+          "lat": 37.5444413390344,
+          "lon": 127.055458105807,
+          "distanceMeters": 51
+        },
+        {
+          "name": "CU 성수",
+          "nameRomanized": "CU Seongsu",
+          "address": "서울특별시 성동구 아차산로 113",
+          "lat": 37.5446929186842,
+          "lon": 127.05692933428,
+          "distanceMeters": 84
+        },
+        {
+          "name": "emart24 R",
+          "nameRomanized": "emart24 R",
+          "address": "서울특별시 성동구 성수이로 113",
+          "lat": 37.545143319715,
+          "lon": 127.05713336076,
+          "distanceMeters": 116
+        },
+        {
+          "name": "GS25 성수SKV1",
+          "nameRomanized": "GS25 SeongsuSKV1",
+          "address": "서울특별시 성동구 연무장5가길 25",
+          "lat": 37.5435492755449,
+          "lon": 127.055615862506,
+          "distanceMeters": 124
+        },
+        {
+          "name": "7-ELEVEN",
+          "nameRomanized": "7-ELEVEN",
+          "address": "서울특별시 성동구 아차산로 92",
+          "lat": 37.5447482462898,
+          "lon": 127.054236235726,
+          "distanceMeters": 155
+        },
+        {
+          "name": "CU 성수",
+          "nameRomanized": "CU Seongsu",
+          "address": "서울특별시 성동구 성수이로 118",
+          "lat": 37.5451519659907,
+          "lon": 127.057880208696,
+          "distanceMeters": 177
+        },
+        {
+          "name": "CU 현대테라스",
+          "nameRomanized": "CU Hyeondaeteraseu",
+          "address": "서울특별시 성동구 연무장5가길 7",
+          "lat": 37.5440907755774,
+          "lon": 127.053669978542,
+          "distanceMeters": 212
+        },
+        {
+          "name": "CU 성수성문점",
+          "nameRomanized": "CU Seongsuseongmun",
+          "address": "서울특별시 성동구 성수이로 87",
+          "lat": 37.5427290823893,
+          "lon": 127.056214970056,
+          "distanceMeters": 212
+        },
+        {
+          "name": "GS25 성수공원점",
+          "nameRomanized": "GS25 Seongsugongwon",
+          "address": "서울특별시 성동구 성수일로6길 32",
+          "lat": 37.5445052916047,
+          "lon": 127.053545803219,
+          "distanceMeters": 215
+        },
+        {
+          "name": "7-ELEVEN 성수우리",
+          "nameRomanized": "7-ELEVEN Seongsuuri",
+          "address": "서울특별시 성동구 연무장11길 10",
+          "lat": 37.5429266535012,
+          "lon": 127.057561655942,
+          "distanceMeters": 235
+        },
+        {
+          "name": "emart24 성동",
+          "nameRomanized": "emart24 Seongdong",
+          "address": "서울특별시 성동구 연무장길 58-1",
+          "lat": 37.5422337581136,
+          "lon": 127.055739354006,
+          "distanceMeters": 267
+        },
+        {
+          "name": "CU 성지아라점",
+          "nameRomanized": "CU Seongjiara",
+          "address": "서울특별시 성동구 아차산로 135",
+          "lat": 37.5439440900851,
+          "lon": 127.058965572004,
+          "distanceMeters": 274
+        },
+        {
+          "name": "7-ELEVEN 성수에스팩토리점",
+          "nameRomanized": "7-ELEVEN Seongsueseupaegtori",
+          "address": "서울특별시 성동구 연무장15길 11",
+          "lat": 37.5428178695565,
+          "lon": 127.058908107884,
+          "distanceMeters": 327
+        },
+        {
+          "name": "CU 성수하우스디점",
+          "nameRomanized": "CU Seongsu House Di",
+          "address": "서울특별시 성동구 성수일로10길 26",
+          "lat": 37.5465868692006,
+          "lon": 127.05294754437,
+          "distanceMeters": 345
+        },
+        {
+          "name": "emart24 성수AK점",
+          "nameRomanized": "emart24 SeongsuAK",
+          "address": "서울특별시 성동구 연무장길 76",
+          "lat": 37.5415030912851,
+          "lon": 127.057526615829,
+          "distanceMeters": 373
+        },
+        {
+          "name": "GS25 성수디지털",
+          "nameRomanized": "GS25 Seongsudijiteol",
+          "address": "서울특별시 성동구 성수이로7길 27",
+          "lat": 37.541568080509,
+          "lon": 127.053441865464,
+          "distanceMeters": 407
+        },
+        {
+          "name": "7-ELEVEN 디지털",
+          "nameRomanized": "7-ELEVEN Dijiteol",
+          "address": "서울특별시 성동구 성수일로4길 25",
+          "lat": 37.5425058211309,
+          "lon": 127.051869697245,
+          "distanceMeters": 433
+        },
+        {
+          "name": "CU 성수",
+          "nameRomanized": "CU Seongsu",
+          "address": "서울특별시 성동구 성수일로12길 27",
+          "lat": 37.5483881503403,
+          "lon": 127.054521779603,
+          "distanceMeters": 438
+        },
+        {
+          "name": "7-ELEVEN 성수SK",
+          "nameRomanized": "7-ELEVEN SeongsuSK",
+          "address": "서울특별시 성동구 성수일로8길 5",
+          "lat": 37.5470739996306,
+          "lon": 127.051612592818,
+          "distanceMeters": 472
+        },
+        {
+          "name": "7-ELEVEN 성수아크벨리점",
+          "nameRomanized": "7-ELEVEN Seongsuakeubelri",
+          "address": "서울특별시 성동구 성수이로22길 37",
+          "lat": 37.543924877238,
+          "lon": 127.061307884465,
+          "distanceMeters": 476
+        },
+        {
+          "name": "GS25 성수백영점",
+          "nameRomanized": "GS25 Seongsubaegyeong",
+          "address": "서울특별시 성동구 성수일로 56",
+          "lat": 37.5453445906471,
+          "lon": 127.050434556535,
+          "distanceMeters": 496
+        },
+        {
+          "name": "CU 성수에이스",
+          "nameRomanized": "CU Seongsueiseu",
+          "address": "서울특별시 성동구 성수이로10길 14",
+          "lat": 37.5401249181464,
+          "lon": 127.056790080811,
+          "distanceMeters": 506
+        },
+        {
+          "name": "7-ELEVEN 성수예광점",
+          "nameRomanized": "7-ELEVEN Seongsuyegwang",
+          "address": "서울특별시 성동구 광나루로 238",
+          "lat": 37.5492253204115,
+          "lon": 127.056140633685,
+          "distanceMeters": 511
+        },
+        {
+          "name": "CU 성수협성점",
+          "nameRomanized": "CU Seongsuhyeobseong",
+          "address": "서울특별시 성동구 아차산로13길 33",
+          "lat": 37.5462312749169,
+          "lon": 127.061615303668,
+          "distanceMeters": 528
+        },
+        {
+          "name": "CU 성수더블유",
+          "nameRomanized": "CU Seongsudeobeulyu",
+          "address": "서울특별시 성동구 아차산로15길 19",
+          "lat": 37.5447443901095,
+          "lon": 127.062066708545,
+          "distanceMeters": 537
+        },
+        {
+          "name": "CU 성수베스트",
+          "nameRomanized": "CU Seongsubeseuteu",
+          "address": "서울특별시 성동구 뚝섬로5길 19",
+          "lat": 37.5419116191315,
+          "lon": 127.050816963772,
+          "distanceMeters": 547
+        },
+        {
+          "name": "emart24 성수한라점",
+          "nameRomanized": "emart24 Seongsuhanra",
+          "address": "서울특별시 성동구 성수이로7길 7",
+          "lat": 37.5398016562311,
+          "lon": 127.054458951954,
+          "distanceMeters": 553
+        },
+        {
+          "name": "CU 성수디지털",
+          "nameRomanized": "CU Seongsudijiteol",
+          "address": "서울특별시 성동구 아차산로 49",
+          "lat": 37.5467863571186,
+          "lon": 127.050039466993,
+          "distanceMeters": 576
+        },
+        {
+          "name": "emart24 성동",
+          "nameRomanized": "emart24 Seongdong",
+          "address": "서울특별시 성동구 성수이로7길 1",
+          "lat": 37.5395041114949,
+          "lon": 127.054922647451,
+          "distanceMeters": 577
+        },
+        {
+          "name": "CU 성수경일점",
+          "nameRomanized": "CU Seongsugyeongil",
+          "address": "서울특별시 성동구 성수일로 39",
+          "lat": 37.5442368587255,
+          "lon": 127.049256983736,
+          "distanceMeters": 595
+        },
+        {
+          "name": "CU 성동",
+          "nameRomanized": "CU Seongdong",
+          "address": "서울특별시 성동구 광나루로 290",
+          "lat": 37.5477087168714,
+          "lon": 127.061989953163,
+          "distanceMeters": 631
+        },
+        {
+          "name": "GS25 성수비즈웰점",
+          "nameRomanized": "GS25 Seongsu Biz Wel",
+          "address": "서울특별시 성동구 뚝섬로3길 16",
+          "lat": 37.5416237808384,
+          "lon": 127.049685243918,
+          "distanceMeters": 648
+        },
+        {
+          "name": "7-ELEVEN 뚝섬역점",
+          "nameRomanized": "7-ELEVEN Ttugseom Station",
+          "address": "서울특별시 성동구 상원길 19",
+          "lat": 37.5458768787001,
+          "lon": 127.048771479631,
+          "distanceMeters": 651
+        },
+        {
+          "name": "emart24 성수뚝도점",
+          "nameRomanized": "emart24 Seongsuttugdo",
+          "address": "서울특별시 성동구 성덕정11길 20-1",
+          "lat": 37.5390362717195,
+          "lon": 127.053440058459,
+          "distanceMeters": 661
+        },
+        {
+          "name": "CU 서울숲A",
+          "nameRomanized": "CU SeoulsupA",
+          "address": "서울특별시 성동구 상원1길 26",
+          "lat": 37.5462013733378,
+          "lon": 127.048443528868,
+          "distanceMeters": 687
+        },
+        {
+          "name": "GS25 성수우림",
+          "nameRomanized": "GS25 Seongsuurim",
+          "address": "서울특별시 성동구 광나루로6길 35",
+          "lat": 37.5468070221019,
+          "lon": 127.063301865689,
+          "distanceMeters": 689
+        },
+        {
+          "name": "7-ELEVEN 성수수청영화점",
+          "nameRomanized": "7-ELEVEN Seongsusucheongyeonghwa",
+          "address": "서울특별시 성동구 뚝섬로17길 20",
+          "lat": 37.5394024141996,
+          "lon": 127.060229265134,
+          "distanceMeters": 691
+        },
+        {
+          "name": "GS25 뚝섬",
+          "nameRomanized": "GS25 Ttugseom",
+          "address": "서울특별시 성동구 아차산로 38",
+          "lat": 37.546588821343,
+          "lon": 127.048398515613,
+          "distanceMeters": 703
+        },
+        {
+          "name": "CU 성수",
+          "nameRomanized": "CU Seongsu",
+          "address": "서울특별시 성동구 연무장길 118",
+          "lat": 37.5402664899552,
+          "lon": 127.061938531106,
+          "distanceMeters": 715
+        },
+        {
+          "name": "emart24 서울숲ITCT점",
+          "nameRomanized": "emart24 SeoulsupITCT",
+          "address": "서울특별시 성동구 성수일로 10",
+          "lat": 37.5412817597401,
+          "lon": 127.048825062266,
+          "distanceMeters": 733
+        },
+        {
+          "name": "emart24 성수이로점",
+          "nameRomanized": "emart24 Seongsuiro",
+          "address": "서울특별시 성동구 연무장18길 12",
+          "lat": 37.5397170342071,
+          "lon": 127.061643887736,
+          "distanceMeters": 740
+        },
+        {
+          "name": "GS25 뉴성수대우점",
+          "nameRomanized": "GS25 Nyuseongsudaeu",
+          "address": "서울특별시 성동구 상원6길 10-1",
+          "lat": 37.5487598295697,
+          "lon": 127.049361806808,
+          "distanceMeters": 743
+        },
+        {
+          "name": "7-ELEVEN 뚝섬리버빌점",
+          "nameRomanized": "7-ELEVEN Ttugseomribeobil",
+          "address": "서울특별시 성동구 성수일로11길 15",
+          "lat": 37.5494804189883,
+          "lon": 127.049860205037,
+          "distanceMeters": 763
+        },
+        {
+          "name": "emart24 성수오피스점",
+          "nameRomanized": "emart24 Seongsuopiseu",
+          "address": "서울특별시 성동구 상원12길 30",
+          "lat": 37.5500386958424,
+          "lon": 127.050664049623,
+          "distanceMeters": 763
+        },
+        {
+          "name": "7-ELEVEN 성수위즈베라점",
+          "nameRomanized": "7-ELEVEN Seongsuwijeubera",
+          "address": "서울특별시 성동구 왕십리로6길 21",
+          "lat": 37.5456612826844,
+          "lon": 127.047187119434,
+          "distanceMeters": 784
+        },
+        {
+          "name": "emart24 광진프라임점",
+          "nameRomanized": "emart24 Gwangjinpeuraim",
+          "address": "서울특별시 광진구 동일로 92-1",
+          "lat": 37.5408242315248,
+          "lon": 127.063591000509,
+          "distanceMeters": 793
+        }
+      ]
+    },
+    "myeongdong": {
+      "centerStationName": "명동",
+      "count": 71,
+      "stores": [
+        {
+          "name": "7-ELEVEN 명동이화점",
+          "nameRomanized": "7-ELEVEN Myeongdongihwa",
+          "address": "서울특별시 중구 삼일대로 299",
+          "lat": 37.5615637520815,
+          "lon": 126.988478010307,
+          "distanceMeters": 59
+        },
+        {
+          "name": "emart24 충무로앰버서더호텔점",
+          "nameRomanized": "emart24 Chungmuroaembeoseodeohotel",
+          "address": "서울특별시 중구 삼일대로 300",
+          "lat": 37.5615007590274,
+          "lon": 126.989292934111,
+          "distanceMeters": 103
+        },
+        {
+          "name": "emart24 K-FOODLAB",
+          "nameRomanized": "emart24 K-FOODLAB",
+          "address": "서울특별시 중구 퇴계로 136",
+          "lat": 37.5608247669685,
+          "lon": 126.986870946927,
+          "distanceMeters": 126
+        },
+        {
+          "name": "7-ELEVEN 남산",
+          "nameRomanized": "7-ELEVEN Namsan",
+          "address": "서울특별시 중구 소파로 142",
+          "lat": 37.5594463871701,
+          "lon": 126.988251977547,
+          "distanceMeters": 179
+        },
+        {
+          "name": "CU 충무로2가점",
+          "nameRomanized": "CU Chungmuro2ga",
+          "address": "서울특별시 중구 수표로 7",
+          "lat": 37.5618612419586,
+          "lon": 126.990266256836,
+          "distanceMeters": 197
+        },
+        {
+          "name": "CU 명동역점",
+          "nameRomanized": "CU Myeongdong Station",
+          "address": "서울특별시 중구 퇴계로 127",
+          "lat": 37.5611580181068,
+          "lon": 126.98585225049,
+          "distanceMeters": 214
+        },
+        {
+          "name": "GS25 충무로타운점",
+          "nameRomanized": "GS25 Chungmuro Town",
+          "address": "서울특별시 중구 수표로 14",
+          "lat": 37.562374836632,
+          "lon": 126.990594423144,
+          "distanceMeters": 252
+        },
+        {
+          "name": "7-ELEVEN 명동역점",
+          "nameRomanized": "7-ELEVEN Myeongdong Station",
+          "address": "서울특별시 중구 퇴계로18길 6",
+          "lat": 37.5605092494927,
+          "lon": 126.985433603411,
+          "distanceMeters": 257
+        },
+        {
+          "name": "GS25 남산",
+          "nameRomanized": "GS25 Namsan",
+          "address": "서울특별시 중구 퇴계로18길 16-1",
+          "lat": 37.5601668594774,
+          "lon": 126.985343125671,
+          "distanceMeters": 276
+        },
+        {
+          "name": "GS25 중구",
+          "nameRomanized": "GS25 Junggu",
+          "address": "서울특별시 중구 퇴계로 180",
+          "lat": 37.5608702568997,
+          "lon": 126.991726427892,
+          "distanceMeters": 305
+        },
+        {
+          "name": "7-ELEVEN 숭의여대점",
+          "nameRomanized": "7-ELEVEN Sunguiyeodae",
+          "address": "서울특별시 중구 소파로 125",
+          "lat": 37.5584191349149,
+          "lon": 126.987142995871,
+          "distanceMeters": 310
+        },
+        {
+          "name": "7-ELEVEN 명동대성당점",
+          "nameRomanized": "7-ELEVEN Myeongdongdaeseongdang",
+          "address": "서울특별시 중구 명동길 74",
+          "lat": 37.5636719060606,
+          "lon": 126.986779898656,
+          "distanceMeters": 319
+        },
+        {
+          "name": "emart24 밀리오레호텔",
+          "nameRomanized": "emart24 Milriorehotel",
+          "address": "서울특별시 중구 퇴계로 115",
+          "lat": 37.5610497309063,
+          "lon": 126.984516725353,
+          "distanceMeters": 331
+        },
+        {
+          "name": "7-ELEVEN",
+          "nameRomanized": "7-ELEVEN",
+          "address": "서울특별시 중구 퇴계로20길 32",
+          "lat": 37.5587073091629,
+          "lon": 126.985875349525,
+          "distanceMeters": 336
+        },
+        {
+          "name": "emart24 명동",
+          "nameRomanized": "emart24 Myeongdong",
+          "address": "서울특별시 중구 명동8길 21-7",
+          "lat": 37.5629148767408,
+          "lon": 126.985161491885,
+          "distanceMeters": 343
+        },
+        {
+          "name": "CU 중부경찰서점",
+          "nameRomanized": "CU Jungbugyeongchalseo",
+          "address": "서울특별시 중구 수표로 28",
+          "lat": 37.5636992831946,
+          "lon": 126.990367884955,
+          "distanceMeters": 347
+        },
+        {
+          "name": "emart24 R충무로",
+          "nameRomanized": "emart24 Rchungmuro",
+          "address": "서울특별시 중구 퇴계로 184",
+          "lat": 37.5608522708108,
+          "lon": 126.992224428629,
+          "distanceMeters": 349
+        },
+        {
+          "name": "CU 명동화이자점",
+          "nameRomanized": "CU Myeongdonghwaija",
+          "address": "서울특별시 중구 퇴계로 114-1",
+          "lat": 37.560545151816,
+          "lon": 126.984358376273,
+          "distanceMeters": 350
+        },
+        {
+          "name": "GS25 사보이호텔점",
+          "nameRomanized": "GS25 Saboihotel",
+          "address": "서울특별시 중구 명동8나길 10",
+          "lat": 37.5617795038068,
+          "lon": 126.98425625358,
+          "distanceMeters": 363
+        },
+        {
+          "name": "CU 충무로점",
+          "nameRomanized": "CU Chungmuro",
+          "address": "서울특별시 중구 수표로2길 29",
+          "lat": 37.5623028687437,
+          "lon": 126.992122412519,
+          "distanceMeters": 367
+        },
+        {
+          "name": "CU 명동",
+          "nameRomanized": "CU Myeongdong",
+          "address": "서울특별시 중구 명동길 58",
+          "lat": 37.563743848092,
+          "lon": 126.985602752506,
+          "distanceMeters": 380
+        },
+        {
+          "name": "CU 을지로백",
+          "nameRomanized": "CU Euljirobaeg",
+          "address": "서울특별시 중구 마른내로 8",
+          "lat": 37.5644920167997,
+          "lon": 126.988749208221,
+          "distanceMeters": 384
+        },
+        {
+          "name": "7-ELEVEN 저동점",
+          "nameRomanized": "7-ELEVEN Jeodong",
+          "address": "서울특별시 중구 수표로 35-1",
+          "lat": 37.564429051436,
+          "lon": 126.989903724524,
+          "distanceMeters": 402
+        },
+        {
+          "name": "CU 뉴명동와이더블유씨에이점",
+          "nameRomanized": "CU Nyumyeongdongwaideobeulyussiei",
+          "address": "서울특별시 중구 명동길 73",
+          "lat": 37.5644106609454,
+          "lon": 126.986236470912,
+          "distanceMeters": 414
+        },
+        {
+          "name": "CU 중구",
+          "nameRomanized": "CU Junggu",
+          "address": "서울특별시 중구 퇴계로 105",
+          "lat": 37.5608693888243,
+          "lon": 126.983464174177,
+          "distanceMeters": 424
+        },
+        {
+          "name": "GS25 나인트리호텔점",
+          "nameRomanized": "GS25 Nainteurihotel",
+          "address": "서울특별시 중구 마른내로 28",
+          "lat": 37.564339026652,
+          "lon": 126.990820549821,
+          "distanceMeters": 429
+        },
+        {
+          "name": "emart24 중구",
+          "nameRomanized": "emart24 Junggu",
+          "address": "서울특별시 중구 퇴계로14길 29",
+          "lat": 37.5591936063437,
+          "lon": 126.983985168028,
+          "distanceMeters": 431
+        },
+        {
+          "name": "GS25 나라키움",
+          "nameRomanized": "GS25 Narakium",
+          "address": "서울특별시 중구 삼일대로 340",
+          "lat": 37.5650415691947,
+          "lon": 126.988183186218,
+          "distanceMeters": 443
+        },
+        {
+          "name": "7-ELEVEN 한옥",
+          "nameRomanized": "7-ELEVEN Hanog",
+          "address": "서울특별시 중구 퇴계로34길 16",
+          "lat": 37.5602306424158,
+          "lon": 126.993186528272,
+          "distanceMeters": 443
+        },
+        {
+          "name": "CU 충무로티마크점",
+          "nameRomanized": "CU Chungmurotimakeu",
+          "address": "서울특별시 중구 충무로 17",
+          "lat": 37.5628254955867,
+          "lon": 126.992892012217,
+          "distanceMeters": 452
+        },
+        {
+          "name": "CU 대신파이낸스",
+          "nameRomanized": "CU Daesinpainaenseu",
+          "address": "서울특별시 중구 삼일대로 343",
+          "lat": 37.5650955002825,
+          "lon": 126.986960747811,
+          "distanceMeters": 464
+        },
+        {
+          "name": "CU 을지로",
+          "nameRomanized": "CU Euljiro",
+          "address": "서울특별시 중구 마른내로 34",
+          "lat": 37.5642309716437,
+          "lon": 126.991692100245,
+          "distanceMeters": 464
+        },
+        {
+          "name": "GS25 을지로",
+          "nameRomanized": "GS25 Euljiro",
+          "address": "서울특별시 중구 수표로 43-2",
+          "lat": 37.5651768646243,
+          "lon": 126.989745160293,
+          "distanceMeters": 476
+        },
+        {
+          "name": "7-ELEVEN 스테이트",
+          "nameRomanized": "7-ELEVEN Seuteiteu",
+          "address": "서울특별시 중구 퇴계로 100",
+          "lat": 37.5602025754714,
+          "lon": 126.98293237296,
+          "distanceMeters": 480
+        },
+        {
+          "name": "7-ELEVEN 명동스카이호텔점",
+          "nameRomanized": "7-ELEVEN Myeongdongseukaihotel",
+          "address": "서울특별시 중구 명동9길 16",
+          "lat": 37.5646447982302,
+          "lon": 126.985229061128,
+          "distanceMeters": 481
+        },
+        {
+          "name": "7-ELEVEN 아시아미디어점",
+          "nameRomanized": "7-ELEVEN Asiamidieo",
+          "address": "서울특별시 중구 충무로 29",
+          "lat": 37.5638345877947,
+          "lon": 126.99250708379,
+          "distanceMeters": 485
+        },
+        {
+          "name": "CU 을지로비즈",
+          "nameRomanized": "CU Euljiro Biz",
+          "address": "서울특별시 중구 수표로 45",
+          "lat": 37.5653390310549,
+          "lon": 126.989597993246,
+          "distanceMeters": 491
+        },
+        {
+          "name": "7-ELEVEN 중구매크로점",
+          "nameRomanized": "7-ELEVEN Junggumaekeuro",
+          "address": "서울특별시 중구 을지로12길 28",
+          "lat": 37.5651769335028,
+          "lon": 126.990571433239,
+          "distanceMeters": 501
+        },
+        {
+          "name": "CU 뉴을지로",
+          "nameRomanized": "CU Nyueuljiro",
+          "address": "서울특별시 중구 을지로 100",
+          "lat": 37.5656452320494,
+          "lon": 126.988137815349,
+          "distanceMeters": 511
+        },
+        {
+          "name": "CU M충무로역점",
+          "nameRomanized": "CU Mchungmuro Station",
+          "address": "서울특별시 중구 퇴계로 214",
+          "lat": 37.5612938730615,
+          "lon": 126.994205071266,
+          "distanceMeters": 524
+        },
+        {
+          "name": "CU 아이비케이기업은행",
+          "nameRomanized": "CU Aibikeigieobeunhaeng",
+          "address": "서울특별시 중구 을지로 82",
+          "lat": 37.5657081913154,
+          "lon": 126.987085148785,
+          "distanceMeters": 528
+        },
+        {
+          "name": "7-ELEVEN 을지스타몰점",
+          "nameRomanized": "7-ELEVEN Euljiseuta Mall",
+          "address": "서울특별시 중구 을지로 88",
+          "lat": 37.5661496556429,
+          "lon": 126.986870012429,
+          "distanceMeters": 580
+        },
+        {
+          "name": "emart24 을지로",
+          "nameRomanized": "emart24 Euljiro",
+          "address": "서울특별시 중구 을지로14길 21",
+          "lat": 37.5652581435642,
+          "lon": 126.99222397071,
+          "distanceMeters": 583
+        },
+        {
+          "name": "7-ELEVEN 명동",
+          "nameRomanized": "7-ELEVEN Myeongdong",
+          "address": "서울특별시 중구 명동길 3",
+          "lat": 37.5637434241351,
+          "lon": 126.982467502978,
+          "distanceMeters": 592
+        },
+        {
+          "name": "7-ELEVEN 명동",
+          "nameRomanized": "7-ELEVEN Myeongdong",
+          "address": "서울특별시 중구 명동9길 35",
+          "lat": 37.5653023783865,
+          "lon": 126.984097048638,
+          "distanceMeters": 599
+        },
+        {
+          "name": "7-ELEVEN 충무",
+          "nameRomanized": "7-ELEVEN Chungmu",
+          "address": "서울특별시 중구 퇴계로 209",
+          "lat": 37.5616633193784,
+          "lon": 126.995031276804,
+          "distanceMeters": 600
+        },
+        {
+          "name": "CU 필동",
+          "nameRomanized": "CU Pildong",
+          "address": "서울특별시 중구 퇴계로36길 29",
+          "lat": 37.5605460843261,
+          "lon": 126.995053987212,
+          "distanceMeters": 601
+        },
+        {
+          "name": "7-ELEVEN 메트로호텔점",
+          "nameRomanized": "7-ELEVEN Meteurohotel",
+          "address": "서울특별시 중구 명동9가길 14",
+          "lat": 37.5651311397804,
+          "lon": 126.983734883421,
+          "distanceMeters": 604
+        },
+        {
+          "name": "CU 을지로홀리데이인점",
+          "nameRomanized": "CU Euljiroholrideiin",
+          "address": "서울특별시 중구 수표로 58",
+          "lat": 37.5664022280551,
+          "lon": 126.989846863252,
+          "distanceMeters": 611
+        },
+        {
+          "name": "CU 을지로",
+          "nameRomanized": "CU Euljiro",
+          "address": "서울특별시 중구 수표로 58-1",
+          "lat": 37.5664652977717,
+          "lon": 126.989846854692,
+          "distanceMeters": 617
+        },
+        {
+          "name": "emart24 을지로기업",
+          "nameRomanized": "emart24 Euljirogieob",
+          "address": "서울특별시 중구 을지로 79",
+          "lat": 37.5664919997228,
+          "lon": 126.986564339164,
+          "distanceMeters": 623
+        },
+        {
+          "name": "7-ELEVEN 롯데시티호텔",
+          "nameRomanized": "7-ELEVEN Rosdesitihotel",
+          "address": "서울특별시 중구 삼일대로 362",
+          "lat": 37.5669426616833,
+          "lon": 126.988092333311,
+          "distanceMeters": 655
+        },
+        {
+          "name": "CU 을지로",
+          "nameRomanized": "CU Euljiro",
+          "address": "서울특별시 중구 충무로 53-1",
+          "lat": 37.5659879658059,
+          "lon": 126.992461592384,
+          "distanceMeters": 661
+        },
+        {
+          "name": "emart24",
+          "nameRomanized": "emart24",
+          "address": "서울특별시 중구 을지로 65",
+          "lat": 37.5664828174184,
+          "lon": 126.985126827159,
+          "distanceMeters": 664
+        },
+        {
+          "name": "emart24 신세계",
+          "nameRomanized": "emart24 Sinsegye",
+          "address": "서울특별시 중구 퇴계로 77",
+          "lat": 37.5603554126478,
+          "lon": 126.980770585183,
+          "distanceMeters": 666
+        },
+        {
+          "name": "GS25 을지로",
+          "nameRomanized": "GS25 Euljiro",
+          "address": "서울특별시 중구 충무로 55-1",
+          "lat": 37.5661231159302,
+          "lon": 126.992472897715,
+          "distanceMeters": 674
+        },
+        {
+          "name": "GS25 필동점",
+          "nameRomanized": "GS25 Pildong",
+          "address": "서울특별시 중구 필동로 14",
+          "lat": 37.5604019565471,
+          "lon": 126.995880216963,
+          "distanceMeters": 675
+        },
+        {
+          "name": "emart24 S을지로입구역점",
+          "nameRomanized": "emart24 Seuljiroibgu Station",
+          "address": "서울특별시 중구 을지로 58",
+          "lat": 37.566113261057,
+          "lon": 126.983995005714,
+          "distanceMeters": 677
+        },
+        {
+          "name": "CU 중구진양점",
+          "nameRomanized": "CU Junggujinyang",
+          "address": "서울특별시 중구 퇴계로 217",
+          "lat": 37.5624292011506,
+          "lon": 126.995936697295,
+          "distanceMeters": 693
+        },
+        {
+          "name": "7-ELEVEN 충무필동점",
+          "nameRomanized": "7-ELEVEN Chungmupildong",
+          "address": "서울특별시 중구 필동로 5",
+          "lat": 37.5610326667749,
+          "lon": 126.996253682197,
+          "distanceMeters": 704
+        },
+        {
+          "name": "GS25 소공점",
+          "nameRomanized": "GS25 Sogong",
+          "address": "서울특별시 중구 남대문로7길 11-10",
+          "lat": 37.5636891275571,
+          "lon": 126.980939507079,
+          "distanceMeters": 710
+        },
+        {
+          "name": "CU 내외빌딩점",
+          "nameRomanized": "CU Naeoebilding",
+          "address": "서울특별시 중구 을지로 51",
+          "lat": 37.5664916359649,
+          "lon": 126.983677992578,
+          "distanceMeters": 728
+        },
+        {
+          "name": "7-ELEVEN 남대문카페점",
+          "nameRomanized": "7-ELEVEN Namdaemunkape",
+          "address": "서울특별시 중구 남대문시장길 73",
+          "lat": 37.5608598429996,
+          "lon": 126.980000821046,
+          "distanceMeters": 729
+        },
+        {
+          "name": "CU 남산회현점",
+          "nameRomanized": "CU Namsanhoehyeon",
+          "address": "서울특별시 중구 퇴계로10길 20",
+          "lat": 37.5585984277268,
+          "lon": 126.980522044841,
+          "distanceMeters": 736
+        },
+        {
+          "name": "CU 페럼",
+          "nameRomanized": "CU Pereom",
+          "address": "서울특별시 중구 을지로5길 19",
+          "lat": 37.566933187197,
+          "lon": 126.984141978238,
+          "distanceMeters": 748
+        },
+        {
+          "name": "7-ELEVEN 중구센터원점",
+          "nameRomanized": "7-ELEVEN Junggu Center Won",
+          "address": "서울특별시 중구 을지로5길 26",
+          "lat": 37.5673387734418,
+          "lon": 126.985205890913,
+          "distanceMeters": 749
+        },
+        {
+          "name": "CU 중구회현점",
+          "nameRomanized": "CU Jungguhoehyeon",
+          "address": "서울특별시 중구 퇴계로 70",
+          "lat": 37.5592019856409,
+          "lon": 126.97986544932,
+          "distanceMeters": 769
+        },
+        {
+          "name": "emart24 메사빌딩점",
+          "nameRomanized": "emart24 Mesabilding",
+          "address": "서울특별시 중구 남대문시장10길 2",
+          "lat": 37.5603732350079,
+          "lon": 126.979593500205,
+          "distanceMeters": 769
+        },
+        {
+          "name": "CU 호텔피제이점",
+          "nameRomanized": "CU Hotelpijei",
+          "address": "서울특별시 중구 마른내로 71",
+          "lat": 37.5649069319634,
+          "lon": 126.995676231084,
+          "distanceMeters": 781
+        },
+        {
+          "name": "7-ELEVEN 을지로3가지하",
+          "nameRomanized": "7-ELEVEN Euljiro3gajiha",
+          "address": "서울특별시 중구 을지로 131",
+          "lat": 37.5664475654494,
+          "lon": 126.994068844052,
+          "distanceMeters": 788
+        },
+        {
+          "name": "emart24 동대",
+          "nameRomanized": "emart24 Dongdae",
+          "address": "서울특별시 중구 퇴계로44길 8",
+          "lat": 37.5615642814636,
+          "lon": 126.997215707771,
+          "distanceMeters": 790
+        }
+      ]
+    },
+    "dongdaemun": {
+      "centerStationName": "동대문역사문화공원",
+      "count": 52,
+      "stores": [
+        {
+          "name": "emart24 SDDP역점",
+          "nameRomanized": "emart24 SDDP Station",
+          "address": "서울특별시 중구 을지로 279",
+          "lat": 37.5655914157257,
+          "lon": 127.009123009502,
+          "distanceMeters": 1
+        },
+        {
+          "name": "CU APM",
+          "nameRomanized": "CU APM",
+          "address": "서울특별시 중구 을지로 280",
+          "lat": 37.5654742992314,
+          "lon": 127.00895321243,
+          "distanceMeters": 20
+        },
+        {
+          "name": "GS25 뉴광희",
+          "nameRomanized": "GS25 Nyugwanghui",
+          "address": "서울특별시 중구 퇴계로 342",
+          "lat": 37.5643299898,
+          "lon": 127.009519009454,
+          "distanceMeters": 145
+        },
+        {
+          "name": "7-ELEVEN 광희재형점",
+          "nameRomanized": "7-ELEVEN Gwanghuijaehyeong",
+          "address": "서울특별시 중구 퇴계로 327",
+          "lat": 37.5644832724762,
+          "lon": 127.007991004099,
+          "distanceMeters": 158
+        },
+        {
+          "name": "CU 공원역점",
+          "nameRomanized": "CU Gongwon Station",
+          "address": "서울특별시 중구 퇴계로 352-1",
+          "lat": 37.5645551329452,
+          "lon": 127.010752777876,
+          "distanceMeters": 185
+        },
+        {
+          "name": "emart24 중구",
+          "nameRomanized": "emart24 Junggu",
+          "address": "서울특별시 중구 장충단로 249-10",
+          "lat": 37.5672943967114,
+          "lon": 127.007742283576,
+          "distanceMeters": 224
+        },
+        {
+          "name": "7-ELEVEN 을지로광희점",
+          "nameRomanized": "7-ELEVEN Euljirogwanghui",
+          "address": "서울특별시 중구 을지로 258",
+          "lat": 37.5660601023686,
+          "lon": 127.00658762382,
+          "distanceMeters": 228
+        },
+        {
+          "name": "GS25 패션",
+          "nameRomanized": "GS25 Paesyeon",
+          "address": "서울특별시 중구 을지로 254",
+          "lat": 37.566060117214,
+          "lon": 127.006315969231,
+          "distanceMeters": 252
+        },
+        {
+          "name": "emart24 에비뉴점",
+          "nameRomanized": "emart24 Ebinyu",
+          "address": "서울특별시 중구 을지로44길 24-4",
+          "lat": 37.5651591247424,
+          "lon": 127.006247980332,
+          "distanceMeters": 257
+        },
+        {
+          "name": "CU 광희",
+          "nameRomanized": "CU Gwanghui",
+          "address": "서울특별시 중구 마른내로 155",
+          "lat": 37.5653033321322,
+          "lon": 127.005263254448,
+          "distanceMeters": 341
+        },
+        {
+          "name": "CU 호텔스카이파크점",
+          "nameRomanized": "CU Hotelseukaipakeu",
+          "address": "서울특별시 중구 장충단로13길 20",
+          "lat": 37.5687359942888,
+          "lon": 127.007674516712,
+          "distanceMeters": 371
+        },
+        {
+          "name": "CU 신당광희문점",
+          "nameRomanized": "CU Sindanggwanghuimun",
+          "address": "서울특별시 중구 다산로33길 52",
+          "lat": 37.5634107114809,
+          "lon": 127.012348527582,
+          "distanceMeters": 375
+        },
+        {
+          "name": "CU 신당퇴계로점",
+          "nameRomanized": "CU Sindangtoegyero",
+          "address": "서울특별시 중구 퇴계로 376-2",
+          "lat": 37.5648611968623,
+          "lon": 127.013435367943,
+          "distanceMeters": 390
+        },
+        {
+          "name": "7-ELEVEN 중구디자이너스호텔점",
+          "nameRomanized": "7-ELEVEN Junggudijaineoseuhotel",
+          "address": "서울특별시 중구 퇴계로 304",
+          "lat": 37.5636545012862,
+          "lon": 127.005432917107,
+          "distanceMeters": 390
+        },
+        {
+          "name": "emart24",
+          "nameRomanized": "emart24",
+          "address": "서울특별시 중구 장충단로 280",
+          "lat": 37.5691953547844,
+          "lon": 127.009678100418,
+          "distanceMeters": 403
+        },
+        {
+          "name": "GS25 쇼핑점",
+          "nameRomanized": "GS25 Syoping",
+          "address": "서울특별시 중구 퇴계로73가길 34",
+          "lat": 37.5669064500879,
+          "lon": 127.013503649691,
+          "distanceMeters": 413
+        },
+        {
+          "name": "7-ELEVEN 동대문",
+          "nameRomanized": "7-ELEVEN Dongdaemun",
+          "address": "서울특별시 중구 퇴계로73길 15",
+          "lat": 37.5659243211974,
+          "lon": 127.013876996784,
+          "distanceMeters": 421
+        },
+        {
+          "name": "CU 행복",
+          "nameRomanized": "CU Haengbog",
+          "address": "서울특별시 중구 퇴계로 299",
+          "lat": 37.5641320622606,
+          "lon": 127.004663283618,
+          "distanceMeters": 425
+        },
+        {
+          "name": "emart24 SMART을지로패션타운점",
+          "nameRomanized": "emart24 SMARTeuljiropaesyeon Town",
+          "address": "서울특별시 중구 을지로 227",
+          "lat": 37.5669251605887,
+          "lon": 127.004391800002,
+          "distanceMeters": 442
+        },
+        {
+          "name": "CU 동대문",
+          "nameRomanized": "CU Dongdaemun",
+          "address": "서울특별시 중구 청계천로 298",
+          "lat": 37.5694565211344,
+          "lon": 127.011070427197,
+          "distanceMeters": 463
+        },
+        {
+          "name": "CU 중구장충점",
+          "nameRomanized": "CU Junggujangchung",
+          "address": "서울특별시 중구 장충단로8길 12",
+          "lat": 37.5616902391932,
+          "lon": 127.007119198209,
+          "distanceMeters": 469
+        },
+        {
+          "name": "CU 광희",
+          "nameRomanized": "CU Gwanghui",
+          "address": "서울특별시 중구 퇴계로 289",
+          "lat": 37.5638077292109,
+          "lon": 127.003961510172,
+          "distanceMeters": 496
+        },
+        {
+          "name": "7-ELEVEN 중구을지로5가점",
+          "nameRomanized": "7-ELEVEN Junggueuljiro5ga",
+          "address": "서울특별시 중구 을지로38길 20",
+          "lat": 37.5658800397322,
+          "lon": 127.003339079639,
+          "distanceMeters": 510
+        },
+        {
+          "name": "7-ELEVEN 종로신협점",
+          "nameRomanized": "7-ELEVEN Jongrosinhyeob",
+          "address": "서울특별시 종로구 청계천로 295",
+          "lat": 37.5700602245651,
+          "lon": 127.010674332421,
+          "distanceMeters": 515
+        },
+        {
+          "name": "CU 을지로코업점",
+          "nameRomanized": "CU Euljirokoeob",
+          "address": "서울특별시 중구 을지로 228",
+          "lat": 37.566447667853,
+          "lon": 127.003316466976,
+          "distanceMeters": 520
+        },
+        {
+          "name": "emart24 쌍림한국점",
+          "nameRomanized": "emart24 Ssangrimhangug",
+          "address": "서울특별시 중구 마른내로 136-3",
+          "lat": 37.5643663680787,
+          "lon": 127.003271099968,
+          "distanceMeters": 533
+        },
+        {
+          "name": "CU 중구세룡점",
+          "nameRomanized": "CU Jungguseryong",
+          "address": "서울특별시 중구 장충단로7길 35",
+          "lat": 37.5623480967321,
+          "lon": 127.004470759968,
+          "distanceMeters": 546
+        },
+        {
+          "name": "emart24 신당역점",
+          "nameRomanized": "emart24 Sindang Station",
+          "address": "서울특별시 중구 퇴계로75길 7",
+          "lat": 37.5658430361423,
+          "lon": 127.015450309964,
+          "distanceMeters": 559
+        },
+        {
+          "name": "7-ELEVEN 신당",
+          "nameRomanized": "7-ELEVEN Sindang",
+          "address": "서울특별시 중구 퇴계로76길 24",
+          "lat": 37.5641852194557,
+          "lon": 127.015325462349,
+          "distanceMeters": 570
+        },
+        {
+          "name": "CU 청구역점",
+          "nameRomanized": "CU Cheonggu Station",
+          "address": "서울특별시 중구 청구로 94",
+          "lat": 37.5609780522472,
+          "lon": 127.012042535426,
+          "distanceMeters": 575
+        },
+        {
+          "name": "GS25 청계천패션점",
+          "nameRomanized": "GS25 Cheonggyecheonpaesyeon",
+          "address": "서울특별시 중구 청계천로 318",
+          "lat": 37.5693391070392,
+          "lon": 127.013775755356,
+          "distanceMeters": 585
+        },
+        {
+          "name": "GS25 장충",
+          "nameRomanized": "GS25 Jangchung",
+          "address": "서울특별시 중구 동호로30길 43",
+          "lat": 37.5611947827142,
+          "lon": 127.005387465673,
+          "distanceMeters": 589
+        },
+        {
+          "name": "CU 신당마루점",
+          "nameRomanized": "CU Sindangmaru",
+          "address": "서울특별시 중구 퇴계로76길 31",
+          "lat": 37.5637977822093,
+          "lon": 127.015393294575,
+          "distanceMeters": 589
+        },
+        {
+          "name": "CU 뉴동대문종합",
+          "nameRomanized": "CU Nyudongdaemunjonghab",
+          "address": "서울특별시 종로구 종로 266",
+          "lat": 37.570700186669,
+          "lon": 127.007323809304,
+          "distanceMeters": 589
+        },
+        {
+          "name": "7-ELEVEN 호텔점",
+          "nameRomanized": "7-ELEVEN Hotel",
+          "address": "서울특별시 종로구 종로 286",
+          "lat": 37.5708531296837,
+          "lon": 127.010346175251,
+          "distanceMeters": 594
+        },
+        {
+          "name": "7-ELEVEN 청구점",
+          "nameRomanized": "7-ELEVEN Cheonggu",
+          "address": "서울특별시 중구 다산로29길 14",
+          "lat": 37.5611220832645,
+          "lon": 127.013242287186,
+          "distanceMeters": 616
+        },
+        {
+          "name": "7-ELEVEN 오장동호점",
+          "nameRomanized": "7-ELEVEN Ojangdongho",
+          "address": "서울특별시 중구 동호로 339",
+          "lat": 37.564762832363,
+          "lon": 127.002139242804,
+          "distanceMeters": 622
+        },
+        {
+          "name": "CU 을지로5가점",
+          "nameRomanized": "CU Euljiro5ga",
+          "address": "서울특별시 중구 동호로 361",
+          "lat": 37.5665828483303,
+          "lon": 127.001912914443,
+          "distanceMeters": 644
+        },
+        {
+          "name": "emart24 종로창신점",
+          "nameRomanized": "emart24 Jongrochangsin",
+          "address": "서울특별시 종로구 종로50길 29",
+          "lat": 37.5706276449389,
+          "lon": 127.012757225763,
+          "distanceMeters": 645
+        },
+        {
+          "name": "7-ELEVEN",
+          "nameRomanized": "7-ELEVEN",
+          "address": "서울특별시 종로구 율곡로 294",
+          "lat": 37.5714389140084,
+          "lon": 127.008636973247,
+          "distanceMeters": 651
+        },
+        {
+          "name": "CU",
+          "nameRomanized": "CU",
+          "address": "서울특별시 종로구 종로46길 5",
+          "lat": 37.5712585202864,
+          "lon": 127.010980136091,
+          "distanceMeters": 651
+        },
+        {
+          "name": "CU 동호",
+          "nameRomanized": "CU Dongho",
+          "address": "서울특별시 중구 동호로20길 36",
+          "lat": 37.5595367074829,
+          "lon": 127.009269404634,
+          "distanceMeters": 674
+        },
+        {
+          "name": "CU 오장",
+          "nameRomanized": "CU Ojang",
+          "address": "서울특별시 중구 마른내로 122-1",
+          "lat": 37.5644204623838,
+          "lon": 127.001595935741,
+          "distanceMeters": 675
+        },
+        {
+          "name": "7-ELEVEN 솔하임점",
+          "nameRomanized": "7-ELEVEN Solhaim",
+          "address": "서울특별시 중구 마장로 58",
+          "lat": 37.5677350055021,
+          "lon": 127.016356236308,
+          "distanceMeters": 681
+        },
+        {
+          "name": "CU 낙산공원점",
+          "nameRomanized": "CU Nagsangongwon",
+          "address": "서울특별시 종로구 낙산성곽길 2",
+          "lat": 37.5717271366895,
+          "lon": 127.009859544805,
+          "distanceMeters": 685
+        },
+        {
+          "name": "7-ELEVEN 신당",
+          "nameRomanized": "7-ELEVEN Sindang",
+          "address": "서울특별시 중구 다산로42길 12",
+          "lat": 37.5647255943705,
+          "lon": 127.016955471499,
+          "distanceMeters": 698
+        },
+        {
+          "name": "CU 신당6동점",
+          "nameRomanized": "CU Sindang6dong",
+          "address": "서울특별시 중구 다산로40길 14",
+          "lat": 37.5638156188403,
+          "lon": 127.016740211832,
+          "distanceMeters": 701
+        },
+        {
+          "name": "7-ELEVEN 퇴계로5가점",
+          "nameRomanized": "7-ELEVEN Toegyero5ga",
+          "address": "서울특별시 중구 퇴계로 272",
+          "lat": 37.5628076733844,
+          "lon": 127.001958091711,
+          "distanceMeters": 703
+        },
+        {
+          "name": "7-ELEVEN S청구역점",
+          "nameRomanized": "7-ELEVEN Scheonggu Station",
+          "address": "서울특별시 중구 청구로 77",
+          "lat": 37.5602931013668,
+          "lon": 127.013808043905,
+          "distanceMeters": 720
+        },
+        {
+          "name": "GS25 중구청산점",
+          "nameRomanized": "GS25 Junggucheongsan",
+          "address": "서울특별시 중구 다산로32길 15",
+          "lat": 37.5611128066073,
+          "lon": 127.015438014929,
+          "distanceMeters": 748
+        },
+        {
+          "name": "CU 청구대로점",
+          "nameRomanized": "CU Cheonggudaero",
+          "address": "서울특별시 중구 다산로 175",
+          "lat": 37.5592750821623,
+          "lon": 127.012857151202,
+          "distanceMeters": 777
+        },
+        {
+          "name": "CU 동대입구역점",
+          "nameRomanized": "CU Dongdaeibgu Station",
+          "address": "서울특별시 중구 동호로24길 3",
+          "lat": 37.5593207197566,
+          "lon": 127.00514965438,
+          "distanceMeters": 780
+        }
+      ]
+    },
+    "itaewon": {
+      "centerStationName": "이태원",
+      "count": 29,
+      "stores": [
+        {
+          "name": "GS25 이태원점",
+          "nameRomanized": "GS25 Itaewon",
+          "address": "서울특별시 용산구 이태원로 185",
+          "lat": 37.5347234378392,
+          "lon": 126.994603124962,
+          "distanceMeters": 34
+        },
+        {
+          "name": "CU 이태원해밀턴점",
+          "nameRomanized": "CU Itaewonhaemilteon",
+          "address": "서울특별시 용산구 보광로 126",
+          "lat": 37.5340296495209,
+          "lon": 126.994229809703,
+          "distanceMeters": 52
+        },
+        {
+          "name": "GS25 S6이태원역",
+          "nameRomanized": "GS25 S6itaewon Station",
+          "address": "서울특별시 용산구 이태원로 177",
+          "lat": 37.5344801239879,
+          "lon": 126.993720637496,
+          "distanceMeters": 57
+        },
+        {
+          "name": "emart24 R이태원피닉스점",
+          "nameRomanized": "emart24 Ritaewonpinigseu",
+          "address": "서울특별시 용산구 이태원로27길 13",
+          "lat": 37.5351829680504,
+          "lon": 126.995055662761,
+          "distanceMeters": 98
+        },
+        {
+          "name": "emart24 이태원해밀턴점",
+          "nameRomanized": "emart24 Itaewonhaemilteon",
+          "address": "서울특별시 용산구 이태원로 173",
+          "lat": 37.5346602992234,
+          "lon": 126.993268054634,
+          "distanceMeters": 99
+        },
+        {
+          "name": "7-ELEVEN 이태원",
+          "nameRomanized": "7-ELEVEN Itaewon",
+          "address": "서울특별시 용산구 우사단로 46",
+          "lat": 37.5342009072638,
+          "lon": 126.995836402185,
+          "distanceMeters": 133
+        },
+        {
+          "name": "7-ELEVEN 이태원",
+          "nameRomanized": "7-ELEVEN Itaewon",
+          "address": "서울특별시 용산구 우사단로 34",
+          "lat": 37.5332278213543,
+          "lon": 126.995700688552,
+          "distanceMeters": 183
+        },
+        {
+          "name": "CU 이태원점",
+          "nameRomanized": "CU Itaewon",
+          "address": "서울특별시 용산구 보광로59길 36",
+          "lat": 37.5339574402764,
+          "lon": 126.992012254078,
+          "distanceMeters": 216
+        },
+        {
+          "name": "CU 이태원탑점",
+          "nameRomanized": "CU Itaewontab",
+          "address": "서울특별시 용산구 이태원로19길 10",
+          "lat": 37.5349485358257,
+          "lon": 126.991932948709,
+          "distanceMeters": 221
+        },
+        {
+          "name": "7-ELEVEN 관광특구점",
+          "nameRomanized": "7-ELEVEN Gwangwangteuggu",
+          "address": "서울특별시 용산구 이태원로 211",
+          "lat": 37.5349938299154,
+          "lon": 126.997273267127,
+          "distanceMeters": 262
+        },
+        {
+          "name": "GS25 용산가구",
+          "nameRomanized": "GS25 Yongsangagu",
+          "address": "서울특별시 용산구 녹사평대로26가길 1",
+          "lat": 37.5319842524942,
+          "lon": 126.992080347254,
+          "distanceMeters": 344
+        },
+        {
+          "name": "CU 니온",
+          "nameRomanized": "CU Nion",
+          "address": "서울특별시 용산구 이태원로45길 37",
+          "lat": 37.5366787051615,
+          "lon": 126.997454237761,
+          "distanceMeters": 365
+        },
+        {
+          "name": "emart24 이태원",
+          "nameRomanized": "emart24 Itaewon",
+          "address": "서울특별시 용산구 이태원로 227",
+          "lat": 37.5356335663806,
+          "lon": 126.998857251565,
+          "distanceMeters": 416
+        },
+        {
+          "name": "CU 이태원1동점",
+          "nameRomanized": "CU Itaewon1dong",
+          "address": "서울특별시 용산구 녹사평대로40다길 30",
+          "lat": 37.5355430318452,
+          "lon": 126.989805791152,
+          "distanceMeters": 419
+        },
+        {
+          "name": "GS25 이태원힐점",
+          "nameRomanized": "GS25 Itaewonhil",
+          "address": "서울특별시 용산구 녹사평대로40길 55",
+          "lat": 37.5344257007593,
+          "lon": 126.988810297303,
+          "distanceMeters": 490
+        },
+        {
+          "name": "7-ELEVEN 보광우사단로점",
+          "nameRomanized": "7-ELEVEN Bogwangusadanro",
+          "address": "서울특별시 용산구 우사단로2길 12",
+          "lat": 37.5305699175144,
+          "lon": 126.997409191093,
+          "distanceMeters": 511
+        },
+        {
+          "name": "CU 이태원하얏트점",
+          "nameRomanized": "CU Itaewonhayasteu",
+          "address": "서울특별시 용산구 회나무로44가길 2",
+          "lat": 37.5393275746884,
+          "lon": 126.995168538093,
+          "distanceMeters": 543
+        },
+        {
+          "name": "CU 이태원햇살점",
+          "nameRomanized": "CU Itaewonhaessal",
+          "address": "서울특별시 용산구 녹사평대로40나길 53",
+          "lat": 37.5369034471846,
+          "lon": 126.988753354416,
+          "distanceMeters": 563
+        },
+        {
+          "name": "CU 이태원공원점",
+          "nameRomanized": "CU Itaewongongwon",
+          "address": "서울특별시 용산구 녹사평대로40나길 84",
+          "lat": 37.5378856173696,
+          "lon": 126.989624437355,
+          "distanceMeters": 564
+        },
+        {
+          "name": "emart24 R한남",
+          "nameRomanized": "emart24 Rhannam",
+          "address": "서울특별시 용산구 이태원로 245",
+          "lat": 37.5369039827213,
+          "lon": 127.000033943599,
+          "distanceMeters": 567
+        },
+        {
+          "name": "CU 한남카페거리",
+          "nameRomanized": "CU Hannamkapegeori",
+          "address": "서울특별시 용산구 이태원로54길 62",
+          "lat": 37.5356876279413,
+          "lon": 127.000973034023,
+          "distanceMeters": 597
+        },
+        {
+          "name": "emart24 R이태원점",
+          "nameRomanized": "emart24 Ritaewon",
+          "address": "서울특별시 용산구 회나무로26길 12",
+          "lat": 37.53952556796,
+          "lon": 126.991230930032,
+          "distanceMeters": 625
+        },
+        {
+          "name": "emart24 알용산보광점",
+          "nameRomanized": "emart24 Alyongsanbogwang",
+          "address": "서울특별시 용산구 보광로 63",
+          "lat": 37.5292634704649,
+          "lon": 126.997658130611,
+          "distanceMeters": 649
+        },
+        {
+          "name": "CU H용산몬드리안호텔점",
+          "nameRomanized": "CU Hyongsanmondeurianhotel",
+          "address": "서울특별시 용산구 장문로 23",
+          "lat": 37.5285695214048,
+          "lon": 126.99311021621,
+          "distanceMeters": 667
+        },
+        {
+          "name": "7-ELEVEN 캐피탈점",
+          "nameRomanized": "7-ELEVEN Kaepital",
+          "address": "서울특별시 용산구 장문로 14",
+          "lat": 37.5286865931188,
+          "lon": 126.992171202244,
+          "distanceMeters": 673
+        },
+        {
+          "name": "CU 뉴이태원경리단점",
+          "nameRomanized": "CU Nyuitaewongyeongridan",
+          "address": "서울특별시 용산구 녹사평대로 220",
+          "lat": 37.5372276322723,
+          "lon": 126.98704480389,
+          "distanceMeters": 714
+        },
+        {
+          "name": "CU 나인원한남점",
+          "nameRomanized": "CU Nainwonhannam",
+          "address": "서울특별시 용산구 한남대로 91",
+          "lat": 37.5365615831716,
+          "lon": 127.002138436937,
+          "distanceMeters": 723
+        },
+        {
+          "name": "emart24 이태원2동점",
+          "nameRomanized": "emart24 Itaewon2dong",
+          "address": "서울특별시 용산구 회나무로13가길 57",
+          "lat": 37.5410033162767,
+          "lon": 126.992837508591,
+          "distanceMeters": 737
+        },
+        {
+          "name": "CU 이태원2동점",
+          "nameRomanized": "CU Itaewon2dong",
+          "address": "서울특별시 용산구 회나무로13가길 41",
+          "lat": 37.5410122679012,
+          "lon": 126.991932295443,
+          "distanceMeters": 757
+        }
+      ]
+    },
+    "gyeongbokgung": {
+      "centerStationName": "경복궁",
+      "count": 30,
+      "stores": [
+        {
+          "name": "CU 생산성빌딩점",
+          "nameRomanized": "CU Saengsanseongbilding",
+          "address": "서울특별시 종로구 새문안로5가길 32",
+          "lat": 37.5749141060342,
+          "lon": 126.973544502931,
+          "distanceMeters": 103
+        },
+        {
+          "name": "CU 내자주",
+          "nameRomanized": "CU Naejaju",
+          "address": "서울특별시 종로구 사직로 121",
+          "lat": 37.5762382556466,
+          "lon": 126.972185576712,
+          "distanceMeters": 130
+        },
+        {
+          "name": "7-ELEVEN 종로내자점",
+          "nameRomanized": "7-ELEVEN Jongronaeja",
+          "address": "서울특별시 종로구 사직로 112",
+          "lat": 37.5757875305726,
+          "lon": 126.971234829657,
+          "distanceMeters": 206
+        },
+        {
+          "name": "emart24 시대점",
+          "nameRomanized": "emart24 Sidae",
+          "address": "서울특별시 종로구 사직로8길 42",
+          "lat": 37.5737697482142,
+          "lon": 126.973126063767,
+          "distanceMeters": 234
+        },
+        {
+          "name": "7-ELEVEN 종로서촌점",
+          "nameRomanized": "7-ELEVEN Jongroseochon",
+          "address": "서울특별시 종로구 자하문로 18-1",
+          "lat": 37.5778150301467,
+          "lon": 126.972332159562,
+          "distanceMeters": 245
+        },
+        {
+          "name": "GS25 종로",
+          "nameRomanized": "GS25 Jongro",
+          "address": "서울특별시 종로구 자하문로 19-1",
+          "lat": 37.5777968762414,
+          "lon": 126.971766130413,
+          "distanceMeters": 269
+        },
+        {
+          "name": "CU 종로사직공원점",
+          "nameRomanized": "CU Jongrosajiggongwon",
+          "address": "서울특별시 종로구 사직로 95",
+          "lat": 37.5763456742212,
+          "lon": 126.969355412359,
+          "distanceMeters": 376
+        },
+        {
+          "name": "7-ELEVEN 종로배화점",
+          "nameRomanized": "7-ELEVEN Jongrobaehwa",
+          "address": "서울특별시 종로구 필운대로 12",
+          "lat": 37.5771656024696,
+          "lon": 126.969445641316,
+          "distanceMeters": 393
+        },
+        {
+          "name": "7-ELEVEN 종로당주점",
+          "nameRomanized": "7-ELEVEN Jongrodangju",
+          "address": "서울특별시 종로구 새문안로3길 21",
+          "lat": 37.5721027827678,
+          "lon": 126.972583309699,
+          "distanceMeters": 425
+        },
+        {
+          "name": "CU 경희당점",
+          "nameRomanized": "CU Gyeonghuidang",
+          "address": "서울특별시 종로구 경희궁길 36",
+          "lat": 37.5729130678268,
+          "lon": 126.970069977542,
+          "distanceMeters": 449
+        },
+        {
+          "name": "7-ELEVEN 세",
+          "nameRomanized": "7-ELEVEN Se",
+          "address": "서울특별시 종로구 종로1길 42-1",
+          "lat": 37.5742213759332,
+          "lon": 126.978661467608,
+          "distanceMeters": 483
+        },
+        {
+          "name": "CU 종로K트윈",
+          "nameRomanized": "CU JongroKteuwin",
+          "address": "서울특별시 종로구 종로1길 50",
+          "lat": 37.5747259978724,
+          "lon": 126.979023571704,
+          "distanceMeters": 496
+        },
+        {
+          "name": "emart24 종로당주점",
+          "nameRomanized": "emart24 Jongrodangju",
+          "address": "서울특별시 종로구 새문안로5길 11",
+          "lat": 37.5712022675879,
+          "lon": 126.974734386436,
+          "distanceMeters": 526
+        },
+        {
+          "name": "7-ELEVEN 종로",
+          "nameRomanized": "7-ELEVEN Jongro",
+          "address": "서울특별시 종로구 새문안로9길 21",
+          "lat": 37.5712114655368,
+          "lon": 126.975628641253,
+          "distanceMeters": 546
+        },
+        {
+          "name": "CU 트윈트리",
+          "nameRomanized": "CU Teuwinteuri",
+          "address": "서울특별시 종로구 율곡로 6",
+          "lat": 37.5754469258725,
+          "lon": 126.979781833719,
+          "distanceMeters": 549
+        },
+        {
+          "name": "CU 종로배화점",
+          "nameRomanized": "CU Jongrobaehwa",
+          "address": "서울특별시 종로구 필운대로1길 36",
+          "lat": 37.5779399404934,
+          "lon": 126.967509478559,
+          "distanceMeters": 583
+        },
+        {
+          "name": "GS25 종로누하점",
+          "nameRomanized": "GS25 Jongronuha",
+          "address": "서울특별시 종로구 필운대로 39",
+          "lat": 37.5795350029243,
+          "lon": 126.968629562514,
+          "distanceMeters": 599
+        },
+        {
+          "name": "CU 종로경희궁점",
+          "nameRomanized": "CU Jongrogyeonghuigung",
+          "address": "서울특별시 종로구 경희궁길 4",
+          "lat": 37.5705800003554,
+          "lon": 126.972153722154,
+          "distanceMeters": 599
+        },
+        {
+          "name": "7-ELEVEN 경복궁점",
+          "nameRomanized": "7-ELEVEN Gyeongbokgung",
+          "address": "서울특별시 종로구 삼청로 22",
+          "lat": 37.5779156658419,
+          "lon": 126.979871732104,
+          "distanceMeters": 601
+        },
+        {
+          "name": "CU",
+          "nameRomanized": "CU",
+          "address": "서울특별시 종로구 새문안로 89",
+          "lat": 37.5704724152497,
+          "lon": 126.974519560417,
+          "distanceMeters": 603
+        },
+        {
+          "name": "CU 연합미디어",
+          "nameRomanized": "CU Yeonhabmidieo",
+          "address": "서울특별시 종로구 율곡로2길 25",
+          "lat": 37.5743658560621,
+          "lon": 126.98051793887,
+          "distanceMeters": 633
+        },
+        {
+          "name": "CU 광장점",
+          "nameRomanized": "CU Gwangjang",
+          "address": "서울특별시 종로구 새문안로 103-1",
+          "lat": 37.5704817726179,
+          "lon": 126.976183539917,
+          "distanceMeters": 639
+        },
+        {
+          "name": "7-ELEVEN 종로창성점",
+          "nameRomanized": "7-ELEVEN Jongrochangseong",
+          "address": "서울특별시 종로구 자하문로 60",
+          "lat": 37.5814637816345,
+          "lon": 126.971187360821,
+          "distanceMeters": 659
+        },
+        {
+          "name": "7-ELEVEN 아벤트리",
+          "nameRomanized": "7-ELEVEN Abenteuri",
+          "address": "서울특별시 종로구 종로 1",
+          "lat": 37.5709596388997,
+          "lon": 126.977926618852,
+          "distanceMeters": 665
+        },
+        {
+          "name": "GS25 청진본",
+          "nameRomanized": "GS25 Cheongjinbon",
+          "address": "서울특별시 종로구 종로3길 38",
+          "lat": 37.5720771565659,
+          "lon": 126.979499748415,
+          "distanceMeters": 669
+        },
+        {
+          "name": "CU 콘코디언점",
+          "nameRomanized": "CU Konkodieon",
+          "address": "서울특별시 종로구 새문안로 76",
+          "lat": 37.5697963703561,
+          "lon": 126.973172769466,
+          "distanceMeters": 673
+        },
+        {
+          "name": "CU",
+          "nameRomanized": "CU",
+          "address": "서울특별시 종로구 율곡로1길 44",
+          "lat": 37.5778257302517,
+          "lon": 126.980856659116,
+          "distanceMeters": 678
+        },
+        {
+          "name": "CU",
+          "nameRomanized": "CU",
+          "address": "서울특별시 종로구 삼봉로 57",
+          "lat": 37.5725638589083,
+          "lon": 126.980473128586,
+          "distanceMeters": 709
+        },
+        {
+          "name": "7-ELEVEN 우체국점",
+          "nameRomanized": "7-ELEVEN Uchegug",
+          "address": "서울특별시 종로구 종로 6",
+          "lat": 37.5698424363635,
+          "lon": 126.978096741258,
+          "distanceMeters": 777
+        },
+        {
+          "name": "CU 종로1가점",
+          "nameRomanized": "CU Jongro1ga",
+          "address": "서울특별시 종로구 종로 19",
+          "lat": 37.5708518751644,
+          "lon": 126.979918911908,
+          "distanceMeters": 788
+        }
+      ]
+    },
+    "bukchon": {
+      "centerStationName": "안국",
+      "count": 44,
+      "stores": [
+        {
+          "name": "GS25 종로",
+          "nameRomanized": "GS25 Jongro",
+          "address": "서울특별시 종로구 율곡로 61",
+          "lat": 37.5769344594361,
+          "lon": 126.985928510258,
+          "distanceMeters": 58
+        },
+        {
+          "name": "CU 계동현대점",
+          "nameRomanized": "CU Gyedonghyeondae",
+          "address": "서울특별시 종로구 계동길 23",
+          "lat": 37.5784031525914,
+          "lon": 126.986550878387,
+          "distanceMeters": 226
+        },
+        {
+          "name": "GS25 종로운현점",
+          "nameRomanized": "GS25 Jongrounhyeon",
+          "address": "서울특별시 종로구 율곡로 88",
+          "lat": 37.5768086386412,
+          "lon": 126.988917163884,
+          "distanceMeters": 305
+        },
+        {
+          "name": "7-ELEVEN 낙원점",
+          "nameRomanized": "7-ELEVEN Nagwon",
+          "address": "서울특별시 종로구 인사동4길 17",
+          "lat": 37.573835110691,
+          "lon": 126.986551699926,
+          "distanceMeters": 318
+        },
+        {
+          "name": "CU 종로창덕궁",
+          "nameRomanized": "CU Jongrochangdeoggung",
+          "address": "서울특별시 종로구 율곡로6길 15",
+          "lat": 37.5765654158712,
+          "lon": 126.989415303305,
+          "distanceMeters": 348
+        },
+        {
+          "name": "GS25 종로익선",
+          "nameRomanized": "GS25 Jongroigseon",
+          "address": "서울특별시 종로구 삼일대로30길 23",
+          "lat": 37.5744750499552,
+          "lon": 126.98878166715,
+          "distanceMeters": 373
+        },
+        {
+          "name": "GS25 계동",
+          "nameRomanized": "GS25 Gyedong",
+          "address": "서울특별시 종로구 계동길 61",
+          "lat": 37.5800429616399,
+          "lon": 126.98655058343,
+          "distanceMeters": 399
+        },
+        {
+          "name": "CU 창덕궁돌담길점",
+          "nameRomanized": "CU Changdeoggungdoldamgil",
+          "address": "서울특별시 종로구 창덕궁길 31",
+          "lat": 37.5788899510665,
+          "lon": 126.989086668643,
+          "distanceMeters": 411
+        },
+        {
+          "name": "7-ELEVEN 종로호스텔점",
+          "nameRomanized": "7-ELEVEN Jongrohoseutel",
+          "address": "서울특별시 종로구 돈화문로 85",
+          "lat": 37.5760789528818,
+          "lon": 126.990275726936,
+          "distanceMeters": 427
+        },
+        {
+          "name": "7-ELEVEN 아벤트리",
+          "nameRomanized": "7-ELEVEN Abenteuri",
+          "address": "서울특별시 종로구 우정국로 46",
+          "lat": 37.5731048948511,
+          "lon": 126.98333694916,
+          "distanceMeters": 428
+        },
+        {
+          "name": "CU",
+          "nameRomanized": "CU",
+          "address": "서울특별시 종로구 율곡로1길 44",
+          "lat": 37.5778257302517,
+          "lon": 126.980856659116,
+          "distanceMeters": 430
+        },
+        {
+          "name": "CU 종로글로벌점",
+          "nameRomanized": "CU Jongrogeulrobeol",
+          "address": "서울특별시 종로구 삼일대로32가길 37",
+          "lat": 37.5746643443911,
+          "lon": 126.989721218956,
+          "distanceMeters": 430
+        },
+        {
+          "name": "7-ELEVEN 종로이비스점",
+          "nameRomanized": "7-ELEVEN Jongroibiseu",
+          "address": "서울특별시 종로구 삼일대로30길 32",
+          "lat": 37.5741327243826,
+          "lon": 126.989347726648,
+          "distanceMeters": 436
+        },
+        {
+          "name": "emart24 정독천수점",
+          "nameRomanized": "emart24 Jeongdogcheonsu",
+          "address": "서울특별시 종로구 북촌로5길 52",
+          "lat": 37.5796729702557,
+          "lon": 126.982146780356,
+          "distanceMeters": 453
+        },
+        {
+          "name": "CU 인사동메인점",
+          "nameRomanized": "CU Insadongmein",
+          "address": "서울특별시 종로구 인사동9길 39",
+          "lat": 37.5728706169194,
+          "lon": 126.983201161696,
+          "distanceMeters": 457
+        },
+        {
+          "name": "CU 낙원점",
+          "nameRomanized": "CU Nagwon",
+          "address": "서울특별시 종로구 삼일대로 423",
+          "lat": 37.5723485639383,
+          "lon": 126.987412279091,
+          "distanceMeters": 499
+        },
+        {
+          "name": "CU 연합미디어",
+          "nameRomanized": "CU Yeonhabmidieo",
+          "address": "서울특별시 종로구 율곡로2길 25",
+          "lat": 37.5743658560621,
+          "lon": 126.98051793887,
+          "distanceMeters": 500
+        },
+        {
+          "name": "CU 인사동이브점",
+          "nameRomanized": "CU Insadongibeu",
+          "address": "서울특별시 종로구 인사동3길 4",
+          "lat": 37.5720601596531,
+          "lon": 126.986631258036,
+          "distanceMeters": 511
+        },
+        {
+          "name": "CU 트윈트리",
+          "nameRomanized": "CU Teuwinteuri",
+          "address": "서울특별시 종로구 율곡로 6",
+          "lat": 37.5754469258725,
+          "lon": 126.979781833719,
+          "distanceMeters": 516
+        },
+        {
+          "name": "7-ELEVEN 경복궁점",
+          "nameRomanized": "7-ELEVEN Gyeongbokgung",
+          "address": "서울특별시 종로구 삼청로 22",
+          "lat": 37.5779156658419,
+          "lon": 126.979871732104,
+          "distanceMeters": 516
+        },
+        {
+          "name": "CU 종로",
+          "nameRomanized": "CU Jongro",
+          "address": "서울특별시 종로구 돈화문로11길 38",
+          "lat": 37.5726731096038,
+          "lon": 126.989313974721,
+          "distanceMeters": 549
+        },
+        {
+          "name": "CU 종로가회점",
+          "nameRomanized": "CU Jongrogahoe",
+          "address": "서울특별시 종로구 북촌로 52",
+          "lat": 37.5815114245083,
+          "lon": 126.985237050792,
+          "distanceMeters": 551
+        },
+        {
+          "name": "GS25 종로낙원점",
+          "nameRomanized": "GS25 Jongronagwon",
+          "address": "서울특별시 종로구 수표로 123-4",
+          "lat": 37.5722495752346,
+          "lon": 126.988600882929,
+          "distanceMeters": 553
+        },
+        {
+          "name": "7-ELEVEN 종로",
+          "nameRomanized": "7-ELEVEN Jongro",
+          "address": "서울특별시 종로구 삼봉로 81",
+          "lat": 37.5725280290029,
+          "lon": 126.981786248653,
+          "distanceMeters": 554
+        },
+        {
+          "name": "7-ELEVEN 종로뉴",
+          "nameRomanized": "7-ELEVEN Jongronyu",
+          "address": "서울특별시 종로구 돈화문로 66",
+          "lat": 37.5744211947811,
+          "lon": 126.991192879236,
+          "distanceMeters": 558
+        },
+        {
+          "name": "emart24 종로낙원점",
+          "nameRomanized": "emart24 Jongronagwon",
+          "address": "서울특별시 종로구 돈화문로11길 41",
+          "lat": 37.572393779392,
+          "lon": 126.989076296738,
+          "distanceMeters": 562
+        },
+        {
+          "name": "CU 종각센트로폴리스점",
+          "nameRomanized": "CU Jonggagsenteuropolriseu",
+          "address": "서울특별시 종로구 우정국로 26",
+          "lat": 37.5714921580596,
+          "lon": 126.983654261841,
+          "distanceMeters": 586
+        },
+        {
+          "name": "7-ELEVEN S종로",
+          "nameRomanized": "7-ELEVEN Sjongro",
+          "address": "서울특별시 종로구 돈화문로11길 26",
+          "lat": 37.5725650554667,
+          "lon": 126.990061105252,
+          "distanceMeters": 601
+        },
+        {
+          "name": "CU 종로K트윈",
+          "nameRomanized": "CU JongroKteuwin",
+          "address": "서울특별시 종로구 종로1길 50",
+          "lat": 37.5747259978724,
+          "lon": 126.979023571704,
+          "distanceMeters": 604
+        },
+        {
+          "name": "CU 종로",
+          "nameRomanized": "CU Jongro",
+          "address": "서울특별시 종로구 수표로 118-1",
+          "lat": 37.5718441869518,
+          "lon": 126.989234854441,
+          "distanceMeters": 621
+        },
+        {
+          "name": "CU",
+          "nameRomanized": "CU",
+          "address": "서울특별시 종로구 삼봉로 57",
+          "lat": 37.5725638589083,
+          "lon": 126.980473128586,
+          "distanceMeters": 626
+        },
+        {
+          "name": "7-ELEVEN 세",
+          "nameRomanized": "7-ELEVEN Se",
+          "address": "서울특별시 종로구 종로1길 42-1",
+          "lat": 37.5742213759332,
+          "lon": 126.978661467608,
+          "distanceMeters": 654
+        },
+        {
+          "name": "7-ELEVEN 종로",
+          "nameRomanized": "7-ELEVEN Jongro",
+          "address": "서울특별시 종로구 돈화문로11길 9",
+          "lat": 37.5724119486078,
+          "lon": 126.990830878968,
+          "distanceMeters": 660
+        },
+        {
+          "name": "CU",
+          "nameRomanized": "CU",
+          "address": "서울특별시 종로구 삼청로 68",
+          "lat": 37.5815739409675,
+          "lon": 126.981331193591,
+          "distanceMeters": 666
+        },
+        {
+          "name": "7-ELEVEN 종로피맛골점",
+          "nameRomanized": "7-ELEVEN Jongropimasgol",
+          "address": "서울특별시 종로구 종로 77",
+          "lat": 37.5704202802596,
+          "lon": 126.986042931899,
+          "distanceMeters": 685
+        },
+        {
+          "name": "emart24 종로",
+          "nameRomanized": "emart24 Jongro",
+          "address": "서울특별시 종로구 율곡로8길 101",
+          "lat": 37.572817475764,
+          "lon": 126.991917545781,
+          "distanceMeters": 704
+        },
+        {
+          "name": "7-ELEVEN 탑골공원점",
+          "nameRomanized": "7-ELEVEN Tabgolgongwon",
+          "address": "서울특별시 종로구 수표로 110",
+          "lat": 37.5709972719043,
+          "lon": 126.989461370107,
+          "distanceMeters": 712
+        },
+        {
+          "name": "CU 종로묘동점",
+          "nameRomanized": "CU Jongromyodong",
+          "address": "서울특별시 종로구 돈화문로 41",
+          "lat": 37.5721777374262,
+          "lon": 126.991464820236,
+          "distanceMeters": 719
+        },
+        {
+          "name": "GS25 청진본",
+          "nameRomanized": "GS25 Cheongjinbon",
+          "address": "서울특별시 종로구 종로3길 38",
+          "lat": 37.5720771565659,
+          "lon": 126.979499748415,
+          "distanceMeters": 725
+        },
+        {
+          "name": "7-ELEVEN M종각역점",
+          "nameRomanized": "7-ELEVEN Mjonggag Station",
+          "address": "서울특별시 종로구 종로 55",
+          "lat": 37.5702126876782,
+          "lon": 126.983247036955,
+          "distanceMeters": 733
+        },
+        {
+          "name": "CU 종로",
+          "nameRomanized": "CU Jongro",
+          "address": "서울특별시 종로구 종로 78",
+          "lat": 37.5698796830381,
+          "lon": 126.986043032776,
+          "distanceMeters": 745
+        },
+        {
+          "name": "CU 종각쇼핑",
+          "nameRomanized": "CU Jonggagsyoping",
+          "address": "서울특별시 종로구 종로 54",
+          "lat": 37.5697622502426,
+          "lon": 126.983677278897,
+          "distanceMeters": 772
+        },
+        {
+          "name": "7-ELEVEN 종로삼일대로점",
+          "nameRomanized": "7-ELEVEN Jongrosamildaero",
+          "address": "서울특별시 종로구 삼일대로 393-1",
+          "lat": 37.569780727521,
+          "lon": 126.987412711251,
+          "distanceMeters": 773
+        },
+        {
+          "name": "7-ELEVEN 종로묘동점",
+          "nameRomanized": "7-ELEVEN Jongromyodong",
+          "address": "서울특별시 종로구 돈화문로 33",
+          "lat": 37.5714479475205,
+          "lon": 126.991691298651,
+          "distanceMeters": 790
+        }
+      ]
+    },
+    "insadong": {
+      "centerStationName": "안국",
+      "count": 44,
+      "stores": [
+        {
+          "name": "GS25 종로",
+          "nameRomanized": "GS25 Jongro",
+          "address": "서울특별시 종로구 율곡로 61",
+          "lat": 37.5769344594361,
+          "lon": 126.985928510258,
+          "distanceMeters": 58
+        },
+        {
+          "name": "CU 계동현대점",
+          "nameRomanized": "CU Gyedonghyeondae",
+          "address": "서울특별시 종로구 계동길 23",
+          "lat": 37.5784031525914,
+          "lon": 126.986550878387,
+          "distanceMeters": 226
+        },
+        {
+          "name": "GS25 종로운현점",
+          "nameRomanized": "GS25 Jongrounhyeon",
+          "address": "서울특별시 종로구 율곡로 88",
+          "lat": 37.5768086386412,
+          "lon": 126.988917163884,
+          "distanceMeters": 305
+        },
+        {
+          "name": "7-ELEVEN 낙원점",
+          "nameRomanized": "7-ELEVEN Nagwon",
+          "address": "서울특별시 종로구 인사동4길 17",
+          "lat": 37.573835110691,
+          "lon": 126.986551699926,
+          "distanceMeters": 318
+        },
+        {
+          "name": "CU 종로창덕궁",
+          "nameRomanized": "CU Jongrochangdeoggung",
+          "address": "서울특별시 종로구 율곡로6길 15",
+          "lat": 37.5765654158712,
+          "lon": 126.989415303305,
+          "distanceMeters": 348
+        },
+        {
+          "name": "GS25 종로익선",
+          "nameRomanized": "GS25 Jongroigseon",
+          "address": "서울특별시 종로구 삼일대로30길 23",
+          "lat": 37.5744750499552,
+          "lon": 126.98878166715,
+          "distanceMeters": 373
+        },
+        {
+          "name": "GS25 계동",
+          "nameRomanized": "GS25 Gyedong",
+          "address": "서울특별시 종로구 계동길 61",
+          "lat": 37.5800429616399,
+          "lon": 126.98655058343,
+          "distanceMeters": 399
+        },
+        {
+          "name": "CU 창덕궁돌담길점",
+          "nameRomanized": "CU Changdeoggungdoldamgil",
+          "address": "서울특별시 종로구 창덕궁길 31",
+          "lat": 37.5788899510665,
+          "lon": 126.989086668643,
+          "distanceMeters": 411
+        },
+        {
+          "name": "7-ELEVEN 종로호스텔점",
+          "nameRomanized": "7-ELEVEN Jongrohoseutel",
+          "address": "서울특별시 종로구 돈화문로 85",
+          "lat": 37.5760789528818,
+          "lon": 126.990275726936,
+          "distanceMeters": 427
+        },
+        {
+          "name": "7-ELEVEN 아벤트리",
+          "nameRomanized": "7-ELEVEN Abenteuri",
+          "address": "서울특별시 종로구 우정국로 46",
+          "lat": 37.5731048948511,
+          "lon": 126.98333694916,
+          "distanceMeters": 428
+        },
+        {
+          "name": "CU",
+          "nameRomanized": "CU",
+          "address": "서울특별시 종로구 율곡로1길 44",
+          "lat": 37.5778257302517,
+          "lon": 126.980856659116,
+          "distanceMeters": 430
+        },
+        {
+          "name": "CU 종로글로벌점",
+          "nameRomanized": "CU Jongrogeulrobeol",
+          "address": "서울특별시 종로구 삼일대로32가길 37",
+          "lat": 37.5746643443911,
+          "lon": 126.989721218956,
+          "distanceMeters": 430
+        },
+        {
+          "name": "7-ELEVEN 종로이비스점",
+          "nameRomanized": "7-ELEVEN Jongroibiseu",
+          "address": "서울특별시 종로구 삼일대로30길 32",
+          "lat": 37.5741327243826,
+          "lon": 126.989347726648,
+          "distanceMeters": 436
+        },
+        {
+          "name": "emart24 정독천수점",
+          "nameRomanized": "emart24 Jeongdogcheonsu",
+          "address": "서울특별시 종로구 북촌로5길 52",
+          "lat": 37.5796729702557,
+          "lon": 126.982146780356,
+          "distanceMeters": 453
+        },
+        {
+          "name": "CU 인사동메인점",
+          "nameRomanized": "CU Insadongmein",
+          "address": "서울특별시 종로구 인사동9길 39",
+          "lat": 37.5728706169194,
+          "lon": 126.983201161696,
+          "distanceMeters": 457
+        },
+        {
+          "name": "CU 낙원점",
+          "nameRomanized": "CU Nagwon",
+          "address": "서울특별시 종로구 삼일대로 423",
+          "lat": 37.5723485639383,
+          "lon": 126.987412279091,
+          "distanceMeters": 499
+        },
+        {
+          "name": "CU 연합미디어",
+          "nameRomanized": "CU Yeonhabmidieo",
+          "address": "서울특별시 종로구 율곡로2길 25",
+          "lat": 37.5743658560621,
+          "lon": 126.98051793887,
+          "distanceMeters": 500
+        },
+        {
+          "name": "CU 인사동이브점",
+          "nameRomanized": "CU Insadongibeu",
+          "address": "서울특별시 종로구 인사동3길 4",
+          "lat": 37.5720601596531,
+          "lon": 126.986631258036,
+          "distanceMeters": 511
+        },
+        {
+          "name": "CU 트윈트리",
+          "nameRomanized": "CU Teuwinteuri",
+          "address": "서울특별시 종로구 율곡로 6",
+          "lat": 37.5754469258725,
+          "lon": 126.979781833719,
+          "distanceMeters": 516
+        },
+        {
+          "name": "7-ELEVEN 경복궁점",
+          "nameRomanized": "7-ELEVEN Gyeongbokgung",
+          "address": "서울특별시 종로구 삼청로 22",
+          "lat": 37.5779156658419,
+          "lon": 126.979871732104,
+          "distanceMeters": 516
+        },
+        {
+          "name": "CU 종로",
+          "nameRomanized": "CU Jongro",
+          "address": "서울특별시 종로구 돈화문로11길 38",
+          "lat": 37.5726731096038,
+          "lon": 126.989313974721,
+          "distanceMeters": 549
+        },
+        {
+          "name": "CU 종로가회점",
+          "nameRomanized": "CU Jongrogahoe",
+          "address": "서울특별시 종로구 북촌로 52",
+          "lat": 37.5815114245083,
+          "lon": 126.985237050792,
+          "distanceMeters": 551
+        },
+        {
+          "name": "GS25 종로낙원점",
+          "nameRomanized": "GS25 Jongronagwon",
+          "address": "서울특별시 종로구 수표로 123-4",
+          "lat": 37.5722495752346,
+          "lon": 126.988600882929,
+          "distanceMeters": 553
+        },
+        {
+          "name": "7-ELEVEN 종로",
+          "nameRomanized": "7-ELEVEN Jongro",
+          "address": "서울특별시 종로구 삼봉로 81",
+          "lat": 37.5725280290029,
+          "lon": 126.981786248653,
+          "distanceMeters": 554
+        },
+        {
+          "name": "7-ELEVEN 종로뉴",
+          "nameRomanized": "7-ELEVEN Jongronyu",
+          "address": "서울특별시 종로구 돈화문로 66",
+          "lat": 37.5744211947811,
+          "lon": 126.991192879236,
+          "distanceMeters": 558
+        },
+        {
+          "name": "emart24 종로낙원점",
+          "nameRomanized": "emart24 Jongronagwon",
+          "address": "서울특별시 종로구 돈화문로11길 41",
+          "lat": 37.572393779392,
+          "lon": 126.989076296738,
+          "distanceMeters": 562
+        },
+        {
+          "name": "CU 종각센트로폴리스점",
+          "nameRomanized": "CU Jonggagsenteuropolriseu",
+          "address": "서울특별시 종로구 우정국로 26",
+          "lat": 37.5714921580596,
+          "lon": 126.983654261841,
+          "distanceMeters": 586
+        },
+        {
+          "name": "7-ELEVEN S종로",
+          "nameRomanized": "7-ELEVEN Sjongro",
+          "address": "서울특별시 종로구 돈화문로11길 26",
+          "lat": 37.5725650554667,
+          "lon": 126.990061105252,
+          "distanceMeters": 601
+        },
+        {
+          "name": "CU 종로K트윈",
+          "nameRomanized": "CU JongroKteuwin",
+          "address": "서울특별시 종로구 종로1길 50",
+          "lat": 37.5747259978724,
+          "lon": 126.979023571704,
+          "distanceMeters": 604
+        },
+        {
+          "name": "CU 종로",
+          "nameRomanized": "CU Jongro",
+          "address": "서울특별시 종로구 수표로 118-1",
+          "lat": 37.5718441869518,
+          "lon": 126.989234854441,
+          "distanceMeters": 621
+        },
+        {
+          "name": "CU",
+          "nameRomanized": "CU",
+          "address": "서울특별시 종로구 삼봉로 57",
+          "lat": 37.5725638589083,
+          "lon": 126.980473128586,
+          "distanceMeters": 626
+        },
+        {
+          "name": "7-ELEVEN 세",
+          "nameRomanized": "7-ELEVEN Se",
+          "address": "서울특별시 종로구 종로1길 42-1",
+          "lat": 37.5742213759332,
+          "lon": 126.978661467608,
+          "distanceMeters": 654
+        },
+        {
+          "name": "7-ELEVEN 종로",
+          "nameRomanized": "7-ELEVEN Jongro",
+          "address": "서울특별시 종로구 돈화문로11길 9",
+          "lat": 37.5724119486078,
+          "lon": 126.990830878968,
+          "distanceMeters": 660
+        },
+        {
+          "name": "CU",
+          "nameRomanized": "CU",
+          "address": "서울특별시 종로구 삼청로 68",
+          "lat": 37.5815739409675,
+          "lon": 126.981331193591,
+          "distanceMeters": 666
+        },
+        {
+          "name": "7-ELEVEN 종로피맛골점",
+          "nameRomanized": "7-ELEVEN Jongropimasgol",
+          "address": "서울특별시 종로구 종로 77",
+          "lat": 37.5704202802596,
+          "lon": 126.986042931899,
+          "distanceMeters": 685
+        },
+        {
+          "name": "emart24 종로",
+          "nameRomanized": "emart24 Jongro",
+          "address": "서울특별시 종로구 율곡로8길 101",
+          "lat": 37.572817475764,
+          "lon": 126.991917545781,
+          "distanceMeters": 704
+        },
+        {
+          "name": "7-ELEVEN 탑골공원점",
+          "nameRomanized": "7-ELEVEN Tabgolgongwon",
+          "address": "서울특별시 종로구 수표로 110",
+          "lat": 37.5709972719043,
+          "lon": 126.989461370107,
+          "distanceMeters": 712
+        },
+        {
+          "name": "CU 종로묘동점",
+          "nameRomanized": "CU Jongromyodong",
+          "address": "서울특별시 종로구 돈화문로 41",
+          "lat": 37.5721777374262,
+          "lon": 126.991464820236,
+          "distanceMeters": 719
+        },
+        {
+          "name": "GS25 청진본",
+          "nameRomanized": "GS25 Cheongjinbon",
+          "address": "서울특별시 종로구 종로3길 38",
+          "lat": 37.5720771565659,
+          "lon": 126.979499748415,
+          "distanceMeters": 725
+        },
+        {
+          "name": "7-ELEVEN M종각역점",
+          "nameRomanized": "7-ELEVEN Mjonggag Station",
+          "address": "서울특별시 종로구 종로 55",
+          "lat": 37.5702126876782,
+          "lon": 126.983247036955,
+          "distanceMeters": 733
+        },
+        {
+          "name": "CU 종로",
+          "nameRomanized": "CU Jongro",
+          "address": "서울특별시 종로구 종로 78",
+          "lat": 37.5698796830381,
+          "lon": 126.986043032776,
+          "distanceMeters": 745
+        },
+        {
+          "name": "CU 종각쇼핑",
+          "nameRomanized": "CU Jonggagsyoping",
+          "address": "서울특별시 종로구 종로 54",
+          "lat": 37.5697622502426,
+          "lon": 126.983677278897,
+          "distanceMeters": 772
+        },
+        {
+          "name": "7-ELEVEN 종로삼일대로점",
+          "nameRomanized": "7-ELEVEN Jongrosamildaero",
+          "address": "서울특별시 종로구 삼일대로 393-1",
+          "lat": 37.569780727521,
+          "lon": 126.987412711251,
+          "distanceMeters": 773
+        },
+        {
+          "name": "7-ELEVEN 종로묘동점",
+          "nameRomanized": "7-ELEVEN Jongromyodong",
+          "address": "서울특별시 종로구 돈화문로 33",
+          "lat": 37.5714479475205,
+          "lon": 126.991691298651,
+          "distanceMeters": 790
+        }
+      ]
+    },
+    "jamsil": {
+      "centerStationName": "잠실",
+      "count": 25,
+      "stores": [
+        {
+          "name": "7-ELEVEN 잠실트레비",
+          "nameRomanized": "7-ELEVEN Jamsilteurebi",
+          "address": "서울특별시 송파구 올림픽로 265",
+          "lat": 37.5138664889338,
+          "lon": 127.101856028367,
+          "distanceMeters": 165
+        },
+        {
+          "name": "7-ELEVEN 잠실롯데호텔점",
+          "nameRomanized": "7-ELEVEN Jamsilrosdehotel",
+          "address": "서울특별시 송파구 송파대로 521",
+          "lat": 37.5116599249009,
+          "lon": 127.100812443853,
+          "distanceMeters": 193
+        },
+        {
+          "name": "emart24 잠실시그마점",
+          "nameRomanized": "emart24 Jamsilsigeuma",
+          "address": "서울특별시 송파구 올림픽로 289",
+          "lat": 37.5146137534674,
+          "lon": 127.102513091339,
+          "distanceMeters": 256
+        },
+        {
+          "name": "7-ELEVEN 롯데월드키자니아점",
+          "nameRomanized": "7-ELEVEN Rosdewoldeukijania",
+          "address": "서울특별시 송파구 올림픽로 240",
+          "lat": 37.5113107817557,
+          "lon": 127.098142657562,
+          "distanceMeters": 283
+        },
+        {
+          "name": "CU 잠실",
+          "nameRomanized": "CU Jamsil",
+          "address": "서울특별시 송파구 올림픽로 293-19",
+          "lat": 37.5151543647263,
+          "lon": 127.102502519565,
+          "distanceMeters": 293
+        },
+        {
+          "name": "7-ELEVEN 광고회관점",
+          "nameRomanized": "7-ELEVEN Gwanggohoegwan",
+          "address": "서울특별시 송파구 올림픽로35길 137",
+          "lat": 37.5159316755592,
+          "lon": 127.09964180833,
+          "distanceMeters": 295
+        },
+        {
+          "name": "GS25 향군",
+          "nameRomanized": "GS25 Hyanggun",
+          "address": "서울특별시 송파구 올림픽로35길 123",
+          "lat": 37.5165790506375,
+          "lon": 127.101226273336,
+          "distanceMeters": 377
+        },
+        {
+          "name": "7-ELEVEN 롯데월드타워",
+          "nameRomanized": "7-ELEVEN Rosdewoldeu Tower",
+          "address": "서울특별시 송파구 올림픽로 300",
+          "lat": 37.5137470965818,
+          "lon": 127.104446092283,
+          "distanceMeters": 384
+        },
+        {
+          "name": "CU M잠실롯데",
+          "nameRomanized": "CU Mjamsilrosde",
+          "address": "서울특별시 송파구 올림픽로 305",
+          "lat": 37.5149816697371,
+          "lon": 127.104221588449,
+          "distanceMeters": 406
+        },
+        {
+          "name": "CU 한신잠실코아점",
+          "nameRomanized": "CU Hansinjamsilkoa",
+          "address": "서울특별시 송파구 올림픽로35가길 11",
+          "lat": 37.5162973324118,
+          "lon": 127.103997189794,
+          "distanceMeters": 477
+        },
+        {
+          "name": "CU",
+          "nameRomanized": "CU",
+          "address": "서울특별시 송파구 올림픽로 212",
+          "lat": 37.5115390295912,
+          "lon": 127.094466979338,
+          "distanceMeters": 537
+        },
+        {
+          "name": "7-ELEVEN 잠실교통회관점",
+          "nameRomanized": "7-ELEVEN Jamsilgyotonghoegwan",
+          "address": "서울특별시 송파구 올림픽로 319",
+          "lat": 37.5156473069857,
+          "lon": 127.105466759098,
+          "distanceMeters": 538
+        },
+        {
+          "name": "7-ELEVEN 잠실",
+          "nameRomanized": "7-ELEVEN Jamsil",
+          "address": "서울특별시 송파구 올림픽로 212",
+          "lat": 37.5114946637833,
+          "lon": 127.093607310815,
+          "distanceMeters": 609
+        },
+        {
+          "name": "CU 송파레이크파크점",
+          "nameRomanized": "CU Songpareikeupakeu",
+          "address": "서울특별시 송파구 석촌호수로 268",
+          "lat": 37.509709456818,
+          "lon": 127.105729854206,
+          "distanceMeters": 636
+        },
+        {
+          "name": "CU 성내역점",
+          "nameRomanized": "CU Seongnae Station",
+          "address": "서울특별시 송파구 올림픽로35길 94",
+          "lat": 37.5185228371665,
+          "lon": 127.103966343059,
+          "distanceMeters": 672
+        },
+        {
+          "name": "7-ELEVEN 석촌동호수점",
+          "nameRomanized": "7-ELEVEN Seogchondonghosu",
+          "address": "서울특별시 송파구 백제고분로41길 42-22",
+          "lat": 37.5099880258407,
+          "lon": 127.106555910984,
+          "distanceMeters": 676
+        },
+        {
+          "name": "GS25 방이",
+          "nameRomanized": "GS25 Bangi",
+          "address": "서울특별시 송파구 오금로11길 6",
+          "lat": 37.5142304955974,
+          "lon": 127.107941897073,
+          "distanceMeters": 697
+        },
+        {
+          "name": "CU 레저",
+          "nameRomanized": "CU Rejeo",
+          "address": "서울특별시 송파구 백제고분로41길 40",
+          "lat": 37.5091774591515,
+          "lon": 127.106181517497,
+          "distanceMeters": 704
+        },
+        {
+          "name": "7-ELEVEN 석촌",
+          "nameRomanized": "7-ELEVEN Seogchon",
+          "address": "서울특별시 송파구 백제고분로39길 38",
+          "lat": 37.5074591297143,
+          "lon": 127.103261082358,
+          "distanceMeters": 706
+        },
+        {
+          "name": "CU 방이그레너스",
+          "nameRomanized": "CU Bangigeureneoseu",
+          "address": "서울특별시 송파구 올림픽로32길 22-23",
+          "lat": 37.513491300814,
+          "lon": 127.108348028197,
+          "distanceMeters": 725
+        },
+        {
+          "name": "7-ELEVEN 방이최고점",
+          "nameRomanized": "7-ELEVEN Bangichoego",
+          "address": "서울특별시 송파구 올림픽로30길 5",
+          "lat": 37.5153386146057,
+          "lon": 127.108067917053,
+          "distanceMeters": 736
+        },
+        {
+          "name": "GS25 송파나루점",
+          "nameRomanized": "GS25 Songpanaru",
+          "address": "서울특별시 송파구 백제고분로45길 34",
+          "lat": 37.5106894725934,
+          "lon": 127.108027282163,
+          "distanceMeters": 755
+        },
+        {
+          "name": "CU 방이",
+          "nameRomanized": "CU Bangi",
+          "address": "서울특별시 송파구 오금로11길 11-8",
+          "lat": 37.5149775804282,
+          "lon": 127.108757380663,
+          "distanceMeters": 783
+        },
+        {
+          "name": "CU 송파임광점",
+          "nameRomanized": "CU Songpaimgwang",
+          "address": "서울특별시 송파구 백제고분로45길 29",
+          "lat": 37.510274793791,
+          "lon": 127.108264205181,
+          "distanceMeters": 793
+        },
+        {
+          "name": "CU 방이",
+          "nameRomanized": "CU Bangi",
+          "address": "서울특별시 송파구 오금로15길 5",
+          "lat": 37.5122562715603,
+          "lon": 127.109058823638,
+          "distanceMeters": 796
+        }
+      ]
+    },
+    "namsan": {
+      "centerStationName": "회현",
+      "count": 61,
+      "stores": [
+        {
+          "name": "CU 중구회현점",
+          "nameRomanized": "CU Jungguhoehyeon",
+          "address": "서울특별시 중구 퇴계로 70",
+          "lat": 37.5592019856409,
+          "lon": 126.97986544932,
+          "distanceMeters": 61
+        },
+        {
+          "name": "emart24 메사빌딩점",
+          "nameRomanized": "emart24 Mesabilding",
+          "address": "서울특별시 중구 남대문시장10길 2",
+          "lat": 37.5603732350079,
+          "lon": 126.979593500205,
+          "distanceMeters": 75
+        },
+        {
+          "name": "emart24 신세계",
+          "nameRomanized": "emart24 Sinsegye",
+          "address": "서울특별시 중구 퇴계로 77",
+          "lat": 37.5603554126478,
+          "lon": 126.980770585183,
+          "distanceMeters": 129
+        },
+        {
+          "name": "GS25 남대문타운점",
+          "nameRomanized": "GS25 Namdaemun Town",
+          "address": "서울특별시 중구 남대문로 30",
+          "lat": 37.5608416581943,
+          "lon": 126.979050101172,
+          "distanceMeters": 135
+        },
+        {
+          "name": "7-ELEVEN 남대문카페점",
+          "nameRomanized": "7-ELEVEN Namdaemunkape",
+          "address": "서울특별시 중구 남대문시장길 73",
+          "lat": 37.5608598429996,
+          "lon": 126.980000821046,
+          "distanceMeters": 135
+        },
+        {
+          "name": "CU 남산회현점",
+          "nameRomanized": "CU Namsanhoehyeon",
+          "address": "서울특별시 중구 퇴계로10길 20",
+          "lat": 37.5585984277268,
+          "lon": 126.980522044841,
+          "distanceMeters": 149
+        },
+        {
+          "name": "CU 중구남대문",
+          "nameRomanized": "CU Junggunamdaemun",
+          "address": "서울특별시 중구 남대문시장길 25-8",
+          "lat": 37.5604809698471,
+          "lon": 126.97747698668,
+          "distanceMeters": 204
+        },
+        {
+          "name": "CU 회현역점",
+          "nameRomanized": "CU Hoehyeon Station",
+          "address": "서울특별시 중구 퇴계로 48",
+          "lat": 37.5579943226226,
+          "lon": 126.978032303492,
+          "distanceMeters": 233
+        },
+        {
+          "name": "emart24 한국",
+          "nameRomanized": "emart24 Hangug",
+          "address": "서울특별시 중구 남대문로5길 9",
+          "lat": 37.5617426226123,
+          "lon": 126.97886875629,
+          "distanceMeters": 235
+        },
+        {
+          "name": "GS25 남대문",
+          "nameRomanized": "GS25 Namdaemun",
+          "address": "서울특별시 중구 퇴계로 43",
+          "lat": 37.5582014236744,
+          "lon": 126.97735317756,
+          "distanceMeters": 256
+        },
+        {
+          "name": "7-ELEVEN 시그니처",
+          "nameRomanized": "7-ELEVEN Sigeunicheo",
+          "address": "서울특별시 중구 소월로 3",
+          "lat": 37.5593724950588,
+          "lon": 126.976209712263,
+          "distanceMeters": 298
+        },
+        {
+          "name": "7-ELEVEN 스테이트",
+          "nameRomanized": "7-ELEVEN Seuteiteu",
+          "address": "서울특별시 중구 퇴계로 100",
+          "lat": 37.5602025754714,
+          "lon": 126.98293237296,
+          "distanceMeters": 302
+        },
+        {
+          "name": "CU 중구해성점",
+          "nameRomanized": "CU Jungguhaeseong",
+          "address": "서울특별시 중구 세종대로12길 12",
+          "lat": 37.5616251285765,
+          "lon": 126.97692204702,
+          "distanceMeters": 317
+        },
+        {
+          "name": "7-ELEVEN 서울로카페점",
+          "nameRomanized": "7-ELEVEN Seoulrokape",
+          "address": "서울특별시 중구 퇴계로 36",
+          "lat": 37.557300365245,
+          "lon": 126.977036557016,
+          "distanceMeters": 347
+        },
+        {
+          "name": "CU 중구",
+          "nameRomanized": "CU Junggu",
+          "address": "서울특별시 중구 퇴계로 105",
+          "lat": 37.5608693888243,
+          "lon": 126.983464174177,
+          "distanceMeters": 368
+        },
+        {
+          "name": "7-ELEVEN 북창프리마점",
+          "nameRomanized": "7-ELEVEN Bugchangpeurima",
+          "address": "서울특별시 중구 세종대로14길 29",
+          "lat": 37.562886787642,
+          "lon": 126.978313828543,
+          "distanceMeters": 371
+        },
+        {
+          "name": "emart24 중구",
+          "nameRomanized": "emart24 Junggu",
+          "address": "서울특별시 중구 퇴계로14길 29",
+          "lat": 37.5591936063437,
+          "lon": 126.983985168028,
+          "distanceMeters": 394
+        },
+        {
+          "name": "7-ELEVEN 북창점",
+          "nameRomanized": "7-ELEVEN Bugchang",
+          "address": "서울특별시 중구 남대문로5길 47",
+          "lat": 37.5634004174741,
+          "lon": 126.978653235819,
+          "distanceMeters": 419
+        },
+        {
+          "name": "emart24 편의점회현이",
+          "nameRomanized": "emart24 Pyeonuijeomhoehyeoni",
+          "address": "서울특별시 중구 세종대로4길 25",
+          "lat": 37.5578045765915,
+          "lon": 126.975316113079,
+          "distanceMeters": 430
+        },
+        {
+          "name": "7-ELEVEN 세종대로카페점",
+          "nameRomanized": "7-ELEVEN Sejongdaerokape",
+          "address": "서울특별시 중구 세종대로 76-1",
+          "lat": 37.5629586056452,
+          "lon": 126.976932954166,
+          "distanceMeters": 430
+        },
+        {
+          "name": "CU 명동화이자점",
+          "nameRomanized": "CU Myeongdonghwaija",
+          "address": "서울특별시 중구 퇴계로 114-1",
+          "lat": 37.560545151816,
+          "lon": 126.984358376273,
+          "distanceMeters": 433
+        },
+        {
+          "name": "emart24 중구소공점",
+          "nameRomanized": "emart24 Junggusogong",
+          "address": "서울특별시 중구 소공로 100-1",
+          "lat": 37.5637790390337,
+          "lon": 126.979807624573,
+          "distanceMeters": 454
+        },
+        {
+          "name": "CU 부영",
+          "nameRomanized": "CU Buyeong",
+          "address": "서울특별시 중구 세종대로 55",
+          "lat": 37.5616247320034,
+          "lon": 126.974975304706,
+          "distanceMeters": 458
+        },
+        {
+          "name": "GS25 소공점",
+          "nameRomanized": "GS25 Sogong",
+          "address": "서울특별시 중구 남대문로7길 11-10",
+          "lat": 37.5636891275571,
+          "lon": 126.980939507079,
+          "distanceMeters": 460
+        },
+        {
+          "name": "emart24 밀리오레호텔",
+          "nameRomanized": "emart24 Milriorehotel",
+          "address": "서울특별시 중구 퇴계로 115",
+          "lat": 37.5610497309063,
+          "lon": 126.984516725353,
+          "distanceMeters": 462
+        },
+        {
+          "name": "GS25 사보이호텔점",
+          "nameRomanized": "GS25 Saboihotel",
+          "address": "서울특별시 중구 명동8나길 10",
+          "lat": 37.5617795038068,
+          "lon": 126.98425625358,
+          "distanceMeters": 474
+        },
+        {
+          "name": "GS25 남산",
+          "nameRomanized": "GS25 Namsan",
+          "address": "서울특별시 중구 퇴계로18길 16-1",
+          "lat": 37.5601668594774,
+          "lon": 126.985343125671,
+          "distanceMeters": 512
+        },
+        {
+          "name": "7-ELEVEN 명동",
+          "nameRomanized": "7-ELEVEN Myeongdong",
+          "address": "서울특별시 중구 명동길 3",
+          "lat": 37.5637434241351,
+          "lon": 126.982467502978,
+          "distanceMeters": 517
+        },
+        {
+          "name": "CU 대한상공회의소점",
+          "nameRomanized": "CU Daehansanggonghoeuiso",
+          "address": "서울특별시 중구 세종대로 39",
+          "lat": 37.5607144649751,
+          "lon": 126.973775887139,
+          "distanceMeters": 523
+        },
+        {
+          "name": "7-ELEVEN 명동역점",
+          "nameRomanized": "7-ELEVEN Myeongdong Station",
+          "address": "서울특별시 중구 퇴계로18길 6",
+          "lat": 37.5605092494927,
+          "lon": 126.985433603411,
+          "distanceMeters": 525
+        },
+        {
+          "name": "CU 서소문",
+          "nameRomanized": "CU Seosomun",
+          "address": "서울특별시 중구 세종대로11길 26",
+          "lat": 37.5623094047598,
+          "lon": 126.974578932625,
+          "distanceMeters": 527
+        },
+        {
+          "name": "CU 국보",
+          "nameRomanized": "CU Gugbo",
+          "address": "서울특별시 중구 칠패로 42",
+          "lat": 37.5594710388431,
+          "lon": 126.973549964051,
+          "distanceMeters": 531
+        },
+        {
+          "name": "emart24 서울조선호텔점",
+          "nameRomanized": "emart24 Seouljoseonhotel",
+          "address": "서울특별시 중구 소공로 106",
+          "lat": 37.5644818813093,
+          "lon": 126.980192270748,
+          "distanceMeters": 535
+        },
+        {
+          "name": "7-ELEVEN 중구ENA",
+          "nameRomanized": "7-ELEVEN JungguENA",
+          "address": "서울특별시 중구 서소문로 120",
+          "lat": 37.5628680444569,
+          "lon": 126.974680608932,
+          "distanceMeters": 556
+        },
+        {
+          "name": "7-ELEVEN",
+          "nameRomanized": "7-ELEVEN",
+          "address": "서울특별시 중구 퇴계로20길 32",
+          "lat": 37.5587073091629,
+          "lon": 126.985875349525,
+          "distanceMeters": 567
+        },
+        {
+          "name": "CU 명동역점",
+          "nameRomanized": "CU Myeongdong Station",
+          "address": "서울특별시 중구 퇴계로 127",
+          "lat": 37.5611580181068,
+          "lon": 126.98585225049,
+          "distanceMeters": 577
+        },
+        {
+          "name": "CU 남대문로5가점",
+          "nameRomanized": "CU Namdaemunro5ga",
+          "address": "서울특별시 중구 세종대로 8-1",
+          "lat": 37.5575518820114,
+          "lon": 126.973403512928,
+          "distanceMeters": 593
+        },
+        {
+          "name": "emart24 서울",
+          "nameRomanized": "emart24 Seoul",
+          "address": "서울특별시 중구 서소문로 116",
+          "lat": 37.5627327498943,
+          "lon": 126.974012866903,
+          "distanceMeters": 594
+        },
+        {
+          "name": "7-ELEVEN 남대문",
+          "nameRomanized": "7-ELEVEN Namdaemun",
+          "address": "서울특별시 중구 세종대로 11",
+          "lat": 37.5581734982541,
+          "lon": 126.973086395046,
+          "distanceMeters": 596
+        },
+        {
+          "name": "emart24 퍼시픽",
+          "nameRomanized": "emart24 Peosipig",
+          "address": "서울특별시 중구 세종대로9길 41",
+          "lat": 37.5613539965834,
+          "lon": 126.972994705187,
+          "distanceMeters": 608
+        },
+        {
+          "name": "emart24 명동",
+          "nameRomanized": "emart24 Myeongdong",
+          "address": "서울특별시 중구 명동8길 21-7",
+          "lat": 37.5629148767408,
+          "lon": 126.985161491885,
+          "distanceMeters": 609
+        },
+        {
+          "name": "CU 시청",
+          "nameRomanized": "CU City Hall",
+          "address": "서울특별시 중구 을지로 6",
+          "lat": 37.5653827101198,
+          "lon": 126.979218612111,
+          "distanceMeters": 633
+        },
+        {
+          "name": "CU 중구탑점",
+          "nameRomanized": "CU Junggutab",
+          "address": "서울특별시 중구 세종대로7길 37",
+          "lat": 37.5607502112098,
+          "lon": 126.97248560692,
+          "distanceMeters": 635
+        },
+        {
+          "name": "emart24 K-FOODLAB",
+          "nameRomanized": "emart24 K-FOODLAB",
+          "address": "서울특별시 중구 퇴계로 136",
+          "lat": 37.5608247669685,
+          "lon": 126.986870946927,
+          "distanceMeters": 656
+        },
+        {
+          "name": "emart24 메리츠화재사옥점",
+          "nameRomanized": "emart24 Mericheuhwajaesaog",
+          "address": "서울특별시 중구 칠패로 28",
+          "lat": 37.5592184316161,
+          "lon": 126.9721239972,
+          "distanceMeters": 658
+        },
+        {
+          "name": "7-ELEVEN 숭의여대점",
+          "nameRomanized": "7-ELEVEN Sunguiyeodae",
+          "address": "서울특별시 중구 소파로 125",
+          "lat": 37.5584191349149,
+          "lon": 126.987142995871,
+          "distanceMeters": 683
+        },
+        {
+          "name": "GS25 서울",
+          "nameRomanized": "GS25 Seoul",
+          "address": "서울특별시 중구 한강대로 416",
+          "lat": 37.5555066964578,
+          "lon": 126.973755077486,
+          "distanceMeters": 692
+        },
+        {
+          "name": "CU 명동",
+          "nameRomanized": "CU Myeongdong",
+          "address": "서울특별시 중구 명동길 58",
+          "lat": 37.563743848092,
+          "lon": 126.985602752506,
+          "distanceMeters": 697
+        },
+        {
+          "name": "7-ELEVEN 메트로호텔점",
+          "nameRomanized": "7-ELEVEN Meteurohotel",
+          "address": "서울특별시 중구 명동9가길 14",
+          "lat": 37.5651311397804,
+          "lon": 126.983734883421,
+          "distanceMeters": 707
+        },
+        {
+          "name": "7-ELEVEN 서소문점",
+          "nameRomanized": "7-ELEVEN Seosomun",
+          "address": "서울특별시 중구 서소문로 101",
+          "lat": 37.5628585167482,
+          "lon": 126.972371647015,
+          "distanceMeters": 725
+        },
+        {
+          "name": "CU 남산트라",
+          "nameRomanized": "CU Namsanteura",
+          "address": "서울특별시 중구 소월로2길 30",
+          "lat": 37.5538222660221,
+          "lon": 126.975792744369,
+          "distanceMeters": 733
+        },
+        {
+          "name": "7-ELEVEN 명동",
+          "nameRomanized": "7-ELEVEN Myeongdong",
+          "address": "서울특별시 중구 명동9길 35",
+          "lat": 37.5653023783865,
+          "lon": 126.984097048638,
+          "distanceMeters": 740
+        },
+        {
+          "name": "7-ELEVEN 명동스카이호텔점",
+          "nameRomanized": "7-ELEVEN Myeongdongseukaihotel",
+          "address": "서울특별시 중구 명동9길 16",
+          "lat": 37.5646447982302,
+          "lon": 126.985229061128,
+          "distanceMeters": 743
+        },
+        {
+          "name": "GS25 LG서울빌딩점",
+          "nameRomanized": "GS25 LGseoulbilding",
+          "address": "서울특별시 중구 후암로 98",
+          "lat": 37.5539211890996,
+          "lon": 126.97489866109,
+          "distanceMeters": 763
+        },
+        {
+          "name": "7-ELEVEN 남산",
+          "nameRomanized": "7-ELEVEN Namsan",
+          "address": "서울특별시 중구 소파로 142",
+          "lat": 37.5594463871701,
+          "lon": 126.988251977547,
+          "distanceMeters": 766
+        },
+        {
+          "name": "CU 을지",
+          "nameRomanized": "CU Eulji",
+          "address": "서울특별시 중구 을지로 29",
+          "lat": 37.5664912382563,
+          "lon": 126.981018026167,
+          "distanceMeters": 766
+        },
+        {
+          "name": "CU 삼정아트",
+          "nameRomanized": "CU Samjeongateu",
+          "address": "서울특별시 중구 서소문로 89-20",
+          "lat": 37.5632458652417,
+          "lon": 126.972031948517,
+          "distanceMeters": 772
+        },
+        {
+          "name": "7-ELEVEN 뉴서울시티",
+          "nameRomanized": "7-ELEVEN Nyuseoulsiti",
+          "address": "서울특별시 중구 후암로 110",
+          "lat": 37.5542994246645,
+          "lon": 126.974049747078,
+          "distanceMeters": 772
+        },
+        {
+          "name": "7-ELEVEN 명동대성당점",
+          "nameRomanized": "7-ELEVEN Myeongdongdaeseongdang",
+          "address": "서울특별시 중구 명동길 74",
+          "lat": 37.5636719060606,
+          "lon": 126.986779898656,
+          "distanceMeters": 774
+        },
+        {
+          "name": "7-ELEVEN 후암",
+          "nameRomanized": "7-ELEVEN Huam",
+          "address": "서울특별시 용산구 후암로 80-1",
+          "lat": 37.5531106598466,
+          "lon": 126.97669833312,
+          "distanceMeters": 775
+        },
+        {
+          "name": "CU 뉴명동와이더블유씨에이점",
+          "nameRomanized": "CU Nyumyeongdongwaideobeulyussiei",
+          "address": "서울특별시 중구 명동길 73",
+          "lat": 37.5644106609454,
+          "lon": 126.986236470912,
+          "distanceMeters": 788
+        }
+      ]
+    },
+    "ddp": {
+      "centerStationName": "동대문역사문화공원",
+      "count": 52,
+      "stores": [
+        {
+          "name": "emart24 SDDP역점",
+          "nameRomanized": "emart24 SDDP Station",
+          "address": "서울특별시 중구 을지로 279",
+          "lat": 37.5655914157257,
+          "lon": 127.009123009502,
+          "distanceMeters": 1
+        },
+        {
+          "name": "CU APM",
+          "nameRomanized": "CU APM",
+          "address": "서울특별시 중구 을지로 280",
+          "lat": 37.5654742992314,
+          "lon": 127.00895321243,
+          "distanceMeters": 20
+        },
+        {
+          "name": "GS25 뉴광희",
+          "nameRomanized": "GS25 Nyugwanghui",
+          "address": "서울특별시 중구 퇴계로 342",
+          "lat": 37.5643299898,
+          "lon": 127.009519009454,
+          "distanceMeters": 145
+        },
+        {
+          "name": "7-ELEVEN 광희재형점",
+          "nameRomanized": "7-ELEVEN Gwanghuijaehyeong",
+          "address": "서울특별시 중구 퇴계로 327",
+          "lat": 37.5644832724762,
+          "lon": 127.007991004099,
+          "distanceMeters": 158
+        },
+        {
+          "name": "CU 공원역점",
+          "nameRomanized": "CU Gongwon Station",
+          "address": "서울특별시 중구 퇴계로 352-1",
+          "lat": 37.5645551329452,
+          "lon": 127.010752777876,
+          "distanceMeters": 185
+        },
+        {
+          "name": "emart24 중구",
+          "nameRomanized": "emart24 Junggu",
+          "address": "서울특별시 중구 장충단로 249-10",
+          "lat": 37.5672943967114,
+          "lon": 127.007742283576,
+          "distanceMeters": 224
+        },
+        {
+          "name": "7-ELEVEN 을지로광희점",
+          "nameRomanized": "7-ELEVEN Euljirogwanghui",
+          "address": "서울특별시 중구 을지로 258",
+          "lat": 37.5660601023686,
+          "lon": 127.00658762382,
+          "distanceMeters": 228
+        },
+        {
+          "name": "GS25 패션",
+          "nameRomanized": "GS25 Paesyeon",
+          "address": "서울특별시 중구 을지로 254",
+          "lat": 37.566060117214,
+          "lon": 127.006315969231,
+          "distanceMeters": 252
+        },
+        {
+          "name": "emart24 에비뉴점",
+          "nameRomanized": "emart24 Ebinyu",
+          "address": "서울특별시 중구 을지로44길 24-4",
+          "lat": 37.5651591247424,
+          "lon": 127.006247980332,
+          "distanceMeters": 257
+        },
+        {
+          "name": "CU 광희",
+          "nameRomanized": "CU Gwanghui",
+          "address": "서울특별시 중구 마른내로 155",
+          "lat": 37.5653033321322,
+          "lon": 127.005263254448,
+          "distanceMeters": 341
+        },
+        {
+          "name": "CU 호텔스카이파크점",
+          "nameRomanized": "CU Hotelseukaipakeu",
+          "address": "서울특별시 중구 장충단로13길 20",
+          "lat": 37.5687359942888,
+          "lon": 127.007674516712,
+          "distanceMeters": 371
+        },
+        {
+          "name": "CU 신당광희문점",
+          "nameRomanized": "CU Sindanggwanghuimun",
+          "address": "서울특별시 중구 다산로33길 52",
+          "lat": 37.5634107114809,
+          "lon": 127.012348527582,
+          "distanceMeters": 375
+        },
+        {
+          "name": "CU 신당퇴계로점",
+          "nameRomanized": "CU Sindangtoegyero",
+          "address": "서울특별시 중구 퇴계로 376-2",
+          "lat": 37.5648611968623,
+          "lon": 127.013435367943,
+          "distanceMeters": 390
+        },
+        {
+          "name": "7-ELEVEN 중구디자이너스호텔점",
+          "nameRomanized": "7-ELEVEN Junggudijaineoseuhotel",
+          "address": "서울특별시 중구 퇴계로 304",
+          "lat": 37.5636545012862,
+          "lon": 127.005432917107,
+          "distanceMeters": 390
+        },
+        {
+          "name": "emart24",
+          "nameRomanized": "emart24",
+          "address": "서울특별시 중구 장충단로 280",
+          "lat": 37.5691953547844,
+          "lon": 127.009678100418,
+          "distanceMeters": 403
+        },
+        {
+          "name": "GS25 쇼핑점",
+          "nameRomanized": "GS25 Syoping",
+          "address": "서울특별시 중구 퇴계로73가길 34",
+          "lat": 37.5669064500879,
+          "lon": 127.013503649691,
+          "distanceMeters": 413
+        },
+        {
+          "name": "7-ELEVEN 동대문",
+          "nameRomanized": "7-ELEVEN Dongdaemun",
+          "address": "서울특별시 중구 퇴계로73길 15",
+          "lat": 37.5659243211974,
+          "lon": 127.013876996784,
+          "distanceMeters": 421
+        },
+        {
+          "name": "CU 행복",
+          "nameRomanized": "CU Haengbog",
+          "address": "서울특별시 중구 퇴계로 299",
+          "lat": 37.5641320622606,
+          "lon": 127.004663283618,
+          "distanceMeters": 425
+        },
+        {
+          "name": "emart24 SMART을지로패션타운점",
+          "nameRomanized": "emart24 SMARTeuljiropaesyeon Town",
+          "address": "서울특별시 중구 을지로 227",
+          "lat": 37.5669251605887,
+          "lon": 127.004391800002,
+          "distanceMeters": 442
+        },
+        {
+          "name": "CU 동대문",
+          "nameRomanized": "CU Dongdaemun",
+          "address": "서울특별시 중구 청계천로 298",
+          "lat": 37.5694565211344,
+          "lon": 127.011070427197,
+          "distanceMeters": 463
+        },
+        {
+          "name": "CU 중구장충점",
+          "nameRomanized": "CU Junggujangchung",
+          "address": "서울특별시 중구 장충단로8길 12",
+          "lat": 37.5616902391932,
+          "lon": 127.007119198209,
+          "distanceMeters": 469
+        },
+        {
+          "name": "CU 광희",
+          "nameRomanized": "CU Gwanghui",
+          "address": "서울특별시 중구 퇴계로 289",
+          "lat": 37.5638077292109,
+          "lon": 127.003961510172,
+          "distanceMeters": 496
+        },
+        {
+          "name": "7-ELEVEN 중구을지로5가점",
+          "nameRomanized": "7-ELEVEN Junggueuljiro5ga",
+          "address": "서울특별시 중구 을지로38길 20",
+          "lat": 37.5658800397322,
+          "lon": 127.003339079639,
+          "distanceMeters": 510
+        },
+        {
+          "name": "7-ELEVEN 종로신협점",
+          "nameRomanized": "7-ELEVEN Jongrosinhyeob",
+          "address": "서울특별시 종로구 청계천로 295",
+          "lat": 37.5700602245651,
+          "lon": 127.010674332421,
+          "distanceMeters": 515
+        },
+        {
+          "name": "CU 을지로코업점",
+          "nameRomanized": "CU Euljirokoeob",
+          "address": "서울특별시 중구 을지로 228",
+          "lat": 37.566447667853,
+          "lon": 127.003316466976,
+          "distanceMeters": 520
+        },
+        {
+          "name": "emart24 쌍림한국점",
+          "nameRomanized": "emart24 Ssangrimhangug",
+          "address": "서울특별시 중구 마른내로 136-3",
+          "lat": 37.5643663680787,
+          "lon": 127.003271099968,
+          "distanceMeters": 533
+        },
+        {
+          "name": "CU 중구세룡점",
+          "nameRomanized": "CU Jungguseryong",
+          "address": "서울특별시 중구 장충단로7길 35",
+          "lat": 37.5623480967321,
+          "lon": 127.004470759968,
+          "distanceMeters": 546
+        },
+        {
+          "name": "emart24 신당역점",
+          "nameRomanized": "emart24 Sindang Station",
+          "address": "서울특별시 중구 퇴계로75길 7",
+          "lat": 37.5658430361423,
+          "lon": 127.015450309964,
+          "distanceMeters": 559
+        },
+        {
+          "name": "7-ELEVEN 신당",
+          "nameRomanized": "7-ELEVEN Sindang",
+          "address": "서울특별시 중구 퇴계로76길 24",
+          "lat": 37.5641852194557,
+          "lon": 127.015325462349,
+          "distanceMeters": 570
+        },
+        {
+          "name": "CU 청구역점",
+          "nameRomanized": "CU Cheonggu Station",
+          "address": "서울특별시 중구 청구로 94",
+          "lat": 37.5609780522472,
+          "lon": 127.012042535426,
+          "distanceMeters": 575
+        },
+        {
+          "name": "GS25 청계천패션점",
+          "nameRomanized": "GS25 Cheonggyecheonpaesyeon",
+          "address": "서울특별시 중구 청계천로 318",
+          "lat": 37.5693391070392,
+          "lon": 127.013775755356,
+          "distanceMeters": 585
+        },
+        {
+          "name": "GS25 장충",
+          "nameRomanized": "GS25 Jangchung",
+          "address": "서울특별시 중구 동호로30길 43",
+          "lat": 37.5611947827142,
+          "lon": 127.005387465673,
+          "distanceMeters": 589
+        },
+        {
+          "name": "CU 신당마루점",
+          "nameRomanized": "CU Sindangmaru",
+          "address": "서울특별시 중구 퇴계로76길 31",
+          "lat": 37.5637977822093,
+          "lon": 127.015393294575,
+          "distanceMeters": 589
+        },
+        {
+          "name": "CU 뉴동대문종합",
+          "nameRomanized": "CU Nyudongdaemunjonghab",
+          "address": "서울특별시 종로구 종로 266",
+          "lat": 37.570700186669,
+          "lon": 127.007323809304,
+          "distanceMeters": 589
+        },
+        {
+          "name": "7-ELEVEN 호텔점",
+          "nameRomanized": "7-ELEVEN Hotel",
+          "address": "서울특별시 종로구 종로 286",
+          "lat": 37.5708531296837,
+          "lon": 127.010346175251,
+          "distanceMeters": 594
+        },
+        {
+          "name": "7-ELEVEN 청구점",
+          "nameRomanized": "7-ELEVEN Cheonggu",
+          "address": "서울특별시 중구 다산로29길 14",
+          "lat": 37.5611220832645,
+          "lon": 127.013242287186,
+          "distanceMeters": 616
+        },
+        {
+          "name": "7-ELEVEN 오장동호점",
+          "nameRomanized": "7-ELEVEN Ojangdongho",
+          "address": "서울특별시 중구 동호로 339",
+          "lat": 37.564762832363,
+          "lon": 127.002139242804,
+          "distanceMeters": 622
+        },
+        {
+          "name": "CU 을지로5가점",
+          "nameRomanized": "CU Euljiro5ga",
+          "address": "서울특별시 중구 동호로 361",
+          "lat": 37.5665828483303,
+          "lon": 127.001912914443,
+          "distanceMeters": 644
+        },
+        {
+          "name": "emart24 종로창신점",
+          "nameRomanized": "emart24 Jongrochangsin",
+          "address": "서울특별시 종로구 종로50길 29",
+          "lat": 37.5706276449389,
+          "lon": 127.012757225763,
+          "distanceMeters": 645
+        },
+        {
+          "name": "7-ELEVEN",
+          "nameRomanized": "7-ELEVEN",
+          "address": "서울특별시 종로구 율곡로 294",
+          "lat": 37.5714389140084,
+          "lon": 127.008636973247,
+          "distanceMeters": 651
+        },
+        {
+          "name": "CU",
+          "nameRomanized": "CU",
+          "address": "서울특별시 종로구 종로46길 5",
+          "lat": 37.5712585202864,
+          "lon": 127.010980136091,
+          "distanceMeters": 651
+        },
+        {
+          "name": "CU 동호",
+          "nameRomanized": "CU Dongho",
+          "address": "서울특별시 중구 동호로20길 36",
+          "lat": 37.5595367074829,
+          "lon": 127.009269404634,
+          "distanceMeters": 674
+        },
+        {
+          "name": "CU 오장",
+          "nameRomanized": "CU Ojang",
+          "address": "서울특별시 중구 마른내로 122-1",
+          "lat": 37.5644204623838,
+          "lon": 127.001595935741,
+          "distanceMeters": 675
+        },
+        {
+          "name": "7-ELEVEN 솔하임점",
+          "nameRomanized": "7-ELEVEN Solhaim",
+          "address": "서울특별시 중구 마장로 58",
+          "lat": 37.5677350055021,
+          "lon": 127.016356236308,
+          "distanceMeters": 681
+        },
+        {
+          "name": "CU 낙산공원점",
+          "nameRomanized": "CU Nagsangongwon",
+          "address": "서울특별시 종로구 낙산성곽길 2",
+          "lat": 37.5717271366895,
+          "lon": 127.009859544805,
+          "distanceMeters": 685
+        },
+        {
+          "name": "7-ELEVEN 신당",
+          "nameRomanized": "7-ELEVEN Sindang",
+          "address": "서울특별시 중구 다산로42길 12",
+          "lat": 37.5647255943705,
+          "lon": 127.016955471499,
+          "distanceMeters": 698
+        },
+        {
+          "name": "CU 신당6동점",
+          "nameRomanized": "CU Sindang6dong",
+          "address": "서울특별시 중구 다산로40길 14",
+          "lat": 37.5638156188403,
+          "lon": 127.016740211832,
+          "distanceMeters": 701
+        },
+        {
+          "name": "7-ELEVEN 퇴계로5가점",
+          "nameRomanized": "7-ELEVEN Toegyero5ga",
+          "address": "서울특별시 중구 퇴계로 272",
+          "lat": 37.5628076733844,
+          "lon": 127.001958091711,
+          "distanceMeters": 703
+        },
+        {
+          "name": "7-ELEVEN S청구역점",
+          "nameRomanized": "7-ELEVEN Scheonggu Station",
+          "address": "서울특별시 중구 청구로 77",
+          "lat": 37.5602931013668,
+          "lon": 127.013808043905,
+          "distanceMeters": 720
+        },
+        {
+          "name": "GS25 중구청산점",
+          "nameRomanized": "GS25 Junggucheongsan",
+          "address": "서울특별시 중구 다산로32길 15",
+          "lat": 37.5611128066073,
+          "lon": 127.015438014929,
+          "distanceMeters": 748
+        },
+        {
+          "name": "CU 청구대로점",
+          "nameRomanized": "CU Cheonggudaero",
+          "address": "서울특별시 중구 다산로 175",
+          "lat": 37.5592750821623,
+          "lon": 127.012857151202,
+          "distanceMeters": 777
+        },
+        {
+          "name": "CU 동대입구역점",
+          "nameRomanized": "CU Dongdaeibgu Station",
+          "address": "서울특별시 중구 동호로24길 3",
+          "lat": 37.5593207197566,
+          "lon": 127.00514965438,
+          "distanceMeters": 780
+        }
+      ]
+    }
+  }
+}

@@ -239,51 +239,18 @@
   }
   .area-dot.loaded { border: none; }
 
-  /* 1. 상단 지역명 + 혼잡도 — 예전엔 화면 대부분을 차지하는 큰 카드였는데,
-     "이 근처" 정보를 주인공으로 올리기 위해 한 줄짜리 얇은 띠로 줄였다. */
+  /* 1. 상단 지역명 + 혼잡도 — 한 줄 띠로 압축했다가, 시간대별 흐름(예측 그래프)이
+     더 잘 보이도록 다시 큼직하게 키웠다. 설명 문장은 넣지 않는다(혼잡도 비중을
+     줄이는 게 이번 개편 취지라, 숫자/색은 크게 보여주되 문장은 되살리지 않음). */
   .congest-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    border-radius: 10px;
-    padding: 10px 16px;
+    border-radius: 14px;
+    padding: 20px 22px;
     color: #fff;
-    margin-bottom: 6px;
+    margin-bottom: 20px;
     transition: background-color 0.3s;
   }
-  .congest-bar-area {
-    font-size: 13px;
-    opacity: 0.9;
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .congest-bar-level { font-size: 15px; font-weight: 800; flex-shrink: 0; }
-
-  /* 12시간 예측: 기본은 접혀 있고 눌러야 펼쳐진다 */
-  .forecast-toggle-wrap { margin-bottom: 28px; }
-  .forecast-toggle-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: #fff;
-    color: #555;
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  .forecast-toggle-btn:hover { background: #f5f5f5; }
-  .forecast-toggle-arrow { transition: transform 0.15s; }
-  .forecast-toggle-btn.open .forecast-toggle-arrow { transform: rotate(180deg); }
-  .forecast-toggle-body { margin-top: 16px; }
+  .congest-bar-area { font-size: 16px; opacity: 0.9; margin: 0 0 6px; }
+  .congest-bar-level { font-size: 36px; font-weight: 800; margin: 0; }
 
   /* 0. "이 근처" — 올리브영, 짐 보관함처럼 도보 거리 안에 있는 실제 장소 정보.
      이제 화면의 주인공이라 혼잡도 띠 바로 아래, 예측 그래프보다 먼저 온다. */
@@ -316,6 +283,9 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
   .nearby-item-name { font-size: 13.5px; font-weight: 700; color: #222; margin: 0 0 3px; line-height: 1.4; }
+  /* 외국어 화면 전용: 로마자(굵게) 위 + 한글 원문(작게, 회색) 아래 */
+  .nearby-item-name-roman { font-size: 13.5px; font-weight: 700; color: #222; margin: 0; line-height: 1.4; }
+  .nearby-item-name-ko { font-size: 11.5px; font-weight: 500; color: #999; margin: 0 0 3px; line-height: 1.3; }
   .nearby-item-address { font-size: 12px; color: #888; margin: 0 0 4px; }
   .nearby-item-walk { font-size: 12px; color: #1565c0; font-weight: 600; margin: 0; }
   .nearby-more-btn {
@@ -997,44 +967,15 @@
       return e;
     }
 
-    // 예전엔 지역명 + 큰 혼잡도 글씨 + 설명 문장까지 있는 큰 카드였는데,
-    // "이 근처" 정보를 주인공으로 올리기 위해 한 줄짜리 띠로 압축했다.
+    // 지역명 + 혼잡도 단계를 크게 보여주는 띠. "이 근처"를 주인공으로 올리면서
+    // 한 줄로 압축했다가, 시간대별 흐름이 더 잘 보이도록 다시 크게 키웠다
+    // (설명 문장은 이번 개편 취지(혼잡도 비중 축소)에 맞게 되살리지 않음).
     function renderCongestBar(container, areaName, live) {
       var bar = el('div', 'congest-bar');
       bar.style.backgroundColor = colorOf(live.AREA_CONGEST_LVL);
-      bar.appendChild(elText('span', 'congest-bar-area', areaName));
-      bar.appendChild(elText('span', 'congest-bar-level', levelText(live.AREA_CONGEST_LVL)));
+      bar.appendChild(elText('p', 'congest-bar-area', areaName));
+      bar.appendChild(elText('p', 'congest-bar-level', levelText(live.AREA_CONGEST_LVL)));
       container.appendChild(bar);
-    }
-
-    // 12시간 예측은 이제 기본으로 접혀 있고, 버튼을 눌러야 펼쳐진다.
-    function renderForecastToggle(container, live) {
-      var t = LANG[currentLang];
-      var wrap = el('div', 'forecast-toggle-wrap');
-
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'forecast-toggle-btn';
-      var label = el('span', null, t.forecastToggleShow);
-      btn.appendChild(label);
-      btn.appendChild(el('span', 'forecast-toggle-arrow', '⌄'));
-      btn.setAttribute('aria-expanded', 'false');
-
-      var body = el('div', 'forecast-toggle-body');
-      body.hidden = true;
-      renderForecast(body, live);
-
-      btn.onclick = function () {
-        var willOpen = body.hidden;
-        body.hidden = !willOpen;
-        btn.classList.toggle('open', willOpen);
-        btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-        label.textContent = willOpen ? t.forecastToggleHide : t.forecastToggleShow;
-      };
-
-      wrap.appendChild(btn);
-      wrap.appendChild(body);
-      container.appendChild(wrap);
     }
 
     // 역명 표시: 한국어는 원본 그대로("명동역"), 다른 언어는 lang.js의 stationNames로
@@ -1126,28 +1067,43 @@
       container.appendChild(moreBtn);
     }
 
+    // 매장 상호명은 외국어 화면에서 "로마자 표기(굵게, 위) + 한글 원문(작게, 아래)"로
+    // 병기한다. 실제 매장 간판은 한글이라 원문을 늘 같이 보여준다. 한국어 화면은
+    // 원래대로 한글만.
+    function appendStoreName(item, t, store) {
+      if (currentLang === 'ko') {
+        item.appendChild(elText('p', 'nearby-item-name', store.name));
+        return;
+      }
+      item.appendChild(elText('p', 'nearby-item-name-roman', store.nameRomanized || store.name));
+      item.appendChild(elText('p', 'nearby-item-name-ko', store.name));
+    }
+
+    function renderStoreCategory(section, t, label, data) {
+      if (!data || !data.stores || !data.stores.length) return;
+      var category = el('div', 'nearby-category');
+      var header = el('div', 'nearby-category-header');
+      header.appendChild(el('span', 'nearby-category-name', label));
+      header.appendChild(el('span', 'nearby-category-badge', formatTemplate(t.nearbyCountUnit, { n: data.count })));
+      category.appendChild(header);
+
+      renderNearbyList(category, data.stores, t, function (store) {
+        var item = el('div', 'nearby-item');
+        appendStoreName(item, t, store);
+        item.appendChild(elText('p', 'nearby-item-address', store.address));
+        item.appendChild(elText('p', 'nearby-item-walk', walkLabel(t, store.distanceMeters)));
+        return item;
+      });
+      section.appendChild(category);
+    }
+
     function renderNearby(container, nearby) {
       var t = LANG[currentLang];
       var section = el('section', 'nearby-section');
       section.appendChild(el('h2', null, t.nearbyTitle));
 
-      var oliveyoung = (nearby && nearby.oliveyoung) || { count: 0, stores: [] };
-      if (oliveyoung.stores && oliveyoung.stores.length) {
-        var oyCategory = el('div', 'nearby-category');
-        var oyHeader = el('div', 'nearby-category-header');
-        oyHeader.appendChild(el('span', 'nearby-category-name', '올리브영 · OLIVE YOUNG'));
-        oyHeader.appendChild(el('span', 'nearby-category-badge', formatTemplate(t.nearbyCountUnit, { n: oliveyoung.count })));
-        oyCategory.appendChild(oyHeader);
-
-        renderNearbyList(oyCategory, oliveyoung.stores, t, function (store) {
-          var item = el('div', 'nearby-item');
-          item.appendChild(elText('p', 'nearby-item-name', store.name));
-          item.appendChild(elText('p', 'nearby-item-address', store.address));
-          item.appendChild(elText('p', 'nearby-item-walk', walkLabel(t, store.distanceMeters)));
-          return item;
-        });
-        section.appendChild(oyCategory);
-      }
+      renderStoreCategory(section, t, t.nearbyConvenienceTitle, nearby && nearby.convenience);
+      renderStoreCategory(section, t, '올리브영 · OLIVE YOUNG', nearby && nearby.oliveyoung);
 
       var lockers = (nearby && nearby.lockers) || { count: 0, lockers: [] };
       if (lockers.lockers && lockers.lockers.length) {
@@ -1351,8 +1307,8 @@
 
       renderCongestBar(app, areaName, live);
       app.appendChild(el('p', 'updated-at', formatTemplate(LANG[currentLang].asOf, { time: live.PPLTN_TIME })));
+      renderForecast(app, live);
       renderNearby(app, nearby);
-      renderForecastToggle(app, live);
       renderEvents(app, events);
     }
 
