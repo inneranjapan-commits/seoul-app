@@ -137,7 +137,7 @@
        바로 알아볼 수 있게 한다 (예전엔 흰 배경에 얇은 회색 테두리라 제목처럼 보였음) */
     border: 2px solid #1565c0;
     background: #eaf2fc;
-    box-shadow: 0 3px 10px rgba(21, 101, 192, 0.16);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
     color: #222;
     font-size: 18px;
     font-weight: 700;
@@ -192,15 +192,6 @@
     transition: transform 0.15s;
   }
   .area-select.open .area-select-arrow { transform: rotate(180deg); }
-
-  /* 처음 방문한 사람의 시선을 끌기 위한 1회성 힌트 애니메이션 (JS가 첫 방문에만 붙였다 뗀다) */
-  @keyframes area-select-hint-pulse {
-    0%, 100% { box-shadow: 0 3px 10px rgba(21, 101, 192, 0.16); transform: scale(1); }
-    50% { box-shadow: 0 4px 18px rgba(21, 101, 192, 0.45); transform: scale(1.015); }
-  }
-  .area-select-toggle.hint-pulse {
-    animation: area-select-hint-pulse 1.1s ease-in-out 3;
-  }
 
   .area-select-panel {
     position: absolute;
@@ -1237,28 +1228,7 @@
       if (areaSelectOpen) closeAreaSelect(); else openAreaSelect();
     }
 
-    document.getElementById('area-select-toggle').onclick = function () {
-      stopAreaSelectHint();
-      toggleAreaSelect();
-    };
-
-    // ---- 처음 방문한 사람에게만: 지역 선택 상자가 눌러볼 만하다는 걸 알려주는 1회성 힌트 ----
-    var AREA_HINT_STORAGE_KEY = 'seoulAppAreaHintSeen';
-
-    function stopAreaSelectHint() {
-      document.getElementById('area-select-toggle').classList.remove('hint-pulse');
-    }
-
-    function maybeShowAreaSelectHint() {
-      try {
-        if (localStorage.getItem(AREA_HINT_STORAGE_KEY)) return;
-        localStorage.setItem(AREA_HINT_STORAGE_KEY, '1');
-      } catch (e) {
-        // localStorage를 못 쓰는 환경(프라이빗 모드 등)이면 매번 보여도 크게 문제 없으니 그냥 진행
-      }
-      document.getElementById('area-select-toggle').classList.add('hint-pulse');
-      setTimeout(stopAreaSelectHint, 3500); // 애니메이션이 끝난 뒤 클래스를 정리
-    }
+    document.getElementById('area-select-toggle').onclick = toggleAreaSelect;
 
     // 펼쳐진 목록 바깥을 누르면 닫기 (버튼과 목록 자체를 누른 건 제외)
     document.addEventListener('click', function (e) {
@@ -1650,7 +1620,6 @@
     selectArea(AREAS[0]);
     // 목록을 열기 전에 인기 지역 점이 이미 채워져 있도록 백그라운드로 미리 불러온다
     prefetchPopularCongestion();
-    maybeShowAreaSelectHint();
   </script>
 </body>
 </html>
