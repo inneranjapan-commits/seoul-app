@@ -576,6 +576,9 @@
     border-radius: 10px;
     text-decoration: none;
     text-align: center;
+    /* 기본값 — 색이 지정된 특정 섹션 밖(상황별 안내 등)에서 쓰일 때를 대비 */
+    background: #333;
+    color: #fff;
   }
   .sos-call-btn-label { font-size: 10px; font-weight: 700; opacity: 0.85; }
   .sos-call-btn-number { font-size: 14px; font-weight: 800; }
@@ -680,6 +683,106 @@
     cursor: pointer;
   }
   .loc-retry-btn:hover { background: #f0f0f0; }
+
+  /* 상황별 안내 — 보라 계열로 다른 섹션(빨강/파랑/청록)과 구분한다 */
+  .sos-section-situations .sos-section-title { color: #5e35b1; }
+  .sit-list { display: flex; flex-direction: column; gap: 8px; }
+  .sit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1.5px solid #d8cdf0;
+    background: #f7f4fc;
+    color: #2a2a2a;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+  }
+  .sit-btn:hover { background: #efe8fa; }
+  .sit-btn.open { border-color: #5e35b1; background: #efe8fa; }
+  .sit-btn-arrow { flex-shrink: 0; margin-left: 8px; color: #5e35b1; font-weight: 900; transition: transform 0.15s; }
+  .sit-btn.open .sit-btn-arrow { transform: rotate(180deg); }
+
+  .sit-panel {
+    margin: -2px 0 4px;
+    padding: 12px 14px 4px;
+    border: 1.5px solid #d8cdf0;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    background: #fff;
+  }
+  .sit-step { display: flex; gap: 10px; margin-bottom: 14px; }
+  .sit-step-num {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #5e35b1;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sit-step-body { flex: 1; min-width: 0; }
+  .sit-step-text { font-size: 13px; color: #333; line-height: 1.4; margin: 0 0 8px; }
+  .sit-step-body .sos-card-buttons { margin-top: 0; }
+  .sit-step-body .sos-call-btn { background: #5e35b1; color: #fff; }
+  .sit-step-body .sos-call-btn.intl { background: #fff; color: #5e35b1; border: 1.5px solid #5e35b1; }
+  .sit-action-btn {
+    width: 100%;
+    padding: 9px 10px;
+    border-radius: 8px;
+    border: 1.5px solid #5e35b1;
+    background: #fff;
+    color: #5e35b1;
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .sit-action-btn:hover { background: #f7f4fc; }
+
+  /* 대사관 연락처 — 접었다 펴는 슬레이트 계열 섹션 */
+  .embassy-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 4px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: none;
+    font-family: inherit;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  .embassy-toggle .sos-section-title { color: #37474f; }
+  .embassy-toggle-arrow { color: #37474f; font-weight: 900; transition: transform 0.15s; }
+  .embassy-toggle.open .embassy-toggle-arrow { transform: rotate(180deg); }
+
+  .embassy-list { display: flex; flex-direction: column; gap: 10px; }
+  .embassy-card { background: #eceff1; border: 1px solid #cfd8dc; }
+  .embassy-card .sos-call-btn { background: #37474f; color: #fff; }
+  .embassy-address-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-top: 8px;
+  }
+  .embassy-address-text { font-size: 12.5px; color: #333; line-height: 1.4; }
+  .embassy-copy-btn { flex-shrink: 0; border-color: #37474f; color: #37474f; }
+  .embassy-copy-btn.copied { background: #37474f; }
 </style>
 </head>
 <body>
@@ -1443,6 +1546,153 @@
       return card;
     }
 
+    // ---- 상황별 안내 ----
+    // 상황 버튼을 누르면 그 상황의 단계가 펼쳐진다 (아코디언, 한 번에 하나만 열림)
+    var situationOpenId = null;
+
+    // 상황별 안내 단계가 참조하는 번호(police/fire/t1330 등)를 기존 긴급/다국어/평일
+    // 섹션에서 그대로 찾아 재사용한다 (번호를 중복으로 새로 만들지 않기 위함)
+    function findContactByRef(t, ref) {
+      for (var i = 0; i < t.sections.length; i++) {
+        var contacts = t.sections[i].contacts;
+        for (var j = 0; j < contacts.length; j++) {
+          if (contacts[j].id === ref) return contacts[j];
+        }
+      }
+      return null;
+    }
+
+    // 'embassy' 단계 버튼 -> 대사관 섹션을 펴고 그리로 스크롤
+    // 'location' 단계 버튼 -> 위치 확인을 실행하고(이미 실행 중/완료면 그대로) 위치 섹션으로 스크롤
+    function handleSituationAction(action) {
+      if (action === 'embassy') {
+        embassiesOpen = true;
+        renderSosSheet();
+      } else if (action === 'location') {
+        startLocate();
+      }
+      var targetId = action === 'embassy' ? 'sos-embassy-section' : 'sos-location-section';
+      var target = document.getElementById(targetId);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function buildSituationsSection(t) {
+      var s = t.situations;
+      var section = el('div', 'sos-section sos-section-situations');
+      section.appendChild(el('p', 'sos-section-title', s.title));
+
+      var list = el('div', 'sit-list');
+      s.items.forEach(function (item) {
+        var isOpen = situationOpenId === item.id;
+
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'sit-btn' + (isOpen ? ' open' : '');
+        btn.innerHTML = '<span>' + item.label + '</span><span class="sit-btn-arrow" aria-hidden="true">⌄</span>';
+        btn.onclick = function () {
+          situationOpenId = isOpen ? null : item.id;
+          renderSosSheet();
+        };
+        list.appendChild(btn);
+
+        if (!isOpen) return;
+
+        var panel = el('div', 'sit-panel');
+        item.steps.forEach(function (step, idx) {
+          var row = el('div', 'sit-step');
+          row.appendChild(el('span', 'sit-step-num', String(idx + 1)));
+
+          var body = el('div', 'sit-step-body');
+          body.appendChild(el('p', 'sit-step-text', step.text));
+
+          if (step.type === 'contact') {
+            var contact = findContactByRef(t, step.contactRef);
+            if (contact) body.appendChild(el('div', 'sos-card-buttons', sosCallButtonsHtml(t, contact)));
+          } else if (step.type === 'action') {
+            var actionLabel = step.action === 'embassy' ? t.embassies.toggleShow : t.location.buttonIdle;
+            var actionBtn = el('button', 'sit-action-btn', actionLabel);
+            actionBtn.type = 'button';
+            actionBtn.onclick = function () { handleSituationAction(step.action); };
+            body.appendChild(actionBtn);
+          }
+
+          row.appendChild(body);
+          panel.appendChild(row);
+        });
+        list.appendChild(panel);
+      });
+
+      section.appendChild(list);
+      return section;
+    }
+
+    // ---- 대사관 연락처 ----
+    // 언어별로 lang.js의 emergency.embassies.contacts에 이미 해당 언어 사용자에게 맞는
+    // 대사관만 들어있어서(예: 일본어는 일본대사관만), 여기서는 그대로 그리기만 한다.
+    // 목록이 길어질 수 있어(영어는 4개국) 기본은 접힌 상태로 시작한다.
+    var embassiesOpen = false;
+
+    function buildEmbassySection(t) {
+      var te = t.embassies;
+      var section = el('div', 'sos-section sos-section-embassy');
+      section.id = 'sos-embassy-section';
+
+      var toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'embassy-toggle' + (embassiesOpen ? ' open' : '');
+      toggle.innerHTML =
+        '<span class="sos-section-title">' + te.sectionTitle + '</span>' +
+        '<span class="embassy-toggle-arrow" aria-hidden="true">⌄</span>';
+      toggle.setAttribute('aria-expanded', embassiesOpen ? 'true' : 'false');
+      toggle.onclick = function () {
+        embassiesOpen = !embassiesOpen;
+        renderSosSheet();
+      };
+      section.appendChild(toggle);
+
+      if (embassiesOpen) {
+        var list = el('div', 'embassy-list');
+        te.contacts.forEach(function (c) {
+          var card = el('div', 'sos-card embassy-card');
+          var top = el('div', 'sos-card-top');
+          top.appendChild(el('p', 'sos-card-name', c.name));
+          top.appendChild(el('span', 'sos-card-hours', c.hours));
+          card.appendChild(top);
+          card.appendChild(el('p', 'sos-card-desc', c.desc));
+
+          var btnRow = el('div', 'sos-card-buttons');
+          c.numbers.forEach(function (n) {
+            var a = document.createElement('a');
+            a.className = 'sos-call-btn domestic';
+            a.href = 'tel:' + n.tel;
+            a.innerHTML =
+              '<span class="sos-call-btn-label">' + n.label + '</span>' +
+              '<span class="sos-call-btn-number">' + n.display + '</span>';
+            btnRow.appendChild(a);
+          });
+          card.appendChild(btnRow);
+
+          if (c.addressKo) {
+            var addrRow = el('div', 'embassy-address-row');
+            addrRow.appendChild(el('span', 'embassy-address-text', c.addressKo));
+            var copyBtn = el('button', 'loc-action-btn embassy-copy-btn', t.location.copyAddress);
+            copyBtn.type = 'button';
+            copyBtn.onclick = function () {
+              copyText(c.addressKo, copyBtn, t.location.copied, t.location.copyAddress);
+            };
+            addrRow.appendChild(copyBtn);
+            card.appendChild(addrRow);
+          }
+
+          if (c.note) card.appendChild(el('p', 'sos-card-note', c.note));
+          list.appendChild(card);
+        });
+        section.appendChild(list);
+      }
+
+      return section;
+    }
+
     function renderSosSheet() {
       var t = LANG[currentLang].emergency;
       document.getElementById('sos-sheet-title').textContent = t.modalTitle;
@@ -1452,9 +1702,12 @@
       container.innerHTML = '';
 
       var locSection = el('div', 'sos-section sos-section-location');
+      locSection.id = 'sos-location-section';
       locSection.appendChild(el('p', 'sos-section-title', t.location.title));
       locSection.appendChild(buildLocationCard(t));
       container.appendChild(locSection);
+
+      container.appendChild(buildSituationsSection(t));
 
       t.sections.forEach(function (sec) {
         var secEl = el('div', 'sos-section sos-section-' + sec.key);
@@ -1474,6 +1727,8 @@
 
         container.appendChild(secEl);
       });
+
+      container.appendChild(buildEmbassySection(t));
     }
 
     function openSos() {

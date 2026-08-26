@@ -171,7 +171,77 @@ var LANG = {
             }
           ]
         }
-      ]
+      ],
+
+      // 상황별 안내: 버튼을 누르면 그 상황에 맞는 단계가 펼쳐진다.
+      // 각 단계는 type으로 렌더링 방식이 갈린다 — 'contact'는 위 sections에 있는
+      // 번호(contactRef)의 전화 버튼을 그대로 재사용하고, 'action'은 버튼을 눌렀을 때
+      // 위치 확인을 실행하거나 대사관 섹션으로 스크롤한다 (index.html에서 처리).
+      situations: {
+        title: '상황별 안내',
+        items: [
+          {
+            id: 'passport',
+            label: '여권을 잃어버렸어요',
+            steps: [
+              { type: 'contact', contactRef: 'police', text: '112 또는 가까운 경찰서에서 분실 신고' },
+              { type: 'text', text: '신고확인서(분실확인서) 받기' },
+              { type: 'action', action: 'embassy', text: '자국 대사관에 연락하기' }
+            ]
+          },
+          {
+            id: 'sick',
+            label: '아파요 / 다쳤어요',
+            steps: [
+              { type: 'contact', contactRef: 'fire', text: '생명이 위급하면' },
+              { type: 'contact', contactRef: 't1330', text: '그 정도가 아니면 (통역 지원)' }
+            ]
+          },
+          {
+            id: 'theft',
+            label: '소매치기 / 도난당했어요',
+            steps: [
+              { type: 'contact', contactRef: 'police', text: '112에 신고하세요 (통역 지원 요청 가능)' }
+            ]
+          },
+          {
+            id: 'lost',
+            label: '길을 잃었어요',
+            steps: [
+              { type: 'action', action: 'location', text: '내 위치를 확인해서 보여주세요' },
+              { type: 'contact', contactRef: 't1330', text: '1330에 전화해서 도움을 요청하세요' }
+            ]
+          },
+          {
+            id: 'unsure',
+            label: '어디에 연락해야 할지 모르겠어요',
+            steps: [
+              { type: 'contact', contactRef: 't1330', text: '1330으로 전화하면 모든 상황을 24시간 다국어로 안내해줍니다' }
+            ]
+          }
+        ]
+      },
+
+      // 대사관 연락처: 언어별로 해당 언어 사용자에게 맞는 대사관/영사 연락처만 넣는다.
+      // 번호는 전부 각 대사관 공식 홈페이지에서 직접 확인한 값이다 (추측 금지).
+      // 주소(addressKo)는 택시기사에게 보여줄 수 있도록 항상 한국어로 적는다.
+      embassies: {
+        sectionTitle: '대사관 연락처',
+        toggleShow: '대사관 연락처 보기',
+        toggleHide: '대사관 연락처 접기',
+        contacts: [
+          {
+            id: 'callcenter',
+            name: '외교부 영사콜센터',
+            hours: '24시간',
+            desc: '해외에서 사건사고, 통역, 영사 업무 등 도움이 필요할 때',
+            numbers: [
+              { label: '전화', tel: '+82-2-3210-0404', display: '+82-2-3210-0404' }
+            ],
+            note: '해외 로밍으로 걸면 유료예요. "영사안전콜센터 무료전화" 앱을 쓰면 무료예요.'
+          }
+        ]
+      }
     },
 
     // 혼잡도 4단계 표시 텍스트 (키는 서울시 API가 내려주는 원래 값)
@@ -357,7 +427,102 @@ var LANG = {
             }
           ]
         }
-      ]
+      ],
+
+      situations: {
+        title: 'Guide by Situation',
+        items: [
+          {
+            id: 'passport',
+            label: 'I lost my passport',
+            steps: [
+              { type: 'contact', contactRef: 'police', text: 'Report the loss to 112 or the nearest police station' },
+              { type: 'text', text: 'Get a police report (loss confirmation document)' },
+              { type: 'action', action: 'embassy', text: 'Contact your embassy' }
+            ]
+          },
+          {
+            id: 'sick',
+            label: "I'm sick / injured",
+            steps: [
+              { type: 'contact', contactRef: 'fire', text: "If it's life-threatening" },
+              { type: 'contact', contactRef: 't1330', text: "If it's not that serious (interpretation available)" }
+            ]
+          },
+          {
+            id: 'theft',
+            label: 'I was pickpocketed / robbed',
+            steps: [
+              { type: 'contact', contactRef: 'police', text: 'Report it to 112 (you can ask for interpretation)' }
+            ]
+          },
+          {
+            id: 'lost',
+            label: "I'm lost",
+            steps: [
+              { type: 'action', action: 'location', text: 'Check and show your current location' },
+              { type: 'contact', contactRef: 't1330', text: 'Call 1330 for help' }
+            ]
+          },
+          {
+            id: 'unsure',
+            label: "I don't know who to call",
+            steps: [
+              { type: 'contact', contactRef: 't1330', text: 'Call 1330 — 24/7 multilingual guidance for any situation' }
+            ]
+          }
+        ]
+      },
+
+      embassies: {
+        sectionTitle: 'Embassy Contacts',
+        toggleShow: 'Show embassy contacts',
+        toggleHide: 'Hide embassy contacts',
+        contacts: [
+          {
+            id: 'us',
+            name: 'U.S. Embassy Seoul',
+            hours: 'Mon–Fri (closed Wed afternoons & holidays)',
+            desc: 'For U.S. citizens needing emergency consular help',
+            numbers: [
+              { label: 'Phone (24/7 emergency)', tel: '02-397-4114', display: '02-397-4114' }
+            ],
+            addressKo: '서울특별시 종로구 세종대로 188'
+          },
+          {
+            id: 'uk',
+            name: 'British Embassy Seoul',
+            hours: 'Appointment only — no walk-in phone line',
+            desc: 'For emergencies, call the UK 24/7 Consular Contact Centre and select "Consular services for British nationals"',
+            numbers: [
+              { label: 'UK 24/7 Consular Centre', tel: '+44-20-7008-5000', display: '+44 (0)20 7008 5000' }
+            ],
+            addressKo: '서울특별시 중구 세종대로19길 24'
+          },
+          {
+            id: 'canada',
+            name: 'Embassy of Canada Seoul',
+            hours: 'Mon–Fri, business hours',
+            desc: 'After hours, call the 24/7 centre in Ottawa (collect calls accepted where available)',
+            numbers: [
+              { label: 'Seoul office', tel: '02-3783-6000', display: '02-3783-6000' },
+              { label: '24/7 Emergency (Ottawa)', tel: '+1-613-996-8885', display: '+1 613 996 8885' }
+            ],
+            addressKo: '서울특별시 중구 정동길 21'
+          },
+          {
+            id: 'australia',
+            name: 'Australian Embassy Seoul',
+            hours: 'Mon–Fri 9:00–12:30, 13:30–17:00',
+            desc: 'After hours, call the 24-hour consular emergency line in Canberra',
+            numbers: [
+              { label: 'Seoul office', tel: '02-2003-0100', display: '02-2003-0100' },
+              { label: '24hr Emergency (Canberra)', tel: '+61-2-6261-3305', display: '+61 2 6261 3305' }
+            ],
+            addressKo: '서울특별시 종로구 종로 1, 교보빌딩 19층'
+          }
+        ]
+      }
     },
 
     congestLevels: {
@@ -538,7 +703,71 @@ var LANG = {
             }
           ]
         }
-      ]
+      ],
+
+      situations: {
+        title: '状況別ガイド',
+        items: [
+          {
+            id: 'passport',
+            label: 'パスポートをなくしました',
+            steps: [
+              { type: 'contact', contactRef: 'police', text: '112または最寄りの警察署に紛失届を出す' },
+              { type: 'text', text: '盗難・紛失証明書を受け取る' },
+              { type: 'action', action: 'embassy', text: '自国の大使館に連絡する' }
+            ]
+          },
+          {
+            id: 'sick',
+            label: '具合が悪い／けがをした',
+            steps: [
+              { type: 'contact', contactRef: 'fire', text: '命に関わる場合は' },
+              { type: 'contact', contactRef: 't1330', text: 'そうでない場合は(通訳あり)' }
+            ]
+          },
+          {
+            id: 'theft',
+            label: 'スリ・盗難に遭いました',
+            steps: [
+              { type: 'contact', contactRef: 'police', text: '112に通報する(通訳依頼可能)' }
+            ]
+          },
+          {
+            id: 'lost',
+            label: '道に迷いました',
+            steps: [
+              { type: 'action', action: 'location', text: '現在地を確認して見せる' },
+              { type: 'contact', contactRef: 't1330', text: '1330に電話して助けを求める' }
+            ]
+          },
+          {
+            id: 'unsure',
+            label: 'どこに連絡すればいいか分かりません',
+            steps: [
+              { type: 'contact', contactRef: 't1330', text: '1330に電話すれば、24時間多言語であらゆる状況を案内してくれます' }
+            ]
+          }
+        ]
+      },
+
+      embassies: {
+        sectionTitle: '大使館連絡先',
+        toggleShow: '大使館連絡先を表示',
+        toggleHide: '大使館連絡先を閉じる',
+        contacts: [
+          {
+            id: 'japan',
+            name: '在大韓民国日本国大使館 領事部',
+            hours: '平日 9:30〜12:15, 13:15〜18:00(昼休みは電話不可)',
+            desc: '旅券(パスポート)紛失やビザに関するお問い合わせ',
+            numbers: [
+              { label: '領事部', tel: '02-739-7400', display: '02-739-7400' },
+              { label: '代表', tel: '02-2170-5200', display: '02-2170-5200' }
+            ],
+            addressKo: '서울특별시 종로구 율곡로 6 트윈트리타워 A동'
+          }
+        ]
+      }
     },
 
     congestLevels: {
@@ -719,7 +948,71 @@ var LANG = {
             }
           ]
         }
-      ]
+      ],
+
+      situations: {
+        title: '按情况指南',
+        items: [
+          {
+            id: 'passport',
+            label: '护照丢了',
+            steps: [
+              { type: 'contact', contactRef: 'police', text: '向112或最近的警察局申报遗失' },
+              { type: 'text', text: '领取遗失/被盗证明' },
+              { type: 'action', action: 'embassy', text: '联系本国大使馆' }
+            ]
+          },
+          {
+            id: 'sick',
+            label: '生病了/受伤了',
+            steps: [
+              { type: 'contact', contactRef: 'fire', text: '如果有生命危险' },
+              { type: 'contact', contactRef: 't1330', text: '如果情况不严重(可提供翻译)' }
+            ]
+          },
+          {
+            id: 'theft',
+            label: '被扒窃/被盗',
+            steps: [
+              { type: 'contact', contactRef: 'police', text: '拨打112报警(可请求翻译协助)' }
+            ]
+          },
+          {
+            id: 'lost',
+            label: '迷路了',
+            steps: [
+              { type: 'action', action: 'location', text: '查看并出示您的当前位置' },
+              { type: 'contact', contactRef: 't1330', text: '拨打1330寻求帮助' }
+            ]
+          },
+          {
+            id: 'unsure',
+            label: '不知道该联系谁',
+            steps: [
+              { type: 'contact', contactRef: 't1330', text: '拨打1330,24小时提供多语言的全方位指引' }
+            ]
+          }
+        ]
+      },
+
+      embassies: {
+        sectionTitle: '大使馆联系方式',
+        toggleShow: '显示大使馆联系方式',
+        toggleHide: '收起大使馆联系方式',
+        contacts: [
+          {
+            id: 'china',
+            name: '中国驻韩国大使馆 领事部',
+            hours: '工作日 09:00-12:00, 13:30-17:00',
+            desc: '护照遗失、签证等领事咨询',
+            numbers: [
+              { label: '领事证件咨询', tel: '02-755-0568', display: '02-755-0568' },
+              { label: '领事保护(紧急)', tel: '02-755-0572', display: '02-755-0572' }
+            ],
+            note: '线路繁忙时可拨打中国外交部全球领事保护与服务应急热线 +86-10-12308(在韩国拨打)'
+          }
+        ]
+      }
     },
 
     congestLevels: {
