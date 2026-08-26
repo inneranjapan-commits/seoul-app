@@ -70,6 +70,28 @@ var LANG = {
       closeLabel: '닫기',
       domesticLabel: '국내용',
       intlLabel: '해외 로밍',
+      // 내 위치 확인: '이 화면을 보여주세요' 문구는 언어와 무관하게 항상 한국어로 고정 표시하므로
+      // (index.html의 LOCATION_SHOW_HINT_KO 상수) 여기 번역 목록에는 넣지 않는다.
+      location: {
+        title: '내 위치',
+        idleDesc: '위급 상황에서 정확한 위치를 전달할 때 사용하세요',
+        buttonIdle: '내 위치 확인하기',
+        locating: '위치를 확인하는 중...',
+        coordsLabel: '위도·경도',
+        copyAddress: '주소 복사',
+        copyCoords: '좌표 복사',
+        copied: '복사했어요',
+        addressUnavailableNote: '주소를 찾지 못했어요. 아래 좌표를 대신 보여주세요.',
+        errorTitle: '위치를 확인할 수 없어요',
+        errorReasons: {
+          permissionDenied: '위치 권한이 거부됐어요. 브라우저 설정에서 위치 권한을 허용한 뒤 다시 시도해주세요.',
+          unavailable: '위치를 확인할 수 없어요. GPS나 인터넷 연결을 확인해주세요.',
+          timeout: '위치 확인이 시간 초과됐어요. 다시 시도해주세요.',
+          unsupported: '이 기기(브라우저)는 위치 확인 기능을 지원하지 않아요.'
+        },
+        errorFallbackIntro: '대신 아래 1330 관광통역안내로 전화해서 도움을 요청하세요',
+        refresh: '다시 확인'
+      },
       sections: [
         {
           key: 'emergency',
@@ -235,6 +257,26 @@ var LANG = {
       closeLabel: 'Close',
       domesticLabel: 'In Korea',
       intlLabel: 'From abroad',
+      location: {
+        title: 'My Location',
+        idleDesc: 'Use this to share your exact location in an emergency',
+        buttonIdle: 'Check My Location',
+        locating: 'Getting your location...',
+        coordsLabel: 'Lat, Lon',
+        copyAddress: 'Copy Address',
+        copyCoords: 'Copy Coordinates',
+        copied: 'Copied',
+        addressUnavailableNote: "Couldn't find an address — showing coordinates instead.",
+        errorTitle: "Couldn't get your location",
+        errorReasons: {
+          permissionDenied: 'Location permission was denied. Please allow location access in your browser settings and try again.',
+          unavailable: 'Your location could not be determined. Please check your GPS or internet connection.',
+          timeout: 'The location request timed out. Please try again.',
+          unsupported: "This device/browser doesn't support location services."
+        },
+        errorFallbackIntro: 'Call Tourist Info & Interpretation (1330) below for help instead',
+        refresh: 'Check Again'
+      },
       sections: [
         {
           key: 'emergency',
@@ -395,6 +437,26 @@ var LANG = {
       closeLabel: '閉じる',
       domesticLabel: '韓国国内から',
       intlLabel: '海外ローミング',
+      location: {
+        title: '現在地',
+        idleDesc: '緊急時に正確な位置を伝えるために使ってください',
+        buttonIdle: '現在地を確認する',
+        locating: '現在地を確認しています...',
+        coordsLabel: '緯度・経度',
+        copyAddress: '住所をコピー',
+        copyCoords: '座標をコピー',
+        copied: 'コピーしました',
+        addressUnavailableNote: '住所が見つかりませんでした。代わりに座標を表示します。',
+        errorTitle: '現在地を確認できません',
+        errorReasons: {
+          permissionDenied: '位置情報の権限が拒否されました。ブラウザの設定で位置情報を許可してから、もう一度お試しください。',
+          unavailable: '現在地を確認できません。GPSやインターネット接続をご確認ください。',
+          timeout: '現在地の確認がタイムアウトしました。もう一度お試しください。',
+          unsupported: 'この端末・ブラウザは位置情報機能に対応していません。'
+        },
+        errorFallbackIntro: '代わりに下の観光通訳案内(1330)に電話して助けを求めてください',
+        refresh: 'もう一度確認'
+      },
       sections: [
         {
           key: 'emergency',
@@ -555,6 +617,26 @@ var LANG = {
       closeLabel: '关闭',
       domesticLabel: '韩国境内拨打',
       intlLabel: '境外/漫游拨打',
+      location: {
+        title: '我的位置',
+        idleDesc: '紧急情况下用于准确告知您所在的位置',
+        buttonIdle: '查看我的位置',
+        locating: '正在获取位置...',
+        coordsLabel: '纬度·经度',
+        copyAddress: '复制地址',
+        copyCoords: '复制坐标',
+        copied: '已复制',
+        addressUnavailableNote: '未能找到地址,将改为显示坐标。',
+        errorTitle: '无法获取您的位置',
+        errorReasons: {
+          permissionDenied: '定位权限被拒绝。请在浏览器设置中允许访问位置信息后重试。',
+          unavailable: '无法确定您的位置,请检查GPS或网络连接。',
+          timeout: '获取位置超时,请重试。',
+          unsupported: '此设备/浏览器不支持定位功能。'
+        },
+        errorFallbackIntro: '请改为拨打下方的旅游咨询及翻译(1330)寻求帮助',
+        refresh: '重新获取'
+      },
       sections: [
         {
           key: 'emergency',

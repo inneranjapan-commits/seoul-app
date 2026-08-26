@@ -596,6 +596,98 @@
   .sos-section-weekday .sos-call-btn.intl { background: #fff; color: #1565c0; border: 1.5px solid #1565c0; }
 
   .sos-card-note { font-size: 11px; color: #888; margin: 8px 0 0; line-height: 1.4; }
+
+  /* 내 위치 확인 섹션 — 전화번호 목록과 구분되도록 청록 계열 강조색을 쓴다 */
+  .sos-section-location .sos-section-title { color: #00695c; }
+  .sos-location-card { background: #e6f4f1; border: 1px solid #b6dfd6; }
+
+  .loc-idle-desc { font-size: 12.5px; color: #555; margin: 0 0 12px; line-height: 1.45; }
+  .loc-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #00695c;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  .loc-btn:hover { background: #00564c; }
+  .loc-btn:active { transform: scale(0.99); }
+
+  .loc-locating { font-size: 13.5px; color: #555; text-align: center; padding: 8px 0; }
+  .loc-spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    border: 2px solid #b6dfd6;
+    border-top-color: #00695c;
+    border-radius: 50%;
+    vertical-align: -2px;
+    animation: loc-spin 0.8s linear infinite;
+  }
+  @keyframes loc-spin { to { transform: rotate(360deg); } }
+
+  /* 한국어 고정 문구 배지 — "이 화면을 보여주세요". 언어와 무관하게 항상 한국어로만 보인다 */
+  .loc-show-hint {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    color: #7a5900;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 8px 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .loc-address { font-size: 19px; font-weight: 800; color: #1a1a1a; line-height: 1.4; margin: 0 0 8px; }
+  .loc-coords-row { display: flex; align-items: baseline; gap: 6px; margin-bottom: 12px; }
+  .loc-coords-label { font-size: 11px; color: #888; }
+  .loc-coords-value { font-size: 12.5px; color: #555; font-family: "SFMono-Regular", Consolas, monospace; }
+
+  .loc-note { font-size: 12px; color: #7a5900; background: #fff8e1; border-radius: 8px; padding: 8px 10px; margin: 0 0 12px; }
+
+  .loc-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .loc-action-btn {
+    flex: 1 1 120px;
+    padding: 9px 10px;
+    border-radius: 8px;
+    border: 1.5px solid #00695c;
+    background: #fff;
+    color: #00695c;
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+  }
+  .loc-action-btn:hover { background: #e6f4f1; }
+  .loc-action-btn.copied { background: #00695c; color: #fff; }
+
+  .loc-error-title { font-size: 14px; font-weight: 800; color: #b71c1c; margin: 0 0 4px; }
+  .loc-error-reason { font-size: 12.5px; color: #555; line-height: 1.45; margin: 0 0 12px; }
+  .loc-error-fallback-intro { font-size: 12.5px; color: #555; margin: 0 0 8px; }
+  .loc-retry-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 9px;
+    border-radius: 8px;
+    border: 1.5px solid #999;
+    background: #fff;
+    color: #555;
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .loc-retry-btn:hover { background: #f0f0f0; }
 </style>
 </head>
 <body>
@@ -1208,6 +1300,176 @@
       document.getElementById('sos-fab').setAttribute('aria-label', t.fabAriaLabel);
     }
 
+    // ---- 내 위치 확인 ----
+    // "이 화면을 보여주세요"는 외국인이 한국인에게 내미는 용도라, 화면 언어와 무관하게
+    // 항상 한국어 그대로 보여야 해서 lang.js 번역 목록이 아니라 여기 고정값으로 둔다.
+    var LOCATION_SHOW_HINT_KO = '📍 이 화면을 보여주세요';
+
+    var locState = 'idle'; // 'idle' | 'locating' | 'success' | 'partial' | 'error'
+    var locData = { address: null, lat: null, lon: null, errorReason: null };
+    var LOCATE_TIMEOUT_MS = 12000;
+
+    function formatCoords(lat, lon) {
+      return lat.toFixed(5) + ', ' + lon.toFixed(5);
+    }
+
+    function copyText(text, btn, copiedLabel, originalLabel) {
+      function showCopied() {
+        btn.textContent = copiedLabel;
+        btn.classList.add('copied');
+        setTimeout(function () {
+          btn.textContent = originalLabel;
+          btn.classList.remove('copied');
+        }, 1500);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(showCopied).catch(function () {
+          fallbackCopy(text);
+          showCopied();
+        });
+      } else {
+        fallbackCopy(text);
+        showCopied();
+      }
+    }
+
+    // navigator.clipboard를 못 쓰는 환경(오래된 브라우저 등)을 위한 대체 수단
+    function fallbackCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+
+    function startLocate() {
+      locState = 'locating';
+      renderSosSheet();
+
+      if (!navigator.geolocation) {
+        locState = 'error';
+        locData.errorReason = 'unsupported';
+        renderSosSheet();
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        function (pos) {
+          locData.lat = pos.coords.latitude;
+          locData.lon = pos.coords.longitude;
+          locData.address = null;
+
+          var controller = ('AbortController' in window) ? new AbortController() : null;
+          var timer = controller ? setTimeout(function () { controller.abort(); }, LOCATE_TIMEOUT_MS) : null;
+
+          fetch('/api/geocode?lat=' + encodeURIComponent(locData.lat) + '&lon=' + encodeURIComponent(locData.lon), controller ? { signal: controller.signal } : {})
+            .then(function (res) { return res.json().catch(function () { return null; }); })
+            .then(function (body) {
+              if (timer) clearTimeout(timer);
+              locData.address = (body && body.address) || null;
+              locState = locData.address ? 'success' : 'partial';
+              renderSosSheet();
+            })
+            .catch(function () {
+              if (timer) clearTimeout(timer);
+              locData.address = null;
+              locState = 'partial';
+              renderSosSheet();
+            });
+        },
+        function (err) {
+          var reason = 'unavailable';
+          if (err.code === err.PERMISSION_DENIED) reason = 'permissionDenied';
+          else if (err.code === err.TIMEOUT) reason = 'timeout';
+          locData.errorReason = reason;
+          locState = 'error';
+          renderSosSheet();
+        },
+        { enableHighAccuracy: true, timeout: LOCATE_TIMEOUT_MS, maximumAge: 0 }
+      );
+    }
+
+    // 위치 섹션은 다른 섹션(긴급/다국어/평일)과 달리 상태(idle/locating/success/error)에
+    // 따라 내용이 완전히 바뀌므로 별도 함수로 카드 내용만 만들어 반환한다.
+    function buildLocationCard(t) {
+      var tl = t.location;
+      var card = el('div', 'sos-card sos-location-card');
+
+      if (locState === 'idle') {
+        card.appendChild(el('p', 'loc-idle-desc', tl.idleDesc));
+        var btn = el('button', 'loc-btn', tl.buttonIdle);
+        btn.type = 'button';
+        btn.onclick = startLocate;
+        card.appendChild(btn);
+        return card;
+      }
+
+      if (locState === 'locating') {
+        var p = el('p', 'loc-locating');
+        p.innerHTML = '<span class="loc-spinner" aria-hidden="true"></span>' + tl.locating;
+        card.appendChild(p);
+        return card;
+      }
+
+      if (locState === 'error') {
+        card.appendChild(el('p', 'loc-error-title', tl.errorTitle));
+        card.appendChild(el('p', 'loc-error-reason', tl.errorReasons[locData.errorReason] || tl.errorReasons.unavailable));
+        card.appendChild(el('p', 'loc-error-fallback-intro', tl.errorFallbackIntro));
+
+        // 1330 관광통역안내 번호를 새로 만들지 않고, 아래 "다국어 상담" 섹션에 이미 있는
+        // 항목(t1330)을 그대로 재사용해 전화 버튼을 그린다.
+        var t1330 = t.sections[1].contacts[0];
+        card.appendChild(el('div', 'sos-card-buttons', sosCallButtonsHtml(t, t1330)));
+
+        var retryBtn = el('button', 'loc-retry-btn', LANG[currentLang].retry);
+        retryBtn.type = 'button';
+        retryBtn.onclick = startLocate;
+        card.appendChild(retryBtn);
+        return card;
+      }
+
+      // 'success' | 'partial' — 위치를 구했을 때 (주소를 못 찾았으면 좌표만 크게 보여준다)
+      card.appendChild(el('p', 'loc-show-hint', LOCATION_SHOW_HINT_KO));
+
+      if (locState === 'success') {
+        // 주소는 외부(OSM Nominatim) 응답이라 innerHTML이 아닌 textContent로 안전하게 넣는다
+        var addrEl = el('p', 'loc-address');
+        addrEl.textContent = locData.address;
+        card.appendChild(addrEl);
+      } else {
+        card.appendChild(el('p', 'loc-note', tl.addressUnavailableNote));
+        card.appendChild(el('p', 'loc-address', formatCoords(locData.lat, locData.lon)));
+      }
+
+      var coordsRow = el('div', 'loc-coords-row');
+      coordsRow.appendChild(el('span', 'loc-coords-label', tl.coordsLabel + ':'));
+      coordsRow.appendChild(el('span', 'loc-coords-value', formatCoords(locData.lat, locData.lon)));
+      card.appendChild(coordsRow);
+
+      var actions = el('div', 'loc-actions');
+
+      var copyLabel = locState === 'success' ? tl.copyAddress : tl.copyCoords;
+      var copyBtn = el('button', 'loc-action-btn', copyLabel);
+      copyBtn.type = 'button';
+      copyBtn.onclick = function () {
+        var text = locState === 'success' ? locData.address : formatCoords(locData.lat, locData.lon);
+        copyText(text, copyBtn, tl.copied, copyLabel);
+      };
+      actions.appendChild(copyBtn);
+
+      var refreshBtn = el('button', 'loc-action-btn', tl.refresh);
+      refreshBtn.type = 'button';
+      refreshBtn.onclick = startLocate;
+      actions.appendChild(refreshBtn);
+
+      card.appendChild(actions);
+      return card;
+    }
+
     function renderSosSheet() {
       var t = LANG[currentLang].emergency;
       document.getElementById('sos-sheet-title').textContent = t.modalTitle;
@@ -1215,6 +1477,11 @@
 
       var container = document.getElementById('sos-sections');
       container.innerHTML = '';
+
+      var locSection = el('div', 'sos-section sos-section-location');
+      locSection.appendChild(el('p', 'sos-section-title', t.location.title));
+      locSection.appendChild(buildLocationCard(t));
+      container.appendChild(locSection);
 
       t.sections.forEach(function (sec) {
         var secEl = el('div', 'sos-section sos-section-' + sec.key);

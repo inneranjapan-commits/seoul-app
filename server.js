@@ -10,6 +10,7 @@ const fs = require('fs');
 const path = require('path');
 const { AREAS, fetchCityData } = require('./lib/citydata');
 const { getEvents } = require('./lib/visitseoul-events');
+const { reverseGeocode } = require('./lib/geocode');
 
 const PORT = 3000;
 const ROOT = __dirname;
@@ -77,6 +78,17 @@ const server = http.createServer((req, res) => {
   if (urlPath === '/api/events') {
     const lang = requestUrl.searchParams.get('lang') || '';
     sendJson(res, 200, { events: getEvents(lang) });
+    return;
+  }
+
+  if (urlPath === '/api/geocode') {
+    const lat = requestUrl.searchParams.get('lat') || '';
+    const lon = requestUrl.searchParams.get('lon') || '';
+    reverseGeocode(lat, lon)
+      .then((result) => sendJson(res, result.status, result.body))
+      .catch((err) => {
+        sendJson(res, 500, { error: '알 수 없는 오류가 발생했습니다: ' + err.message, code: 'UNCAUGHT_ERROR', detail: err.message });
+      });
     return;
   }
 
