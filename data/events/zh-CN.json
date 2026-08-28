@@ -1,9 +1,24 @@
 {
-  "generatedAt": "2026-08-26T09:26:24.195Z",
+  "generatedAt": "2026-08-28T03:48:14.651Z",
   "events": [
+    {
+      "EVENT_NM": "2027 S/S首尔时装周",
+      "EVENT_PERIOD": "2026-09-01~2026-09-06",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "韩华呈献2026首尔世界烟花节",
       "EVENT_PERIOD": "2026-09-05~2026-09-05",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "2026首尔国际作家节",
+      "EVENT_PERIOD": "2026-09-11~2026-09-16",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "2026首尔DDP迈阿密设计展(Design Miami Seoul)",
+      "EVENT_PERIOD": "2026-08-31~2026-09-06",
       "EVENT_URL": ""
     },
     {

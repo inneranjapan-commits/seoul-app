@@ -1,6 +1,26 @@
 {
-  "generatedAt": "2026-08-26T09:03:02.067Z",
+  "generatedAt": "2026-08-28T03:16:17.763Z",
   "events": [
+    {
+      "EVENT_NM": "2027 S/S ソウルファッションウィーク",
+      "EVENT_PERIOD": "2026-09-01~2026-09-06",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "ハンファと共にするソウル世界花火祭り2026",
+      "EVENT_PERIOD": "2026-09-05~2026-09-05",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "2026 ソウル国際作家フェスティバル",
+      "EVENT_PERIOD": "2026-09-11~2026-09-16",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "DDP デザインマイアミ ソウル 2026(Design Miami Seoul)",
+      "EVENT_PERIOD": "2026-08-31~2026-09-06",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "ソチョ(瑞草)-ハンガン(漢江)アートツアー",
       "EVENT_PERIOD": "2026-08-06~2026-08-30",

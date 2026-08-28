@@ -1,6 +1,26 @@
 {
-  "generatedAt": "2026-08-26T08:40:34.058Z",
+  "generatedAt": "2026-08-28T02:45:33.706Z",
   "events": [
+    {
+      "EVENT_NM": "2027 S/S Seoul Fashion Week",
+      "EVENT_PERIOD": "2026-09-01~2026-09-06",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "Seoul International Fireworks Festival 2026 with Hanwha",
+      "EVENT_PERIOD": "2026-09-05~2026-09-05",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "2026 Seoul International Writers' Festival",
+      "EVENT_PERIOD": "2026-09-11~2026-09-16",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "Design Miami Seoul 2026",
+      "EVENT_PERIOD": "2026-08-31~2026-09-06",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "2026 SEOUL AUTUMN FESTA",
       "EVENT_PERIOD": "2026-09-18~2026-11-29",
