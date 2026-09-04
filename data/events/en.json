@@ -1,6 +1,21 @@
 {
-  "generatedAt": "2026-09-03T19:42:48.566Z",
+  "generatedAt": "2026-09-04T19:44:03.510Z",
   "events": [
+    {
+      "EVENT_NM": "HELLO SEOUL (The Hyundai Seoul Shopping Festa)",
+      "EVENT_PERIOD": "2026-09-11~2026-09-20",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "K-LOCAL BREW JOURNEY 2026: Moving Brewery by Tongyeong-ae Onna",
+      "EVENT_PERIOD": "2026-09-05~2026-09-13",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "SEOUL LIGHT DDP 2026 Autumn",
+      "EVENT_PERIOD": "2026-09-03~2026-09-13",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "2027 S/S Seoul Fashion Week",
       "EVENT_PERIOD": "2026-09-01~2026-09-06",

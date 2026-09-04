@@ -1,6 +1,21 @@
 {
-  "generatedAt": "2026-09-03T20:37:36.127Z",
+  "generatedAt": "2026-09-04T20:43:37.343Z",
   "events": [
+    {
+      "EVENT_NM": "首尔之光DDP2026秋季",
+      "EVENT_PERIOD": "2026-09-03~2026-09-13",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "K-LOCAL BREW JOURNEY 2026：MOVING BREWERY by 统营愛 ONNA",
+      "EVENT_PERIOD": "2026-09-05~2026-09-13",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "HELLO SEOUL（现代首尔购物节）",
+      "EVENT_PERIOD": "2026-09-11~2026-09-20",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "2027 S/S首尔时装周",
       "EVENT_PERIOD": "2026-09-01~2026-09-06",

@@ -1,6 +1,21 @@
 {
-  "generatedAt": "2026-09-03T20:09:36.507Z",
+  "generatedAt": "2026-09-04T20:13:11.491Z",
   "events": [
+    {
+      "EVENT_NM": "ソウルライト DDP 2026 秋",
+      "EVENT_PERIOD": "2026-09-03~2026-09-13",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "K-LOCAL BREW JOURNEY 2026：ムービング・ブルワリー by トンヨン(統営)愛 オンナ",
+      "EVENT_PERIOD": "2026-09-05~2026-09-13",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "HELLO SEOUL(The Hyundai Seoul ショッピングフェスタ)",
+      "EVENT_PERIOD": "2026-09-11~2026-09-20",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "2027 S/S ソウルファッションウィーク",
       "EVENT_PERIOD": "2026-09-01~2026-09-06",
