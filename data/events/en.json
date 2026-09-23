@@ -1,6 +1,11 @@
 {
-  "generatedAt": "2026-09-22T22:27:22.323Z",
+  "generatedAt": "2026-09-23T22:44:17.782Z",
   "events": [
+    {
+      "EVENT_NM": "Taste of Seoul 2026",
+      "EVENT_PERIOD": "2026-10-23~2026-10-29",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "2026 SEOUL AUTUMN FESTA",
       "EVENT_PERIOD": "2026-09-18~2026-11-29",
