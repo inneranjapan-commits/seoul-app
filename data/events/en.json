@@ -1,6 +1,16 @@
 {
-  "generatedAt": "2026-10-01T23:33:31.865Z",
+  "generatedAt": "2026-10-02T23:23:39.664Z",
   "events": [
+    {
+      "EVENT_NM": "Smart Life Week 2026 (SLW)",
+      "EVENT_PERIOD": "2026-10-06~2026-10-08",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "2026 Seoul BBQ Festival",
+      "EVENT_PERIOD": "2026-10-24~2026-10-25",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "The 15th Gangnam Festival 2026 · HEY GANGNAM",
       "EVENT_PERIOD": "2026-10-03~2026-10-05",

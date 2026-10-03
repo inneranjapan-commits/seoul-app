@@ -1,6 +1,11 @@
 {
-  "generatedAt": "2026-10-02T00:28:40.257Z",
+  "generatedAt": "2026-10-03T00:19:03.811Z",
   "events": [
+    {
+      "EVENT_NM": "2026首尔烧烤节",
+      "EVENT_PERIOD": "2026-10-24~2026-10-25",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "2026首尔美食周（TASTE OF SEOUL 2026）",
       "EVENT_PERIOD": "2026-10-23~2026-10-29",
