@@ -1,6 +1,11 @@
 {
-  "generatedAt": "2026-10-08T00:01:20.584Z",
+  "generatedAt": "2026-10-09T00:13:15.566Z",
   "events": [
+    {
+      "EVENT_NM": "Seoul Gallery Autumn Special Event",
+      "EVENT_PERIOD": "2026-09-18~2026-10-11",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "Smart Life Week 2026 (SLW)",
       "EVENT_PERIOD": "2026-10-06~2026-10-08",
