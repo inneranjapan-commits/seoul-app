@@ -1,6 +1,26 @@
 {
-  "generatedAt": "2026-10-14T23:45:36.316Z",
+  "generatedAt": "2026-10-15T23:41:44.893Z",
   "events": [
+    {
+      "EVENT_NM": "[乐园乐器商街] Guitar Show乐园2026",
+      "EVENT_PERIOD": "2026-10-31~2026-11-01",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "2026南山夜间庆典",
+      "EVENT_PERIOD": "2026-10-23~2026-11-14",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "Local Trip秋日郊游",
+      "EVENT_PERIOD": "2026-10-21~2026-10-25",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "2026 Eugene投资证券首尔公开赛网球挑战赛",
+      "EVENT_PERIOD": "2026-10-25~2026-11-01",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "2026贞洞夜行",
       "EVENT_PERIOD": "2026-10-30~2026-10-31",

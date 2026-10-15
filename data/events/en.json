@@ -1,6 +1,16 @@
 {
-  "generatedAt": "2026-10-14T22:43:55.598Z",
+  "generatedAt": "2026-10-15T22:39:06.792Z",
   "events": [
+    {
+      "EVENT_NM": "[Nakwon Musical Instrument Arcade] Guitar Show Nakwon 2026",
+      "EVENT_PERIOD": "2026-10-31~2026-11-01",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "2026 Namsan Night Festival",
+      "EVENT_PERIOD": "2026-10-23~2026-11-14",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "2026 Jeongdong Culture Night",
       "EVENT_PERIOD": "2026-10-30~2026-10-31",
@@ -14,6 +24,11 @@
     {
       "EVENT_NM": "Local Trip Autumn Picnic Pop-up",
       "EVENT_PERIOD": "2026-10-21~2026-10-25",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "2026 Eugene Seoul Open Challenger",
+      "EVENT_PERIOD": "2026-10-25~2026-11-01",
       "EVENT_URL": ""
     },
     {
