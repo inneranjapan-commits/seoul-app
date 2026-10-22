@@ -1,6 +1,21 @@
 {
-  "generatedAt": "2026-10-21T23:49:08.348Z",
+  "generatedAt": "2026-10-22T23:39:05.024Z",
   "events": [
+    {
+      "EVENT_NM": "第18届Unlimited Edition - 首尔艺术书展2026",
+      "EVENT_PERIOD": "2026-11-06~2026-11-08",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "第14届印度电影节",
+      "EVENT_PERIOD": "2026-11-03~2026-11-07",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "2026首尔健康旅游周",
+      "EVENT_PERIOD": "2026-10-29~2026-11-04",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "[乐园乐器商街] Guitar Show乐园2026",
       "EVENT_PERIOD": "2026-10-31~2026-11-01",
