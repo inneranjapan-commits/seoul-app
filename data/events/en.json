@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T22:11:09.353Z",
+  "generatedAt": "2026-10-26T23:34:20.526Z",
   "events": [
     {
       "EVENT_NM": "The 18th Unlimited Edition – Seoul Art Book Fair 2026",
@@ -32,18 +32,8 @@
       "EVENT_URL": ""
     },
     {
-      "EVENT_NM": "Local Trip Autumn Picnic Pop-up",
-      "EVENT_PERIOD": "2026-10-21~2026-10-25",
-      "EVENT_URL": ""
-    },
-    {
       "EVENT_NM": "2026 Eugene Seoul Open Challenger",
       "EVENT_PERIOD": "2026-10-25~2026-11-01",
-      "EVENT_URL": ""
-    },
-    {
-      "EVENT_NM": "2026 Seoul BBQ Festival",
-      "EVENT_PERIOD": "2026-10-24~2026-10-25",
       "EVENT_URL": ""
     },
     {
@@ -64,11 +54,6 @@
     {
       "EVENT_NM": "2026 Seoul Outdoor Library",
       "EVENT_PERIOD": "2026-04-23~2026-11-01",
-      "EVENT_URL": ""
-    },
-    {
-      "EVENT_NM": "2026 Namsangol Traditional Experience : Artist's Time",
-      "EVENT_PERIOD": "2026-04-03~2026-10-25",
       "EVENT_URL": ""
     }
   ]

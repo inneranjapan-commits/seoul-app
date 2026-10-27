@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T23:15:20.332Z",
+  "generatedAt": "2026-10-27T00:29:55.563Z",
   "events": [
     {
       "EVENT_NM": "第18届Unlimited Edition - 首尔艺术书展2026",
@@ -27,11 +27,6 @@
       "EVENT_URL": ""
     },
     {
-      "EVENT_NM": "Local Trip秋日郊游",
-      "EVENT_PERIOD": "2026-10-21~2026-10-25",
-      "EVENT_URL": ""
-    },
-    {
       "EVENT_NM": "2026 Eugene投资证券首尔公开赛网球挑战赛",
       "EVENT_PERIOD": "2026-10-25~2026-11-01",
       "EVENT_URL": ""
@@ -39,11 +34,6 @@
     {
       "EVENT_NM": "2026贞洞夜行",
       "EVENT_PERIOD": "2026-10-30~2026-10-31",
-      "EVENT_URL": ""
-    },
-    {
-      "EVENT_NM": "2026首尔烧烤节",
-      "EVENT_PERIOD": "2026-10-24~2026-10-25",
       "EVENT_URL": ""
     },
     {
@@ -64,11 +54,6 @@
     {
       "EVENT_NM": "2026首尔户外图书馆",
       "EVENT_PERIOD": "2026-04-23~2026-11-01",
-      "EVENT_URL": ""
-    },
-    {
-      "EVENT_NM": "2026南山谷传统体验：艺术家的时光",
-      "EVENT_PERIOD": "2026-04-03~2026-10-25",
       "EVENT_URL": ""
     }
   ]
