@@ -1,6 +1,11 @@
 {
-  "generatedAt": "2026-10-29T23:45:22.375Z",
+  "generatedAt": "2026-10-30T23:27:50.826Z",
   "events": [
+    {
+      "EVENT_NM": "Secret K-Showindow",
+      "EVENT_PERIOD": "2026-10-26~2026-10-31",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "The 18th Unlimited Edition – Seoul Art Book Fair 2026",
       "EVENT_PERIOD": "2026-11-06~2026-11-08",
@@ -34,11 +39,6 @@
     {
       "EVENT_NM": "2026 Eugene Seoul Open Challenger",
       "EVENT_PERIOD": "2026-10-25~2026-11-01",
-      "EVENT_URL": ""
-    },
-    {
-      "EVENT_NM": "Taste of Seoul 2026",
-      "EVENT_PERIOD": "2026-10-23~2026-10-29",
       "EVENT_URL": ""
     },
     {
