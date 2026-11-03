@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T00:14:02.372Z",
+  "generatedAt": "2026-11-03T02:55:11.343Z",
   "events": [
     {
       "EVENT_NM": "第18届Unlimited Edition - 首尔艺术书展2026",
@@ -17,28 +17,13 @@
       "EVENT_URL": ""
     },
     {
-      "EVENT_NM": "[乐园乐器商街] Guitar Show乐园2026",
-      "EVENT_PERIOD": "2026-10-31~2026-11-01",
-      "EVENT_URL": ""
-    },
-    {
       "EVENT_NM": "2026南山夜间庆典",
       "EVENT_PERIOD": "2026-10-23~2026-11-14",
       "EVENT_URL": ""
     },
     {
-      "EVENT_NM": "2026 Eugene投资证券首尔公开赛网球挑战赛",
-      "EVENT_PERIOD": "2026-10-25~2026-11-01",
-      "EVENT_URL": ""
-    },
-    {
       "EVENT_NM": "2026首尔秋日庆典",
       "EVENT_PERIOD": "2026-09-18~2026-11-29",
-      "EVENT_URL": ""
-    },
-    {
-      "EVENT_NM": "2026首尔户外图书馆",
-      "EVENT_PERIOD": "2026-04-23~2026-11-01",
       "EVENT_URL": ""
     }
   ]

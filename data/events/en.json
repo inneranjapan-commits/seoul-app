@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T23:13:17.833Z",
+  "generatedAt": "2026-11-03T01:59:21.633Z",
   "events": [
     {
       "EVENT_NM": "The 18th Unlimited Edition – Seoul Art Book Fair 2026",
@@ -17,28 +17,13 @@
       "EVENT_URL": ""
     },
     {
-      "EVENT_NM": "[Nakwon Musical Instrument Arcade] Guitar Show Nakwon 2026",
-      "EVENT_PERIOD": "2026-10-31~2026-11-01",
-      "EVENT_URL": ""
-    },
-    {
       "EVENT_NM": "2026 Namsan Night Festival",
       "EVENT_PERIOD": "2026-10-23~2026-11-14",
       "EVENT_URL": ""
     },
     {
-      "EVENT_NM": "2026 Eugene Seoul Open Challenger",
-      "EVENT_PERIOD": "2026-10-25~2026-11-01",
-      "EVENT_URL": ""
-    },
-    {
       "EVENT_NM": "2026 SEOUL AUTUMN FESTA",
       "EVENT_PERIOD": "2026-09-18~2026-11-29",
-      "EVENT_URL": ""
-    },
-    {
-      "EVENT_NM": "2026 Seoul Outdoor Library",
-      "EVENT_PERIOD": "2026-04-23~2026-11-01",
       "EVENT_URL": ""
     }
   ]
