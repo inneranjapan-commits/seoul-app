@@ -1,6 +1,21 @@
 {
-  "generatedAt": "2026-11-05T00:50:15.654Z",
+  "generatedAt": "2026-11-06T00:32:17.405Z",
   "events": [
+    {
+      "EVENT_NM": "2026 Gwanghwamun Market",
+      "EVENT_PERIOD": "2026-12-11~2027-01-10",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "2026 Seoul Lantern Festival",
+      "EVENT_PERIOD": "2026-12-11~2027-01-31",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "2026 Seoul K-CONTENT WEEK",
+      "EVENT_PERIOD": "2026-11-14~2026-11-20",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "The 18th Unlimited Edition – Seoul Art Book Fair 2026",
       "EVENT_PERIOD": "2026-11-06~2026-11-08",

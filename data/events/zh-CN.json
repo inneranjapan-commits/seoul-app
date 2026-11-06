@@ -1,6 +1,21 @@
 {
-  "generatedAt": "2026-11-05T01:52:21.478Z",
+  "generatedAt": "2026-11-06T01:30:30.888Z",
   "events": [
+    {
+      "EVENT_NM": "2026 首尔旅游周",
+      "EVENT_PERIOD": "2026-11-14~2026-11-20",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "2026 首尔灯节",
+      "EVENT_PERIOD": "2026-12-11~2027-01-31",
+      "EVENT_URL": ""
+    },
+    {
+      "EVENT_NM": "2026 光化门市集",
+      "EVENT_PERIOD": "2026-12-11~2027-01-10",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "第18届Unlimited Edition - 首尔艺术书展2026",
       "EVENT_PERIOD": "2026-11-06~2026-11-08",
