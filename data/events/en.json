@@ -1,6 +1,11 @@
 {
-  "generatedAt": "2026-11-10T02:27:41.671Z",
+  "generatedAt": "2026-11-11T00:27:55.502Z",
   "events": [
+    {
+      "EVENT_NM": "2026 Myeongdong Square Mission Festa",
+      "EVENT_PERIOD": "2026-11-16~2026-11-21",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "2026 Gwanghwamun Market",
       "EVENT_PERIOD": "2026-12-11~2027-01-10",
