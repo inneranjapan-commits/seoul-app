@@ -1,6 +1,11 @@
 {
-  "generatedAt": "2026-11-13T00:32:57.045Z",
+  "generatedAt": "2026-11-14T00:46:30.071Z",
   "events": [
+    {
+      "EVENT_NM": "Korea Christmas Festival",
+      "EVENT_PERIOD": "2026-11-16~2026-12-31",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "2026 Myeongdong Square Mission Festa",
       "EVENT_PERIOD": "2026-11-16~2026-11-21",
