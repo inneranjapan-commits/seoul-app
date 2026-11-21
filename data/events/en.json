@@ -1,6 +1,11 @@
 {
-  "generatedAt": "2026-11-20T01:41:16.573Z",
+  "generatedAt": "2026-11-21T01:12:34.113Z",
   "events": [
+    {
+      "EVENT_NM": "2026 Gangnam Eyes Media Winter Festa",
+      "EVENT_PERIOD": "2026-12-03~2026-12-27",
+      "EVENT_URL": ""
+    },
     {
       "EVENT_NM": "Korea Christmas Festival",
       "EVENT_PERIOD": "2026-11-16~2026-12-31",
@@ -19,11 +24,6 @@
     {
       "EVENT_NM": "2026 Seoul Lantern Festival",
       "EVENT_PERIOD": "2026-12-11~2027-01-31",
-      "EVENT_URL": ""
-    },
-    {
-      "EVENT_NM": "2026 Seoul K-CONTENT WEEK",
-      "EVENT_PERIOD": "2026-11-14~2026-11-20",
       "EVENT_URL": ""
     },
     {
